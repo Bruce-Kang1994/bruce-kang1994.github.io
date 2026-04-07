@@ -1,0 +1,271 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import {
+  profile,
+  metrics,
+  proofs,
+  endorsements,
+  education,
+  sideProjects,
+  methodAssets,
+  experiences,
+  thinkingItems,
+  contact,
+} from '../data/siteData';
+
+const structuredData = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'Person',
+    name: '康鑫',
+    alternateName: 'Kang Xin',
+    url: profile.siteUrl,
+    jobTitle: 'Product Manager',
+    description: profile.bio.en,
+    sameAs: [contact.github],
+    alumniOf: [
+      { '@type': 'CollegeOrUniversity', name: 'Tianjin University' },
+      { '@type': 'CollegeOrUniversity', name: 'Universiti Sains Malaysia' },
+    ],
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    name: 'Kang Xin Personal Hub',
+    url: profile.siteUrl,
+    description: profile.bio.en,
+  },
+];
+---
+
+<BaseLayout
+  title="康鑫 — 产品经理 · 独立做产品的人"
+  titleEn="Kang Xin — Product Manager & Indie Builder"
+  description="产品经理，独立做产品的人。5 年 B 端经验，3 条产品线从 0 到 1，方法论沉淀与 side project 实践。"
+  descriptionEn="Product manager and indie builder. 5 years B2B experience, 3 product lines 0→1, with methodology assets and side projects."
+  structuredData={structuredData}
+>
+
+  <!-- ═══════════════════ HERO ═══════════════════ -->
+  <section class="section" style="border-bottom: 1px solid var(--gray-2);">
+    <div class="container">
+      <div class="grid gap-8 lg:grid-cols-[1.2fr_0.8fr] lg:gap-12 items-start" data-reveal>
+        <!-- Left: Copy -->
+        <div>
+          <p class="caption mb-3" style="font-weight: 500;" data-zh="你好，我是康鑫" data-en="Hi, I'm Kang Xin">你好，我是康鑫</p>
+          <h1 class="display mb-5" data-zh={profile.heroTitle.zh} data-en={profile.heroTitle.en}>
+            {profile.heroTitle.zh}
+          </h1>
+          <p class="body-lg mb-6 max-w-[560px]" data-zh={profile.bio.zh} data-en={profile.bio.en}>
+            {profile.bio.zh}
+          </p>
+          <div class="flex flex-wrap gap-3">
+            <a href="#work" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg text-sm font-medium text-white transition-colors" style="background: var(--blue-6);" onmouseover="this.style.background='var(--blue-7)'" onmouseout="this.style.background='var(--blue-6)'" data-zh="看代表作品" data-en="See my work">
+              看代表作品
+            </a>
+            <a href="#contact" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg text-sm font-medium transition-colors" style="color: var(--gray-6); border: 1px solid var(--gray-3);" data-zh="发起交流" data-en="Get in touch">
+              发起交流
+            </a>
+          </div>
+        </div>
+
+        <!-- Right: Metric cards -->
+        <div class="grid grid-cols-2 gap-3">
+          {metrics.map((m) => (
+            <div class="card p-4">
+              <div class="metric-value mb-1">{m.value}</div>
+              <div class="text-sm font-medium mb-0.5" style="color: var(--gray-10);" data-zh={m.label.zh} data-en={m.label.en}>{m.label.zh}</div>
+              <div class="caption" data-zh={m.detail.zh} data-en={m.detail.en}>{m.detail.zh}</div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════ PROOF ═══════════════════ -->
+  <section id="proof" class="section section--alt">
+    <div class="container">
+      <div class="section-eyebrow" data-zh="Proof / 可信度" data-en="Proof / Credibility">Proof / 可信度</div>
+      <h2 class="heading-lg mb-8" data-zh="先看证据，再决定是否继续深入。" data-en="See the evidence, then decide if you want to dig deeper.">先看证据，再决定是否继续深入。</h2>
+
+      <!-- Proof cards -->
+      <div class="grid gap-4 sm:grid-cols-3 mb-10" data-reveal>
+        {proofs.map((p) => (
+          <div class="card p-5">
+            <h3 class="heading-sm mb-2" data-zh={p.title.zh} data-en={p.title.en}>{p.title.zh}</h3>
+            <p class="body" data-zh={p.description.zh} data-en={p.description.en}>{p.description.zh}</p>
+          </div>
+        ))}
+      </div>
+
+      <!-- Endorsements + Education -->
+      <div class="grid gap-8 sm:grid-cols-2" data-reveal style="--delay: 100ms;">
+        <div>
+          <div class="caption font-medium uppercase tracking-wider mb-3" data-zh="权威背书" data-en="Endorsements">权威背书</div>
+          <div class="flex flex-wrap gap-x-4 gap-y-2">
+            {endorsements.map((e) => (
+              e.href ? (
+                <a href={e.href} target="_blank" rel="noopener" class="link-arrow text-[13px]" data-zh={e.label.zh} data-en={e.label.en}>
+                  {e.label.zh} ↗
+                </a>
+              ) : (
+                <span class="text-[13px] font-medium" style="color: var(--gray-10);" data-zh={e.label.zh} data-en={e.label.en}>
+                  {e.label.zh}
+                </span>
+              )
+            ))}
+          </div>
+        </div>
+        <div>
+          <div class="caption font-medium uppercase tracking-wider mb-3" data-zh="教育背景" data-en="Education">教育背景</div>
+          <div class="space-y-1">
+            {education.map((e) => (
+              <div class="text-[13px]" style="color: var(--gray-6);" data-zh={`${e.school.zh} · ${e.degree.zh}`} data-en={`${e.school.en} · ${e.degree.en}`}>
+                {e.school.zh} · {e.degree.zh}
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════ SELECTED WORK ═══════════════════ -->
+  <section id="work" class="section" style="border-bottom: 1px solid var(--gray-2);">
+    <div class="container">
+      <div class="section-eyebrow" data-zh="Selected Work / 代表作品" data-en="Selected Work">Selected Work / 代表作品</div>
+      <h2 class="heading-lg mb-2" data-zh="项目和方法论资产，要被明确区分。" data-en="Projects and methodology assets, clearly separated.">项目和方法论资产，要被明确区分。</h2>
+      <p class="body mb-10 max-w-[600px]" data-zh="前者展示我在做产品，后者展示我如何把实践沉淀成可被阅读和验证的资产。" data-en="The former shows I build products; the latter shows how I turn practice into readable, verifiable assets.">前者展示我在做产品，后者展示我如何把实践沉淀成可被阅读和验证的资产。</p>
+
+      <!-- Side Projects -->
+      <div class="mb-12" data-reveal>
+        <div class="flex items-center gap-3 mb-5">
+          <h3 class="text-base font-semibold" style="color: var(--gray-10);" data-zh="Side Projects" data-en="Side Projects">Side Projects</h3>
+          <span class="caption" data-zh="独立产品实验" data-en="Independent product experiments">独立产品实验</span>
+        </div>
+        <div class="grid gap-4 sm:grid-cols-2">
+          {sideProjects.map((p) => (
+            <div class="card p-5">
+              <div class="flex items-center gap-3 mb-3">
+                <h4 class="heading-sm">{p.title}</h4>
+                <span class={`badge badge--${p.statusType}`} data-zh={p.status.zh} data-en={p.status.en}>{p.status.zh}</span>
+              </div>
+              <p class="body mb-3" data-zh={p.tagline.zh} data-en={p.tagline.en}>{p.tagline.zh}</p>
+              <div class="flex items-center gap-3">
+                <span class="caption">{p.stack}</span>
+                {p.href && (
+                  <a href={p.href} target="_blank" rel="noopener" class="link-arrow text-xs">GitHub ↗</a>
+                )}
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <!-- Methodology Assets -->
+      <div data-reveal style="--delay: 100ms;">
+        <div class="flex items-center gap-3 mb-5">
+          <h3 class="text-base font-semibold" style="color: var(--gray-10);" data-zh="Methodology Assets" data-en="Methodology Assets">Methodology Assets</h3>
+          <span class="caption" data-zh="方法论资产" data-en="Public methodology">方法论资产</span>
+        </div>
+        <div class="grid gap-4 sm:grid-cols-2">
+          {methodAssets.map((a) => (
+            <a href={a.href} target="_blank" rel="noopener" class="card p-5 block group no-underline" style="text-decoration: none;">
+              <div class="flex items-center gap-3 mb-3">
+                <h4 class="heading-sm group-hover:text-[var(--blue-6)] transition-colors">{a.title}</h4>
+                <span class="badge badge--published" data-zh={a.status.zh} data-en={a.status.en}>{a.status.zh}</span>
+              </div>
+              <p class="body mb-3" data-zh={a.tagline.zh} data-en={a.tagline.en}>{a.tagline.zh}</p>
+              <span class="link-arrow text-xs" data-zh="查看 →" data-en="View →">查看 →</span>
+            </a>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════ EXPERIENCE ═══════════════════ -->
+  <section id="experience" class="section section--alt">
+    <div class="container">
+      <div class="section-eyebrow" data-zh="Experience / 职业经历" data-en="Experience">Experience / 职业经历</div>
+      <h2 class="heading-lg mb-8" data-zh="用阶段性的实践路径，解释能力是怎么长出来的。" data-en="Career stages that show how capabilities were built.">用阶段性的实践路径，解释能力是怎么长出来的。</h2>
+
+      <div class="timeline-line" data-reveal>
+        {experiences.map((exp) => (
+          <div class="timeline-node">
+            <div class="flex flex-col sm:flex-row sm:items-baseline gap-1 sm:gap-4 mb-2">
+              <span class="caption font-mono shrink-0" style="font-weight: 500;">{exp.period}</span>
+              <div class="flex items-baseline gap-2 flex-wrap">
+                <span class="heading-sm" data-zh={exp.company.zh} data-en={exp.company.en}>{exp.company.zh}</span>
+                <span class="caption" data-zh={exp.role.zh} data-en={exp.role.en}>{exp.role.zh}</span>
+              </div>
+            </div>
+            <p class="body mb-2" data-zh={exp.description.zh} data-en={exp.description.en}>
+              {exp.description.zh}
+            </p>
+            <ul class="space-y-1 mb-1">
+              {exp.highlights.zh.map((h, i) => (
+                <li class="flex gap-2 text-[13px]" style="color: var(--gray-6);">
+                  <span style="color: var(--blue-6); flex-shrink: 0;">·</span>
+                  <span data-zh={h} data-en={exp.highlights.en[i]}>{h}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════ THINKING ═══════════════════ -->
+  <section id="thinking" class="section" style="border-bottom: 1px solid var(--gray-2);">
+    <div class="container">
+      <div class="section-eyebrow" data-zh="Thinking / 方法论" data-en="Thinking / Methodology">Thinking / 方法论</div>
+      <h2 class="heading-lg mb-8" data-zh="方法论不是内容装饰，而是对问题的判断方式。" data-en="Methodology is not decoration — it's how I frame problems.">方法论不是内容装饰，而是对问题的判断方式。</h2>
+
+      <div class="grid gap-5 sm:grid-cols-3" data-reveal>
+        {thinkingItems.map((item) => (
+          <div class="card p-5">
+            <h3 class="heading-sm mb-3" style="color: var(--blue-6);" data-zh={`"${item.title.zh}"`} data-en={`"${item.title.en}"`}>
+              "{item.title.zh}"
+            </h3>
+            <p class="body mb-3" data-zh={item.body.zh} data-en={item.body.en}>
+              {item.body.zh}
+            </p>
+            <span class="caption" data-zh={`— ${item.source.zh}`} data-en={`— ${item.source.en}`}>
+              — {item.source.zh}
+            </span>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════ CONTACT ═══════════════════ -->
+  <section id="contact" class="section">
+    <div class="container">
+      <div class="section-eyebrow" data-zh="Contact / 联系" data-en="Contact / Collaboration">Contact / 联系</div>
+
+      <div class="grid gap-8 sm:grid-cols-[1fr_auto] items-start" data-reveal>
+        <div>
+          <h2 class="heading-lg mb-4" data-zh="适合初次交流，也适合长期合作前的快速了解。" data-en="For first introductions and deeper collaborations alike.">适合初次交流，也适合长期合作前的快速了解。</h2>
+          <p class="body max-w-[520px]" data-zh={contact.cta.zh} data-en={contact.cta.en}>
+            {contact.cta.zh}
+          </p>
+        </div>
+        <div class="flex flex-col gap-3 sm:min-w-[240px]">
+          <a href={`mailto:${contact.email}`} class="card p-4 flex items-center justify-between gap-4 group no-underline" style="text-decoration: none;">
+            <span class="caption font-medium">Email</span>
+            <span class="text-sm font-medium" style="color: var(--gray-10);">{contact.email}</span>
+          </a>
+          <a href={contact.github} target="_blank" rel="noopener" class="card p-4 flex items-center justify-between gap-4 group no-underline" style="text-decoration: none;">
+            <span class="caption font-medium">GitHub</span>
+            <span class="text-sm font-medium" style="color: var(--gray-10);">Bruce-Kang1994</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>
