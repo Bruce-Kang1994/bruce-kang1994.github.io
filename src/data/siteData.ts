@@ -2,16 +2,16 @@
 export const profile = {
   name: { zh: '康鑫', en: 'Kang Xin' },
   tagline: {
-    zh: 'B 端产品经理，也持续独立做产品。',
-    en: 'B2B product manager and indie builder.',
+    zh: '产品经理，独立在做一个 AI 产品。',
+    en: 'Product manager, building an AI product solo.',
   },
   heroTitle: {
-    zh: '做过复杂业务系统，\n也持续把产品方法沉淀成公开资产。',
-    en: 'Building complex business systems,\nand turning product methods into public assets.',
+    zh: '做产品的人，也自己从零做产品。',
+    en: 'A product person who also builds from scratch.',
   },
   bio: {
-    zh: '5 年 B 端产品经验，独立负责过 3 条产品线从 0 到 1。做过知识产权平台、装修监理服务、教育交易履约和银行合作类业务，也持续把产品、增长与 SEO 的实践沉淀成公开资产。相比“会什么工具”，我更关心的是：能不能把问题拆清楚，能不能把方案落到系统里，能不能把关键指标真正做出来。',
-    en: 'Five years of B2B product experience, having independently led three product lines from zero to one. I have worked on IP platforms, renovation supervision services, education transaction fulfillment, and banking partnership businesses, while turning product, growth, and SEO practice into public assets. More than listing tools, I care about whether a problem is framed correctly, whether the solution lands in the system, and whether the key metric actually moves.',
+    zh: '5 年 B 端产品经验，独立负责过 3 条产品线从 0 到 1。现在全职做 PostMem——用老照片帮家庭留住故事的 AI 产品，一个人跑产品、增长、投放全链路。',
+    en: 'Five years of B2B product experience, having independently led three product lines from zero to one. Now building PostMem full-time — an AI product that turns old family photos into stories. Running product, growth, and ads end-to-end solo.',
   },
   siteUrl: 'https://bruce-kang1994.github.io',
 };
@@ -40,39 +40,20 @@ export const metrics = [
   },
 ];
 
-// ─── Proof ──────────────────────────────────────────────
-export const proofs = [
-  {
-    title: {
-      zh: '能从业务诊断走到产品落地',
-      en: 'From diagnosis to delivery',
-    },
-    description: {
-      zh: '每个项目都不是单点功能优化，而是围绕业务目标做问题拆解、链路诊断、方案设计和指标验证。',
-      en: 'Every project involved problem decomposition, pipeline diagnosis, solution design and metric validation around business goals.',
-    },
+// ─── Now ────────────────────────────────────────────────
+export const now = {
+  title: 'PostMem',
+  role: { zh: 'Co-Founder', en: 'Co-Founder' },
+  tagline: {
+    zh: '用老照片帮家庭留住故事的 AI 产品。',
+    en: 'An AI product that turns old family photos into family stories.',
   },
-  {
-    title: {
-      zh: '有明确的结果意识，而不是只写方案',
-      en: 'Results-driven mindset',
-    },
-    description: {
-      zh: '服务完成率 +17%、发表转化率 +57%、确权效率 +90%、完单时效 72h→48h——结果构成最直接的背书。',
-      en: '+17% completion rate, +57% conversion, +90% copyright efficiency, 72h→48h cycle — results speak for themselves.',
-    },
+  description: {
+    zh: '负责产品设计、增长策略、SEO/GEO 内容体系、视频广告投放全链路。从用户研究到 Remotion 视频生产线到 Facebook Ads 闭环，全栈自己跑。',
+    en: 'Responsible for product design, growth strategy, SEO/GEO content system, and video ad pipeline end-to-end. From user research to Remotion video production to Facebook Ads closed loop.',
   },
-  {
-    title: {
-      zh: '既做业务系统，也做公开方法论资产',
-      en: 'Business systems + public methodology',
-    },
-    description: {
-      zh: '两个已上线的公开站点、side projects 和真实项目经历放在一起，完整呈现我是谁以及我怎么工作。',
-      en: 'Two live public sites, side projects, and real project history together present who I am and how I work.',
-    },
-  },
-];
+  href: 'https://www.postmem.com',
+};
 
 export const endorsements = [
   {
@@ -118,7 +99,7 @@ export const sideProjects = [
     stack: 'Next.js · DeepSeek · Supabase · Stripe',
     status: { zh: '已上线', en: 'Live' },
     statusType: 'live' as const,
-    href: '',
+    href: 'https://caliber-nine.vercel.app/zh',
   },
   {
     title: 'Parla',
@@ -239,34 +220,6 @@ export const experiences = [
         '10+ loan disbursements, 700+ new clients from single campaign',
       ],
     },
-  },
-];
-
-// ─── Thinking ───────────────────────────────────────────
-export const thinkingItems = [
-  {
-    title: { zh: '先诊断，后开方', en: 'Diagnose first, prescribe second' },
-    body: {
-      zh: '产品工作的起点不是需求文档，是搞清楚业务到底卡在哪。装小蜜项目中，通过流失归因发现 61% 的流失发生在签约后首次服务——这个诊断决定了后续所有方案的优先级。',
-      en: 'Product work starts not with a PRD, but with understanding where the business is stuck. At Zhuangxiaomi, churn attribution revealed 61% of churn at the first post-signup service — that diagnosis set all priorities.',
-    },
-    source: { zh: '装小蜜 · 监理业务', en: 'Zhuangxiaomi · Supervision' },
-  },
-  {
-    title: { zh: '公开资产是最好的背书材料', en: 'Public assets are the best proof' },
-    body: {
-      zh: '与其堆砌"我会什么"，不如让别人直接看到真实站点、真实文档和真实项目。PostMem SEO 体系和 Growth Lab 就是这种思路的产物。',
-      en: 'Rather than listing skills, let people see real sites, real docs, and real projects. PostMem SEO System and Growth Lab are products of this thinking.',
-    },
-    source: { zh: 'PostMem · 方法论', en: 'PostMem · Methodology' },
-  },
-  {
-    title: { zh: '方法论必须回到真实产品里验证', en: 'Methodology must be validated in real products' },
-    body: {
-      zh: '内容沉淀不是终点，side projects 与真实产品实验才是方法论继续成立的地方。Caliber 和 Parla 就是从洞察到产品的闭环实践。',
-      en: 'Content is not the end goal — side projects and real product experiments are where methodology proves itself. Caliber and Parla are closed-loop practices from insight to product.',
-    },
-    source: { zh: 'Side Projects', en: 'Side Projects' },
   },
 ];
 
