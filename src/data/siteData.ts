@@ -225,7 +225,7 @@ export const experiences = [
 
 // ─── Contact ────────────────────────────────────────────
 export const contact = {
-  email: 'kangxin_liu2020@163.com',
+  email: 'bruce@motiful.ai',
   github: 'https://github.com/Bruce-Kang1994',
   cta: {
     zh: '如果你想聊产品、增长、SEO、方法论资产，或者想更系统地了解我做过的项目和思考方式，欢迎交流。',

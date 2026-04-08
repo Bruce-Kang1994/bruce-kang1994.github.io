@@ -483,9 +483,7 @@ p[data-lang="en"] { display: none; }
 
 /* ─── Timeline ────────────────────────── */
 .tl-item {
-  display: grid;
-  grid-template-columns: 130px 1fr;
-  gap: 1.5rem;
+  display: block;
   padding: 1.5rem 0;
   border-bottom: 1px solid var(--border-light);
 }
@@ -498,6 +496,7 @@ p[data-lang="en"] { display: none; }
   font-weight: 500;
   color: var(--text-3);
   padding-top: 2px;
+  display: none;
 }
 
 .tl-company {
@@ -680,12 +679,6 @@ p[data-lang="en"] { display: none; }
 
   .sec__title { font-size: 1.25rem; }
 
-  .tl-item {
-    grid-template-columns: 1fr;
-    gap: 0.25rem;
-  }
-
-  .tl-period { margin-bottom: 0.25rem; }
 
   .now-card { padding: 1.25rem; }
 
