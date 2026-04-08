@@ -1,6 +1,6 @@
 ---
 import '../styles/global.css';
-import { contact, education } from '../data/siteData';
+import { contact } from '../data/siteData';
 
 interface Props {
   title: string;
@@ -74,19 +74,6 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
             <a href={`mailto:${contact.email}`} class="footer__email">{contact.email}</a>
             <a href={contact.github} target="_blank" rel="noopener" class="footer__secondary-link">GitHub ↗</a>
           </div>
-        </div>
-
-        <div class="footer__edu">
-          <span data-lang="zh">
-            {education.map((e, i) => (
-              <span>{e.school.zh} · {e.degree.zh}{i < education.length - 1 ? '　|　' : ''}</span>
-            ))}
-          </span>
-          <span data-lang="en">
-            {education.map((e, i) => (
-              <span>{e.school.en} · {e.degree.en}{i < education.length - 1 ? '　|　' : ''}</span>
-            ))}
-          </span>
         </div>
 
         <div class="footer__bottom">© 2026 Bruce Kang</div>
