@@ -1,19 +1,34 @@
 ---
 import '../styles/global.css';
+import { translations } from '../lib/i18n';
 import { contact } from '../data/siteData';
 
 interface Props {
   title: string;
   description?: string;
+  section?: 'home' | 'lab' | 'postmem';
   structuredData?: Record<string, unknown> | Record<string, unknown>[];
 }
 
 const {
   title,
   description = 'Bruce Kang — Product Manager, PostMem Co-Founder.',
+  section = 'home',
   structuredData,
 } = Astro.props;
+
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+const currentPath = Astro.url.pathname.endsWith('/') ? Astro.url.pathname : `${Astro.url.pathname}/`;
+const isActive = (path: string) => {
+  if (path === '/') return currentPath === '/';
+  return currentPath === path || currentPath.startsWith(path);
+};
+
+const siteTitle = section === 'lab'
+  ? `${title} | Bruce's Growth Lab`
+  : section === 'postmem'
+    ? `${title} | PostMem`
+    : title;
 ---
 
 <!doctype html>
@@ -25,7 +40,7 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
     <meta name="author" content="Bruce Kang / 康鑫" />
     <meta name="robots" content="index,follow" />
 
-    <title>{title}</title>
+    <title>{siteTitle}</title>
     <meta name="description" content={description} />
     <link rel="canonical" href={canonicalURL} />
 
@@ -35,100 +50,464 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 
     <meta property="og:type" content="website" />
     <meta property="og:url" content={canonicalURL} />
-    <meta property="og:title" content={title} />
+    <meta property="og:title" content={siteTitle} />
     <meta property="og:description" content={description} />
     <meta property="og:site_name" content="Bruce Kang" />
-
     <meta name="twitter:card" content="summary" />
-    <meta name="twitter:title" content={title} />
+    <meta name="twitter:title" content={siteTitle} />
     <meta name="twitter:description" content={description} />
+
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 
     {structuredData && (
       <script type="application/ld+json" set:html={JSON.stringify(structuredData)} />
     )}
 
-    <!-- Prevent FOUC: apply saved language before render -->
+    {/* Prevent FOUC: apply saved language + theme before render */}
     <script is:inline>
       (function() {
-        var lang = localStorage.getItem('lang') || 'zh';
-        if (lang === 'en') document.documentElement.classList.add('lang-en');
+        var locale = localStorage.getItem('locale') || localStorage.getItem('lang') || 'zh';
+        if (locale === 'en') {
+          document.documentElement.classList.add('lang-en');
+          document.documentElement.lang = 'en';
+        }
+        document.documentElement.dataset.locale = locale;
+        localStorage.setItem('locale', locale);
+        var t = localStorage.getItem('theme');
+        if (t === 'dark' || (!t && matchMedia('(prefers-color-scheme:dark)').matches)) document.documentElement.classList.add('dark');
       })();
     </script>
   </head>
 
-  <body>
-    <slot />
+  <body class:list={[
+    'min-h-screen flex flex-col',
+    section === 'home' && 'page-home',
+    section === 'lab' && 'page-lab page-shell',
+    section === 'postmem' && 'page-postmem',
+  ]}>
 
-    <!-- ══════════ FOOTER ══════════ -->
-    <footer id="contact" class="site-footer">
-      <div class="wrap">
-        <div class="footer__contact">
-          <div class="footer__contact-title">
-            <span data-lang="zh">联系方式</span><span data-lang="en">Contact</span>
+    {/* ══════════ UNIFIED SITE NAV ══════════ */}
+    <header class="site-header">
+      <div class="site-header__inner">
+        <div class="site-header__left">
+          <a href="/" class="site-header__brand">Bruce Kang</a>
+          <nav class="site-nav" id="site-nav">
+            <a href="/" class:list={['site-nav__link', isActive('/') && !isActive('/lab/') && !isActive('/postmem/') && 'is-active']}>
+              <span data-lang="zh">首页</span><span data-lang="en">Home</span>
+            </a>
+            <a href="/lab/" class:list={['site-nav__link', isActive('/lab/') && 'is-active']}>
+              Growth Lab
+            </a>
+            <a href="/postmem/" class:list={['site-nav__link', isActive('/postmem/') && 'is-active']}>
+              PostMem SEO
+            </a>
+            <a href="/#contact" class="site-nav__link">
+              <span data-lang="zh">联系</span><span data-lang="en">Contact</span>
+            </a>
+          </nav>
+        </div>
+        <div class="site-header__right">
+          <div class="locale-switch" role="group" aria-label="Language">
+            <button type="button" class="locale-btn" data-set-locale="zh" aria-pressed="true">中</button>
+            <button type="button" class="locale-btn" data-set-locale="en" aria-pressed="false">EN</button>
           </div>
-          <div class="footer__contact-desc">
+          {section === 'lab' && (
+            <button id="theme-toggle" class="ctrl-btn" aria-label="Theme">
+              <svg class="w-4 h-4 dark:hidden" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/></svg>
+              <svg class="w-4 h-4 hidden dark:block" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2m10-10h-2M4 12H2m15.364 6.364l-1.414-1.414M7.05 7.05L5.636 5.636m12.728 0l-1.414 1.414M7.05 16.95l-1.414 1.414"/></svg>
+            </button>
+          )}
+          <button id="mobile-menu-toggle" class="ctrl-btn mobile-only" aria-label="Menu">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+          </button>
+        </div>
+      </div>
+
+      {/* Mobile nav dropdown */}
+      <nav id="mobile-nav" class="mobile-nav hidden">
+        <a href="/" class="mobile-nav__link">
+          <span data-lang="zh">首页</span><span data-lang="en">Home</span>
+        </a>
+        <a href="/lab/" class="mobile-nav__link">Growth Lab</a>
+        <a href="/postmem/" class="mobile-nav__link">PostMem SEO</a>
+        <a href="/#contact" class="mobile-nav__link">
+          <span data-lang="zh">联系</span><span data-lang="en">Contact</span>
+        </a>
+        {section === 'lab' && (
+          <>
+            <div class="mobile-nav__divider"></div>
+            <a href="/lab/frameworks/" class="mobile-nav__link mobile-nav__link--sub" data-i18n="nav.frameworks">框架</a>
+            <a href="/lab/case-studies/" class="mobile-nav__link mobile-nav__link--sub" data-i18n="nav.caseStudies">案例</a>
+            <a href="/lab/dialogues/" class="mobile-nav__link mobile-nav__link--sub" data-i18n="nav.dialogues">对话</a>
+            <a href="/lab/notes/" class="mobile-nav__link mobile-nav__link--sub" data-i18n="nav.notes">笔记</a>
+            <a href="/lab/about/" class="mobile-nav__link mobile-nav__link--sub" data-i18n="nav.about">关于</a>
+          </>
+        )}
+      </nav>
+
+      {/* Lab sub-navigation */}
+      {section === 'lab' && (
+        <nav class="lab-subnav">
+          <div class="lab-subnav__inner">
+            <a href="/lab/frameworks/" class:list={['lab-subnav__link', isActive('/lab/frameworks/') && 'is-active']} data-i18n="nav.frameworks">框架</a>
+            <a href="/lab/case-studies/" class:list={['lab-subnav__link', isActive('/lab/case-studies/') && 'is-active']} data-i18n="nav.caseStudies">案例</a>
+            <a href="/lab/dialogues/" class:list={['lab-subnav__link', isActive('/lab/dialogues/') && 'is-active']} data-i18n="nav.dialogues">对话</a>
+            <a href="/lab/notes/" class:list={['lab-subnav__link', isActive('/lab/notes/') && 'is-active']} data-i18n="nav.notes">笔记</a>
+            <a href="/lab/about/" class:list={['lab-subnav__link', isActive('/lab/about/') && 'is-active']} data-i18n="nav.about">关于</a>
+          </div>
+        </nav>
+      )}
+    </header>
+
+    <main class="flex-1"><slot /></main>
+
+    {/* ══════════ FOOTER ══════════ */}
+    <footer id="contact" class="site-footer-unified">
+      <div class="site-footer__inner">
+        <div class="site-footer__left">
+          <p class="site-footer__desc">
             <span data-lang="zh">产品合作、增长交流、投资沟通——都可以直接发邮件。</span>
             <span data-lang="en">Product collaboration, growth exchange, investment discussion — drop me an email.</span>
-          </div>
-          <div>
-            <a href={`mailto:${contact.email}`} class="footer__email">{contact.email}</a>
-            <a href={contact.github} target="_blank" rel="noopener" class="footer__secondary-link">GitHub ↗</a>
+          </p>
+          <div class="site-footer__links">
+            <a href={`mailto:${contact.email}`} class="site-footer__email">{contact.email}</a>
+            <a href={contact.github} target="_blank" rel="noopener" class="site-footer__ext">GitHub ↗</a>
           </div>
         </div>
-
-        <div class="footer__bottom">© 2026 Bruce Kang</div>
+        <div class="site-footer__right">
+          &copy; {new Date().getFullYear()} Bruce Kang
+        </div>
       </div>
     </footer>
 
-    <script>
-      // ─── Scroll Reveal ───
-      const revealObs = new IntersectionObserver(
-        (entries) => entries.forEach((e) => { if (e.isIntersecting) e.target.classList.add('is-visible'); }),
-        { threshold: 0.06 }
-      );
-      document.querySelectorAll('[data-reveal]').forEach((el) => revealObs.observe(el));
+    <style>
+      /* ═══ Unified Site Header ═══ */
+      .site-header {
+        position: sticky;
+        top: 0;
+        z-index: 50;
+        background: rgba(255,255,255,0.92);
+        backdrop-filter: blur(12px);
+        border-bottom: 1px solid #E5E7EB;
+      }
+      .dark .site-header {
+        background: rgba(16,26,46,0.92);
+        border-color: rgb(39 57 94);
+      }
+      .site-header__inner {
+        max-width: 1080px;
+        margin: 0 auto;
+        padding: 0 1.5rem;
+        height: 3.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+      .site-header__left {
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+      }
+      .site-header__brand {
+        font-size: 15px;
+        font-weight: 700;
+        color: #111827;
+        text-decoration: none;
+        letter-spacing: -0.02em;
+      }
+      .dark .site-header__brand { color: #E9F1FF; }
+      .site-nav {
+        display: flex;
+        align-items: center;
+        gap: 0.25rem;
+      }
+      .site-nav__link {
+        padding: 0.375rem 0.625rem;
+        font-size: 13px;
+        font-weight: 500;
+        color: #6B7280;
+        text-decoration: none;
+        border-radius: 6px;
+        transition: color 0.12s, background 0.12s;
+      }
+      .site-nav__link:hover { color: #111827; background: #F3F4F6; }
+      .site-nav__link.is-active { color: #111827; background: #F3F4F6; font-weight: 600; }
+      .dark .site-nav__link { color: rgb(129 146 173); }
+      .dark .site-nav__link:hover { color: #E9F1FF; background: rgb(23 38 66); }
+      .dark .site-nav__link.is-active { color: #E9F1FF; background: rgb(23 38 66); }
 
-      // ─── Language Toggle ───
-      const langBtn = document.getElementById('lang-toggle');
-      const html = document.documentElement;
-
-      function setLang(lang: string) {
-        if (lang === 'en') {
-          html.classList.add('lang-en');
-          html.setAttribute('lang', 'en');
-        } else {
-          html.classList.remove('lang-en');
-          html.setAttribute('lang', 'zh-CN');
-        }
-        if (langBtn) langBtn.textContent = lang === 'en' ? '中文' : 'EN';
-        localStorage.setItem('lang', lang);
+      .site-header__right {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
       }
 
-      // Init from saved preference
-      const saved = localStorage.getItem('lang') || 'zh';
-      setLang(saved);
+      /* Locale switch */
+      .locale-switch {
+        display: inline-flex;
+        align-items: center;
+        gap: 2px;
+        padding: 2px;
+        border-radius: 8px;
+        border: 1px solid #E5E7EB;
+        background: #F9FAFB;
+      }
+      .dark .locale-switch { border-color: rgb(39 57 94); background: rgb(16 26 46); }
+      .locale-btn {
+        min-width: 30px;
+        height: 26px;
+        padding: 0 8px;
+        border-radius: 6px;
+        font-size: 11px;
+        font-weight: 700;
+        color: #9CA3AF;
+        transition: color 0.12s, background 0.12s;
+        cursor: pointer;
+        border: none;
+        background: none;
+      }
+      .locale-btn.is-active {
+        color: #111827;
+        background: #FFFFFF;
+        box-shadow: 0 1px 2px rgba(0,0,0,0.06);
+      }
+      .dark .locale-btn { color: rgb(110 132 173); }
+      .dark .locale-btn.is-active { color: #E9F1FF; background: rgb(31 52 90); }
 
-      langBtn?.addEventListener('click', () => {
-        const current = localStorage.getItem('lang') || 'zh';
-        setLang(current === 'zh' ? 'en' : 'zh');
-      });
+      .ctrl-btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 32px;
+        height: 32px;
+        border-radius: 6px;
+        color: #9CA3AF;
+        background: none;
+        border: none;
+        cursor: pointer;
+        transition: color 0.12s, background 0.12s;
+      }
+      .ctrl-btn:hover { color: #111827; background: #F3F4F6; }
+      .dark .ctrl-btn { color: rgb(110 132 173); }
+      .dark .ctrl-btn:hover { color: #E9F1FF; background: rgb(23 38 66); }
 
-      // ─── Mobile Nav Toggle ───
-      const navToggle = document.getElementById('nav-toggle');
-      const navLinks = document.getElementById('nav-links');
+      .mobile-only { display: none; }
 
-      navToggle?.addEventListener('click', () => {
-        navLinks?.classList.toggle('nav__links--open');
-        navToggle.classList.toggle('nav__toggle--active');
-      });
+      /* Lab sub-nav */
+      .lab-subnav {
+        border-top: 1px solid #F3F4F6;
+        display: none;
+      }
+      .dark .lab-subnav { border-color: rgb(39 57 94); }
+      .lab-subnav__inner {
+        max-width: 1080px;
+        margin: 0 auto;
+        padding: 0 1.5rem;
+        display: flex;
+        align-items: center;
+        gap: 0.25rem;
+        height: 2.5rem;
+      }
+      .lab-subnav__link {
+        padding: 0.25rem 0.5rem;
+        font-size: 12px;
+        font-weight: 600;
+        color: #9CA3AF;
+        text-decoration: none;
+        border-radius: 5px;
+        transition: color 0.12s, background 0.12s;
+      }
+      .lab-subnav__link:hover { color: #6B7280; }
+      .lab-subnav__link.is-active { color: #111827; background: #F3F4F6; }
+      .dark .lab-subnav__link { color: rgb(110 132 173); }
+      .dark .lab-subnav__link.is-active { color: #E9F1FF; background: rgb(23 38 66); }
 
-      // Close mobile nav on link click
-      navLinks?.querySelectorAll('a').forEach((link) => {
-        link.addEventListener('click', () => {
-          navLinks.classList.remove('nav__links--open');
-          navToggle?.classList.remove('nav__toggle--active');
+      /* Mobile nav */
+      .mobile-nav {
+        border-top: 1px solid #E5E7EB;
+        background: #FFFFFF;
+        padding: 0.5rem 1.5rem;
+      }
+      .dark .mobile-nav { background: rgb(16 26 46); border-color: rgb(39 57 94); }
+      .mobile-nav__link {
+        display: block;
+        padding: 0.5rem 0.25rem;
+        font-size: 14px;
+        font-weight: 500;
+        color: #4B5563;
+        text-decoration: none;
+      }
+      .mobile-nav__link:hover { color: #111827; }
+      .dark .mobile-nav__link { color: rgb(161 180 214); }
+      .mobile-nav__link--sub {
+        padding-left: 1rem;
+        font-size: 13px;
+        color: #9CA3AF;
+      }
+      .mobile-nav__divider {
+        height: 1px;
+        background: #E5E7EB;
+        margin: 0.375rem 0;
+      }
+      .dark .mobile-nav__divider { background: rgb(39 57 94); }
+
+      /* Footer */
+      .site-footer-unified {
+        border-top: 1px solid #E5E7EB;
+        margin-top: 4rem;
+      }
+      .page-lab .site-footer-unified { border-color: rgb(214 225 241); }
+      .page-postmem .site-footer-unified { border-color: #e0d5c5; }
+      .dark .site-footer-unified { border-color: rgb(39 57 94); }
+      .site-footer__inner {
+        max-width: 1080px;
+        margin: 0 auto;
+        padding: 2rem 1.5rem;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-end;
+        justify-content: space-between;
+        gap: 1.5rem;
+      }
+      .site-footer__desc {
+        font-size: 14px;
+        color: #6B7280;
+        max-width: 420px;
+        margin-bottom: 0.75rem;
+        line-height: 1.6;
+      }
+      .dark .site-footer__desc { color: rgb(129 146 173); }
+      .site-footer__links { display: flex; align-items: center; gap: 1rem; }
+      .site-footer__email {
+        font-size: 14px;
+        font-weight: 500;
+        color: #2563EB;
+        text-decoration: none;
+      }
+      .site-footer__email:hover { text-decoration: underline; text-underline-offset: 3px; }
+      .site-footer__ext {
+        font-size: 13px;
+        color: #9CA3AF;
+        text-decoration: none;
+      }
+      .site-footer__ext:hover { color: #6B7280; }
+      .site-footer__right {
+        font-size: 12px;
+        color: #9CA3AF;
+      }
+      .dark .site-footer__right { color: rgb(110 132 173); }
+
+      /* Responsive */
+      @media (min-width: 769px) {
+        .lab-subnav { display: block; }
+      }
+      @media (max-width: 768px) {
+        .site-nav { display: none; }
+        .mobile-only { display: flex; }
+        .site-footer__inner { flex-direction: column; align-items: flex-start; }
+      }
+    </style>
+
+    <script is:inline define:vars={{ i18nMessages: translations }}>
+      // ─── Unified i18n ───
+      var getNestedValue = function(obj, key) { return key.split('.').reduce(function(acc, part) { return acc && acc[part]; }, obj); };
+      var formatLocaleDate = function(value, locale) {
+        var date = new Date(value);
+        if (isNaN(date.valueOf())) return value;
+        return locale === 'en'
+          ? date.toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' })
+          : date.toLocaleDateString('zh-CN', { year: 'numeric', month: 'long', day: 'numeric' });
+      };
+      var applyLocale = function(locale) {
+        document.documentElement.lang = locale === 'en' ? 'en' : 'zh-CN';
+        document.documentElement.dataset.locale = locale;
+        localStorage.setItem('locale', locale);
+
+        // Also sync legacy 'lang' key for home page CSS toggle
+        localStorage.setItem('lang', locale);
+        if (locale === 'en') {
+          document.documentElement.classList.add('lang-en');
+        } else {
+          document.documentElement.classList.remove('lang-en');
+        }
+
+        // i18n key-based replacement (Growth Lab style)
+        document.querySelectorAll('[data-i18n]').forEach(function(node) {
+          var key = node.getAttribute('data-i18n');
+          var value = getNestedValue(i18nMessages[locale], key);
+          if (value) node.textContent = value;
+        });
+
+        // Copy-based replacement (Growth Lab style)
+        document.querySelectorAll('[data-copy-zh][data-copy-en]').forEach(function(node) {
+          node.textContent = locale === 'en' ? node.getAttribute('data-copy-en') : node.getAttribute('data-copy-zh');
+        });
+
+        // CSS-driven toggle (Landing Page style) — handled by .lang-en class above
+
+        // Locale-aware elements
+        document.querySelectorAll('[data-locale-date]').forEach(function(node) {
+          var rawDate = node.getAttribute('data-date');
+          if (rawDate) node.textContent = formatLocaleDate(rawDate, locale);
+        });
+        document.querySelectorAll('[data-locale-mins]').forEach(function(node) {
+          var mins = Number(node.getAttribute('data-mins') || '0');
+          node.textContent = locale === 'en' ? mins + ' min read' : mins + ' 分钟阅读';
+        });
+        document.querySelectorAll('[data-locale-count]').forEach(function(node) {
+          var count = Number(node.getAttribute('data-count') || '0');
+          node.textContent = locale === 'en' ? count + ' posts' : count + ' 篇内容';
+        });
+        document.querySelectorAll('[data-locale-tag-count]').forEach(function(node) {
+          var count = Number(node.getAttribute('data-count') || '0');
+          node.textContent = locale === 'en' ? count + ' tags' : count + ' 个标签';
+        });
+
+        // Update locale buttons
+        document.querySelectorAll('[data-set-locale]').forEach(function(button) {
+          var isActiveLocale = button.getAttribute('data-set-locale') === locale;
+          button.classList.toggle('is-active', isActiveLocale);
+          button.setAttribute('aria-pressed', isActiveLocale ? 'true' : 'false');
+        });
+      };
+
+      // Init
+      var initialLocale = localStorage.getItem('locale') || localStorage.getItem('lang') || 'zh';
+      if (initialLocale !== 'en') initialLocale = 'zh';
+      applyLocale(initialLocale);
+
+      // Theme toggle
+      var themeToggle = document.getElementById('theme-toggle');
+      if (themeToggle) {
+        themeToggle.addEventListener('click', function() {
+          document.documentElement.classList.toggle('dark');
+          localStorage.setItem('theme', document.documentElement.classList.contains('dark') ? 'dark' : 'light');
+        });
+      }
+
+      // Locale buttons
+      document.querySelectorAll('[data-set-locale]').forEach(function(button) {
+        button.addEventListener('click', function() {
+          var locale = button.getAttribute('data-set-locale');
+          if (locale === 'zh' || locale === 'en') applyLocale(locale);
         });
       });
+
+      // Mobile menu toggle
+      var menuToggle = document.getElementById('mobile-menu-toggle');
+      var mobileNav = document.getElementById('mobile-nav');
+      if (menuToggle && mobileNav) {
+        menuToggle.addEventListener('click', function() {
+          mobileNav.classList.toggle('hidden');
+        });
+      }
+
+      // Scroll reveal
+      var revealObs = new IntersectionObserver(
+        function(entries) { entries.forEach(function(e) { if (e.isIntersecting) e.target.classList.add('is-visible'); }); },
+        { threshold: 0.06 }
+      );
+      document.querySelectorAll('[data-reveal]').forEach(function(el) { revealObs.observe(el); });
     </script>
   </body>
 </html>

@@ -122,7 +122,7 @@ export const methodAssets = [
       en: 'SEO/GEO content system built from real user problems, turning product narrative into growth assets.',
     },
     status: { zh: '已发布', en: 'Published' },
-    href: 'https://bruce-kang1994.github.io/postmem-seo-preview/index.html',
+    href: '/postmem/',
   },
   {
     title: 'Bruce Growth Lab',
@@ -131,7 +131,7 @@ export const methodAssets = [
       en: 'An evolving growth research archive — frameworks, case studies, and operating judgments.',
     },
     status: { zh: '已发布', en: 'Published' },
-    href: 'https://bruce-kang1994.github.io/bruce-growth-lab/',
+    href: '/lab/',
   },
 ];
 

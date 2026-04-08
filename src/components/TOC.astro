@@ -1,0 +1,38 @@
+---
+interface Heading {
+  depth: number;
+  slug: string;
+  text: string;
+}
+
+interface Props {
+  headings: Heading[];
+}
+
+const { headings } = Astro.props;
+const toc = headings.filter((h) => h.depth >= 2 && h.depth <= 3);
+---
+
+{toc.length > 0 && (
+  <aside class="hidden xl:block sticky top-24 w-56 shrink-0 self-start">
+    <h4 class="section-kicker mb-4" data-i18n="article.toc">
+      目录
+    </h4>
+    <ul class="space-y-1 text-[13px] border-l border-[rgb(var(--border))]">
+      {toc.map((h) => (
+        <li>
+          <a
+            href={`#${h.slug}`}
+            class:list={[
+              "block py-1 text-[rgb(var(--text-3))] hover:text-[rgb(var(--text-1))] transition-colors",
+              "border-l border-transparent hover:border-[rgb(var(--accent))] -ml-px",
+              h.depth === 2 ? "pl-4" : "pl-8 text-[12px]",
+            ]}
+          >
+            {h.text}
+          </a>
+        </li>
+      ))}
+    </ul>
+  </aside>
+)}

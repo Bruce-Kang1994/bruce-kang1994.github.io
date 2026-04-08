@@ -1,0 +1,27 @@
+---
+import PostMemLayout from '../../layouts/PostMemLayout.astro';
+import { getCollection, render } from 'astro:content';
+
+export async function getStaticPaths() {
+  const articles = await getCollection('postmem');
+  return articles
+    .filter((a) => !a.data.draft)
+    .map((a) => ({
+      params: { slug: a.id },
+      props: { article: a },
+    }));
+}
+
+const { article } = Astro.props;
+const { Content } = await render(article);
+---
+
+<PostMemLayout
+  title={article.data.title}
+  description={article.data.description}
+  keywords={article.data.keywords}
+  datePublished={article.data.datePublished}
+  dateModified={article.data.dateModified}
+>
+  <Content />
+</PostMemLayout>

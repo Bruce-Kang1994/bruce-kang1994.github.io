@@ -1,0 +1,125 @@
+---
+import BaseLayout from './BaseLayout.astro';
+import '../styles/postmem.css';
+
+interface Props {
+  title: string;
+  description: string;
+  keywords?: string[];
+  datePublished?: Date;
+  dateModified?: Date;
+}
+
+const { title, description, keywords = [], datePublished, dateModified } = Astro.props;
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+
+const articleSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: title,
+  description: description,
+  url: canonicalURL.toString(),
+  author: { '@type': 'Organization', name: 'PostMem' },
+  publisher: { '@type': 'Organization', name: 'PostMem', url: 'https://www.postmem.com' },
+  ...(datePublished && { datePublished: datePublished.toISOString().split('T')[0] }),
+  ...(dateModified && { dateModified: dateModified.toISOString().split('T')[0] }),
+  ...(keywords.length > 0 && { keywords: keywords.join(', ') }),
+};
+---
+
+<BaseLayout title={title} description={description} section="postmem" structuredData={articleSchema}>
+  <div class="pm-article-wrap">
+    <header class="pm-article-header">
+      <a href="/postmem/" class="pm-back-link">
+        &larr; <span data-lang="zh">返回文章列表</span><span data-lang="en">PostMem SEO</span>
+      </a>
+      {keywords.length > 0 && (
+        <div class="pm-article-tags">
+          {keywords.slice(0, 3).map((k) => (
+            <span class="pm-badge">{k}</span>
+          ))}
+        </div>
+      )}
+      <h1 class="pm-article-title">{title}</h1>
+      <p class="pm-article-desc">{description}</p>
+      {datePublished && (
+        <div class="pm-article-meta">
+          <time datetime={datePublished.toISOString().split('T')[0]}
+            data-locale-date data-date={datePublished.toISOString()}>
+            {datePublished.toLocaleDateString('zh-CN', { year: 'numeric', month: 'long', day: 'numeric' })}
+          </time>
+          {dateModified && (
+            <span>
+              · <span data-lang="zh">更新于</span><span data-lang="en">Updated</span>{' '}
+              <time data-locale-date data-date={dateModified.toISOString()}>
+                {dateModified.toLocaleDateString('zh-CN', { year: 'numeric', month: 'short', day: 'numeric' })}
+              </time>
+            </span>
+          )}
+        </div>
+      )}
+    </header>
+
+    <article class="pm-prose">
+      <slot />
+    </article>
+
+    <footer class="pm-article-footer">
+      <a href="/postmem/" class="pm-back-link">
+        &larr; <span data-lang="zh">返回文章列表</span><span data-lang="en">Back to all articles</span>
+      </a>
+    </footer>
+  </div>
+
+  <style>
+    .pm-article-wrap {
+      max-width: 740px;
+      margin: 0 auto;
+      padding: 0 1.25rem;
+    }
+    .pm-article-header {
+      padding: 4rem 0 2rem;
+    }
+    .pm-back-link {
+      display: inline-block;
+      font-size: 0.8125rem;
+      font-weight: 500;
+      color: var(--pm-accent);
+      text-decoration: none;
+      margin-bottom: 1.5rem;
+    }
+    .pm-back-link:hover {
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+    .pm-article-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-bottom: 1rem;
+    }
+    .pm-article-title {
+      font-size: clamp(1.75rem, 4vw, 2.25rem);
+      font-weight: 700;
+      line-height: 1.2;
+      color: var(--pm-text-1);
+      margin-bottom: 0.75rem;
+    }
+    .pm-article-desc {
+      font-size: 1.0625rem;
+      color: var(--pm-text-2);
+      line-height: 1.7;
+      max-width: 600px;
+    }
+    .pm-article-meta {
+      margin-top: 1rem;
+      font-size: 0.8125rem;
+      color: var(--pm-text-3);
+    }
+    .pm-article-footer {
+      padding: 3rem 0 4rem;
+      border-top: 1px solid var(--pm-border);
+      margin-top: 3rem;
+    }
+  </style>
+</BaseLayout>

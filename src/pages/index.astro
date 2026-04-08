@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import '../styles/home.css';
 import {
   profile, metrics, endorsements, education, now,
   sideProjects, methodAssets, experiences, contact,
@@ -25,31 +26,9 @@ const pressItems = endorsements.filter(e => e.href);
 <BaseLayout
   title="Bruce Kang｜Product Manager · PostMem Co-Founder"
   description="5 年 B 端产品经验，现在全职做 PostMem。真实项目结果、公开方法论资产与独立产品实践。"
+  section="home"
   structuredData={structuredData}
 >
-
-  <!-- ══════════ NAV ══════════ -->
-  <nav class="nav">
-    <div class="nav__inner">
-      <a href="/" class="nav__name">Bruce Kang</a>
-      <button class="nav__toggle" id="nav-toggle" aria-label="Toggle menu">
-        <span></span><span></span>
-      </button>
-      <div class="nav__links" id="nav-links">
-        <a href="#now" class="nav__link">Now</a>
-        <a href="#work" class="nav__link">
-          <span data-lang="zh">作品</span><span data-lang="en">Work</span>
-        </a>
-        <a href="#experience" class="nav__link">
-          <span data-lang="zh">经历</span><span data-lang="en">Experience</span>
-        </a>
-        <a href="#contact" class="nav__cta">
-          <span data-lang="zh">联系</span><span data-lang="en">Contact</span>
-        </a>
-        <button class="lang-toggle" id="lang-toggle" aria-label="Switch language">EN</button>
-      </div>
-    </div>
-  </nav>
 
   <!-- ══════════ HERO ══════════ -->
   <section class="hero">
@@ -149,7 +128,7 @@ const pressItems = endorsements.filter(e => e.href);
 
       <div class="grid-2" data-reveal>
         {methodAssets.map((a) => (
-          <a href={a.href} target="_blank" rel="noopener" class="card">
+          <a href={a.href} class="card">
             <div class="card__header">
               <span class="card__title">{a.title}</span>
               <span class="badge badge--published">
@@ -194,7 +173,7 @@ const pressItems = endorsements.filter(e => e.href);
               {p.stack}
               {p.href && (
                 <span>
-                  <span style="margin: 0 0.375rem; color: var(--border);">|</span>
+                  <span style="margin: 0 0.375rem; color: var(--home-border);">|</span>
                   <a href={p.href} target="_blank" rel="noopener" class="card__link">
                     <span data-lang="zh">查看 ↗</span><span data-lang="en">View ↗</span>
                   </a>

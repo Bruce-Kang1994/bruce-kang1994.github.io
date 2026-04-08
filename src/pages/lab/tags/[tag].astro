@@ -1,0 +1,52 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import '../../../styles/lab.css';
+import ArticleCard from '../../../components/ArticleCard.astro';
+import { getCollection } from 'astro:content';
+import { slugify } from '../../../lib/utils';
+
+export async function getStaticPaths() {
+  const allPosts = (await getCollection('posts')).filter((p) => !p.data.draft);
+  const tagSet = new Set<string>();
+  allPosts.forEach((p) => p.data.tags.forEach((t) => tagSet.add(t)));
+  return [...tagSet].map((tag) => ({
+    params: { tag: slugify(tag) },
+    props: {
+      tag,
+      posts: allPosts.filter((p) => p.data.tags.includes(tag)).sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf()),
+    },
+  }));
+}
+
+const { tag, posts } = Astro.props;
+---
+
+<BaseLayout title={`#${tag}`} section="lab">
+  <div class="max-w-[1160px] mx-auto px-6">
+    <section class="py-14 sm:py-20">
+      <div class="grid gap-8 lg:grid-cols-[minmax(0,1fr)_20rem] lg:items-end">
+        <div>
+          <div class="eyebrow mb-5">Tag Archive</div>
+          <h1 class="display-serif text-[38px] sm:text-[52px] leading-[1.04] tracking-[-0.04em] mb-5">
+            <span class="text-[rgb(var(--accent))]">#</span>{tag}
+          </h1>
+          <p class="max-w-[42rem] text-[16px] sm:text-[17px] leading-relaxed text-[rgb(var(--text-2))]">
+            这个标签把同一个问题域下的相关文章串在一起。
+          </p>
+        </div>
+        <aside class="paper-card p-5 sm:p-6">
+          <div class="section-kicker mb-3">{posts.length} 篇文章</div>
+        </aside>
+      </div>
+    </section>
+    <div class="rule"></div>
+    <section class="py-10 pb-20">
+      <div class="paper-card px-6">
+        {posts.map((post: any) => (
+          <ArticleCard title={post.data.title} description={post.data.description} category={post.data.category}
+            tags={post.data.tags} date={post.data.date} slug={post.id} body={post.body || ''} />
+        ))}
+      </div>
+    </section>
+  </div>
+</BaseLayout>

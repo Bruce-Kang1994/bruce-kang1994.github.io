@@ -6,6 +6,14 @@ import sitemap from '@astrojs/sitemap';
 export default defineConfig({
   site: 'https://bruce-kang1994.github.io',
   integrations: [sitemap()],
+  markdown: {
+    shikiConfig: {
+      themes: {
+        light: 'github-light',
+        dark: 'github-dark',
+      },
+    },
+  },
   vite: {
     plugins: [tailwindcss()],
   },
