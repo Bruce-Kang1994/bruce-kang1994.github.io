@@ -2,16 +2,16 @@
 export const profile = {
   name: { zh: '康鑫', en: 'Kang Xin' },
   tagline: {
-    zh: '产品经理，独立做产品的人。',
-    en: 'Product manager. Indie builder.',
+    zh: 'B 端产品经理，也持续独立做产品。',
+    en: 'B2B product manager and indie builder.',
   },
   heroTitle: {
-    zh: '把判断、执行和方法论，\n沉淀成可被看见的长期资产。',
-    en: 'Turning judgment, execution\nand methodology into lasting assets.',
+    zh: '做过复杂业务系统，\n也持续把产品方法沉淀成公开资产。',
+    en: 'Building complex business systems,\nand turning product methods into public assets.',
   },
   bio: {
-    zh: '5 年 B 端产品经验，独立负责过 3 条产品线从 0 到 1。现在一边做产品工作，一边独立构建自己的产品、增长体系和方法论。相比"会什么工具"，我更关心怎么把问题拆对、把路径走通、把关键指标做出来，再把经验写成别人也能读懂和复用的结构。',
-    en: 'Five years of B2B product experience, having independently led three product lines from zero to one. Now I split my time between product work and building my own products, growth systems, and methodologies. Rather than listing tools I know, I focus on breaking down problems correctly, finding the right path, hitting key metrics, and turning experience into reusable systems.',
+    zh: '5 年 B 端产品经验，独立负责过 3 条产品线从 0 到 1。做过知识产权平台、装修监理服务、教育交易履约和银行合作类业务，也持续把产品、增长与 SEO 的实践沉淀成公开资产。相比“会什么工具”，我更关心的是：能不能把问题拆清楚，能不能把方案落到系统里，能不能把关键指标真正做出来。',
+    en: 'Five years of B2B product experience, having independently led three product lines from zero to one. I have worked on IP platforms, renovation supervision services, education transaction fulfillment, and banking partnership businesses, while turning product, growth, and SEO practice into public assets. More than listing tools, I care about whether a problem is framed correctly, whether the solution lands in the system, and whether the key metric actually moves.',
   },
   siteUrl: 'https://bruce-kang1994.github.io',
 };
@@ -44,7 +44,7 @@ export const metrics = [
 export const proofs = [
   {
     title: {
-      zh: '从业务诊断走到产品落地',
+      zh: '能从业务诊断走到产品落地',
       en: 'From diagnosis to delivery',
     },
     description: {
@@ -54,7 +54,7 @@ export const proofs = [
   },
   {
     title: {
-      zh: '有明确的结果意识',
+      zh: '有明确的结果意识，而不是只写方案',
       en: 'Results-driven mindset',
     },
     description: {
@@ -182,8 +182,8 @@ export const experiences = [
     company: { zh: '装小蜜', en: 'Zhuangxiaomi' },
     role: { zh: '产品经理', en: 'Product Manager' },
     description: {
-      zh: '聚焦监理业务服务完成率偏低问题，通过流失归因定位关键节点，落地双边能力建设方案。',
-      en: 'Focused on low service completion rates, identified churn points through attribution, shipped bilateral improvements.',
+      zh: '聚焦监理业务服务完成率偏低问题，通过流失归因定位关键节点，落地用户侧和监理侧双边能力建设方案。',
+      en: 'Focused on low service completion rates, identified churn points through attribution, and shipped bilateral improvements for both users and supervisors.',
     },
     highlights: {
       zh: [
