@@ -8,7 +8,7 @@ featured: false
 draft: false
 ---
 
-> **阅读定位**：这是增长方法论体系的**第四篇**，属于"实战案例"层。建议先读 [产品增长通用框架](/bruce-growth-lab/posts/growth-dimension-framework/)（理解 8 维度和 6 种增长杠杆）和 [业务拆解方法论](/bruce-growth-lab/posts/business-teardown-methodology/)（理解美团的多业务线结构）。本文展示：当维度组合是"高频+低决策+重供给+强网络效应"时，增长引擎长什么样。
+> **阅读定位**：这是增长方法论体系的**第四篇**，属于"实战案例"层。建议先读 [产品增长通用框架](/lab/posts/growth-dimension-framework/)（理解 8 维度和 6 种增长杠杆）和 [业务拆解方法论](/lab/posts/business-teardown-methodology/)（理解美团的多业务线结构）。本文展示：当维度组合是"高频+低决策+重供给+强网络效应"时，增长引擎长什么样。
 
 ---
 
@@ -35,7 +35,7 @@ draft: false
 | 月活 | 太粗，打开 App 看菜单不等于有需求 |
 | **WUCO** | ✓ 周维度平滑波动，"结账"确保真实需求，"独立"去重 |
 
-> 选北极星指标的逻辑，和 [产品增长通用框架](/bruce-growth-lab/posts/growth-dimension-framework/) Step 6（实验闭环）中"先定成功标准"的原则一致——你得先知道优化什么，才能设计实验。
+> 选北极星指标的逻辑，和 [产品增长通用框架](/lab/posts/growth-dimension-framework/) Step 6（实验闭环）中"先定成功标准"的原则一致——你得先知道优化什么，才能设计实验。
 
 ### WUCO 公式
 
@@ -83,7 +83,7 @@ WUCO = 周活跃用户数 × 人均周下单频次
 | 低频 + 低客单 | 聚合流量 | 特价频道、限时闪购 |
 | 低频 + 高客单 | 场景营销 | 节日推荐、聚餐专区 |
 
-**关键洞察**：美团先把**高频低客单**做到极致（快餐、奶茶），用这个品类养成用户"有事找美团"的习惯，然后用同一批用户去渗透其他象限。这和 [产品增长通用框架](/bruce-growth-lab/posts/growth-dimension-framework/) 中"使用频率"维度的分析完全对应——高频是留存的基石。
+**关键洞察**：美团先把**高频低客单**做到极致（快餐、奶茶），用这个品类养成用户"有事找美团"的习惯，然后用同一批用户去渗透其他象限。这和 [产品增长通用框架](/lab/posts/growth-dimension-framework/) 中"使用频率"维度的分析完全对应——高频是留存的基石。
 
 ---
 
@@ -109,7 +109,7 @@ WUCO = 周活跃用户数 × 人均周下单频次
 - 在多长时间窗口内完成？
 - 如何设计激励让用户达到这个数字？
 
-> 这和 [产品增长通用框架](/bruce-growth-lab/posts/growth-dimension-framework/) 中的"Aha Moment 速度"维度直接相关——魔法数字本质上是"让 Aha Moment 发生 N 次"。
+> 这和 [产品增长通用框架](/lab/posts/growth-dimension-framework/) 中的"Aha Moment 速度"维度直接相关——魔法数字本质上是"让 Aha Moment 发生 N 次"。
 
 ---
 
@@ -137,7 +137,7 @@ WUCO = 周活跃用户数 × 人均周下单频次
 
 **切换信号**：当新增用户成本开始高于留住老用户成本时，增长引擎应该从"获客"切到"留存"。
 
-> 对比 [ElevenLabs 增长策略拆解](/bruce-growth-lab/posts/elevenlabs-growth-teardown/)：Luke 明确说"PMF 前别做 paid"——他们的 0→1 是靠产品自传播（PLG），100 万用户后才招增长团队。不同维度的产品，0→1 的策略也完全不同。
+> 对比 [ElevenLabs 增长策略拆解](/lab/posts/elevenlabs-growth-teardown/)：Luke 明确说"PMF 前别做 paid"——他们的 0→1 是靠产品自传播（PLG），100 万用户后才招增长团队。不同维度的产品，0→1 的策略也完全不同。
 
 ---
 
@@ -162,7 +162,7 @@ WUCO = 周活跃用户数 × 人均周下单频次
 | B 级 | 10% 用户 | 经理 | 周度 |
 | C 级 | 1% 用户 | 个人 | 天级 |
 
-大部分增长实验应该是 B/C 级——小范围、快速、低风险。这就是 [产品增长通用框架](/bruce-growth-lab/posts/growth-dimension-framework/) Step 6（实验闭环）在组织层面的落地。
+大部分增长实验应该是 B/C 级——小范围、快速、低风险。这就是 [产品增长通用框架](/lab/posts/growth-dimension-framework/) Step 6（实验闭环）在组织层面的落地。
 
 ---
 
@@ -171,7 +171,7 @@ WUCO = 周活跃用户数 × 人均周下单频次
 | 启示 | 美团怎么做的 | 你可以怎么用 |
 |------|------------|-------------|
 | 指标拆到底 | WUCO → 用户数 × 频次 → 具体运营动作 | 你的北极星指标能拆成什么公式？ |
-| 策略从维度推导 | 高频+低决策+双边网络 → 补贴+供给 | 用 [8 维度](/bruce-growth-lab/posts/growth-dimension-framework/) 分析你的产品，推导你的杠杆 |
+| 策略从维度推导 | 高频+低决策+双边网络 → 补贴+供给 | 用 [8 维度](/lab/posts/growth-dimension-framework/) 分析你的产品，推导你的杠杆 |
 | 阶段决定打法 | 0→1 烧钱跑通，1→100 精细化运营 | 你现在在哪个阶段？ |
 
 > **增长不是一套固定打法，是一个根据产品特性和发展阶段持续调整的系统。**

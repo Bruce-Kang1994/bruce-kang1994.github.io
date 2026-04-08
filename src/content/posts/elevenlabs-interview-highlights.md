@@ -8,7 +8,7 @@ featured: false
 draft: false
 ---
 
-> **阅读定位**：这是增长方法论体系中"对话精华"分类的第一篇。建议先读 [ElevenLabs 增长策略拆解](/bruce-growth-lab/posts/elevenlabs-growth-teardown/)（我对 5 个策略的分析），本文是那篇的原材料——Luke Harries 在 20VC 播客中的原话提炼，附上我的适配笔记。
+> **阅读定位**：这是增长方法论体系中"对话精华"分类的第一篇。建议先读 [ElevenLabs 增长策略拆解](/lab/posts/elevenlabs-growth-teardown/)（我对 5 个策略的分析），本文是那篇的原材料——Luke Harries 在 20VC 播客中的原话提炼，附上我的适配笔记。
 
 ---
 
@@ -29,13 +29,13 @@ draft: false
 
 > 如果你还没有 PMF，付费营销不会起作用。你会花所有时间优化漏斗、转化、创意——这些都不重要。只管构建一个不可思议的产品。
 
-**我的笔记**：这和 [美团拆解](/bruce-growth-lab/posts/meituan-growth-levers/) 中"0→1 vs 1→100"的阶段论一致。美团在 0→1 阶段靠地推不靠广告，ElevenLabs 在 0→1 阶段靠产品自传播。**先有 PMF，再谈 paid。**
+**我的笔记**：这和 [美团拆解](/lab/posts/meituan-growth-levers/) 中"0→1 vs 1→100"的阶段论一致。美团在 0→1 阶段靠地推不靠广告，ElevenLabs 在 0→1 阶段靠产品自传播。**先有 PMF，再谈 paid。**
 
 ### 2. 精通文案写作是一切增长的基础
 
 > 给明天开始做增长的人的建议：精通 Copywriting。LinkedIn 广告、有机内容、博客、推文、落地页——一切都建立在文案之上。
 
-**我的笔记**：文案能力在 [SEO 七层框架](/bruce-growth-lab/posts/seo-seven-layer-framework/) 第 4 层（内容层）和 [GEO 实战指南](/bruce-growth-lab/posts/geo-ai-search-optimization/)（Evidence 三要素）中都是核心。不是"写得漂亮"，是"写得清楚、写得可信、写得让人行动"。
+**我的笔记**：文案能力在 [SEO 七层框架](/lab/posts/seo-seven-layer-framework/) 第 4 层（内容层）和 [GEO 实战指南](/lab/posts/geo-ai-search-optimization/)（Evidence 三要素）中都是核心。不是"写得漂亮"，是"写得清楚、写得可信、写得让人行动"。
 
 ### 3. LinkedIn 有机内容是最被低估的渠道
 
@@ -51,7 +51,7 @@ draft: false
 
 > 视频作为增长媒介被严重低估了。我们每次发布的基石营销资产就是视频——每次 T1 发布能获得 20-70 万次浏览。
 
-**我的笔记**：详细分析见 [ElevenLabs 增长策略拆解](/bruce-growth-lab/posts/elevenlabs-growth-teardown/) 的洞察 1。
+**我的笔记**：详细分析见 [ElevenLabs 增长策略拆解](/lab/posts/elevenlabs-growth-teardown/) 的洞察 1。
 
 ### 5. 前 30 秒决定一切
 
@@ -81,7 +81,7 @@ draft: false
 
 > 先招一个通才型增长营销人员——负责定位、信息到渠道测试。如果你只招产品营销，定位漂亮但没人知道；只招量化渠道人员，能推出去但没人转化。
 
-**我的笔记**：这个建议对早期团队太重要了。不要一上来就招"SEO 专家"或"Facebook 广告专家"——你还不知道哪个渠道有效。先招一个什么都能做的人，用 [产品增长通用框架](/bruce-growth-lab/posts/growth-dimension-framework/) 的六步执行测出有效渠道后，再招专人。
+**我的笔记**：这个建议对早期团队太重要了。不要一上来就招"SEO 专家"或"Facebook 广告专家"——你还不知道哪个渠道有效。先招一个什么都能做的人，用 [产品增长通用框架](/lab/posts/growth-dimension-framework/) 的六步执行测出有效渠道后，再招专人。
 
 ### 10. 第二个增长hire：增长工程师
 
@@ -103,13 +103,13 @@ draft: false
 
 > 博客型内容会逐渐死亡，因为 ChatGPT 可以直接回答。但工具型页面至少还能活 5 年——搜索引擎无法用 AI 生成交互页面。
 
-**我的笔记**：这直接影响了 [GEO 实战指南](/bruce-growth-lab/posts/geo-ai-search-optimization/) 的策略——博客仍然要写（现在还没死），但要加入 GEO 三要素让 AI 也能用；同时开始投资 Mini-Tool 类页面作为 SEO 护城河。
+**我的笔记**：这直接影响了 [GEO 实战指南](/lab/posts/geo-ai-search-optimization/) 的策略——博客仍然要写（现在还没死），但要加入 GEO 三要素让 AI 也能用；同时开始投资 Mini-Tool 类页面作为 SEO 护城河。
 
 ### 13. 不要暴露全部产品，免费给出小片段价值
 
 > 找到那些可以免费给出去的小片段价值，让人们尽快体验到"哇"的时刻。ElevenLabs 首页所有产品都在登录之外有可以体验的小文字框。
 
-**我的笔记**：这和 [业务拆解方法论](/bruce-growth-lab/posts/business-teardown-methodology/) 中"爆款 SaaS 差异 1：价值交付速度"完全对应——**让用户在注册前就感受到产品价值**。
+**我的笔记**：这和 [业务拆解方法论](/lab/posts/business-teardown-methodology/) 中"爆款 SaaS 差异 1：价值交付速度"完全对应——**让用户在注册前就感受到产品价值**。
 
 ---
 
@@ -123,7 +123,7 @@ draft: false
 
 > 如果你想建一家大公司，你希望人们因为你的使命加入你。最开始这来自创始人把自己推出去、保持真实。你的品牌核心需要是真实的——一旦建立就很难改变。
 
-**我的笔记**：这呼应了 [业务拆解方法论](/bruce-growth-lab/posts/business-teardown-methodology/) 中竞品分析维度 7（创始人故事/品牌叙事）的重要性。Remento 的创始人故事（9/11 失去家人）为它获得了 Shark Tank 的关注——**品牌叙事不是文案游戏，是信任信号。**
+**我的笔记**：这呼应了 [业务拆解方法论](/lab/posts/business-teardown-methodology/) 中竞品分析维度 7（创始人故事/品牌叙事）的重要性。Remento 的创始人故事（9/11 失去家人）为它获得了 Shark Tank 的关注——**品牌叙事不是文案游戏，是信任信号。**
 
 ### 16. 最令他印象深刻的增长策略：Bryan Johnson
 
@@ -135,7 +135,7 @@ draft: false
 
 ## 不能照搬的前提条件
 
-和 [ElevenLabs 增长策略拆解](/bruce-growth-lab/posts/elevenlabs-growth-teardown/) 中的分析一样，Luke 的这些观点建立在特定前提上：
+和 [ElevenLabs 增长策略拆解](/lab/posts/elevenlabs-growth-teardown/) 中的分析一样，Luke 的这些观点建立在特定前提上：
 
 | 前提 | 影响 |
 |------|------|
@@ -144,4 +144,4 @@ draft: false
 | 200 人团队 | "分片式增长"需要人手 |
 | 横向产品策略 | 不是常规做法，Luke 自己也不推荐别人学 |
 
-> **提炼观点，不抄作业。每个观点都要回到你自己的 [8 维度分析](/bruce-growth-lab/posts/growth-dimension-framework/)，判断它在你的维度组合下是否适用。**
+> **提炼观点，不抄作业。每个观点都要回到你自己的 [8 维度分析](/lab/posts/growth-dimension-framework/)，判断它在你的维度组合下是否适用。**

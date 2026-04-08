@@ -8,7 +8,7 @@ featured: false
 draft: false
 ---
 
-> **阅读定位**：这是 [产品增长通用框架](/bruce-growth-lab/posts/growth-dimension-framework/) Step 2（竞品拆解）的深度展开。通用框架里用一张表概括了竞品拆解，本文把它变成一个可执行的 7 维度分析系统。
+> **阅读定位**：这是 [产品增长通用框架](/lab/posts/growth-dimension-framework/) Step 2（竞品拆解）的深度展开。通用框架里用一张表概括了竞品拆解，本文把它变成一个可执行的 7 维度分析系统。
 
 ---
 
@@ -53,7 +53,7 @@ draft: false
 
 **关键发现示例**：StoryWorth 73% 的流量是直接访问，只有 16% 来自搜索——说明它的增长引擎是**品牌+口碑**，SEO 是辅助。而新入局的 Tell Mel 100% 靠 SEO+GEO，零广告支出。
 
-> 流量来源结构直接告诉你竞品的增长模式——回到 [产品增长通用框架](/bruce-growth-lab/posts/growth-dimension-framework/) 的 6 种驱动模式：StoryWorth 是"病毒驱动"（礼物飞轮），Tell Mel 是"营销驱动"（纯内容获客）。
+> 流量来源结构直接告诉你竞品的增长模式——回到 [产品增长通用框架](/lab/posts/growth-dimension-framework/) 的 6 种驱动模式：StoryWorth 是"病毒驱动"（礼物飞轮），Tell Mel 是"营销驱动"（纯内容获客）。
 
 ### 维度 3：短视频 / YouTube
 
@@ -66,7 +66,7 @@ draft: false
 
 **关键发现示例**：Remento 在 TikTok 有 **130 万粉丝**，远超其他所有竞品。但 StoryWorth 的 TikTok 粉丝只有 822，视频数为 0——而 #storyworth 话题下有大量**用户自发的开箱/送礼视频**。
 
-> **StoryWorth 的 TikTok 增长完全靠 UGC，不是官方投入。** 这说明它的产品天然具有"传播性"（参考 [通用框架](/bruce-growth-lab/posts/growth-dimension-framework/) 的第 7 个维度）。
+> **StoryWorth 的 TikTok 增长完全靠 UGC，不是官方投入。** 这说明它的产品天然具有"传播性"（参考 [通用框架](/lab/posts/growth-dimension-framework/) 的第 7 个维度）。
 
 ### 维度 4：邮件营销
 
@@ -157,9 +157,9 @@ PostMem 的发现：
 
 | 框架 | 和竞品分析的关系 |
 |------|----------------|
-| [产品增长通用框架](/bruce-growth-lab/posts/growth-dimension-framework/) | 先用 8 维度分析自己，再用本文的 7 维度分析竞品——两个框架交叉使用 |
-| [业务拆解方法论](/bruce-growth-lab/posts/business-teardown-methodology/) | 竞品分析的第一步是搞清楚"他在做什么业务"（四要素） |
-| [SEO 七层框架](/bruce-growth-lab/posts/seo-seven-layer-framework/) | 维度 2（SEO 打法）的详细操作指南 |
-| [GEO 实战指南](/bruce-growth-lab/posts/geo-ai-search-optimization/) | 看竞品的 AI 搜索存在感，评估 GEO 差距 |
+| [产品增长通用框架](/lab/posts/growth-dimension-framework/) | 先用 8 维度分析自己，再用本文的 7 维度分析竞品——两个框架交叉使用 |
+| [业务拆解方法论](/lab/posts/business-teardown-methodology/) | 竞品分析的第一步是搞清楚"他在做什么业务"（四要素） |
+| [SEO 七层框架](/lab/posts/seo-seven-layer-framework/) | 维度 2（SEO 打法）的详细操作指南 |
+| [GEO 实战指南](/lab/posts/geo-ai-search-optimization/) | 看竞品的 AI 搜索存在感，评估 GEO 差距 |
 
 > **竞品分析不是学术练习，是找到"他做得好的学，他漏的抢，他弱的打"。用固定框架做，不遗漏；交叉对比看，找空白。**

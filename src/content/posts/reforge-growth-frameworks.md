@@ -8,7 +8,7 @@ featured: true
 draft: false
 ---
 
-> **阅读定位**：这是增长方法论体系中最"硬核"的一篇。Brian Balfour 是 Reforge 的创始人，前 HubSpot VP Growth，增长领域最系统化的思想家。本文把他最核心的 5 个框架串成一条线。建议先读 [产品增长通用框架](/bruce-growth-lab/posts/growth-dimension-framework/)（理解基础维度分析），再来看 Balfour 的更深层体系。
+> **阅读定位**：这是增长方法论体系中最"硬核"的一篇。Brian Balfour 是 Reforge 的创始人，前 HubSpot VP Growth，增长领域最系统化的思想家。本文把他最核心的 5 个框架串成一条线。建议先读 [产品增长通用框架](/lab/posts/growth-dimension-framework/)（理解基础维度分析），再来看 Balfour 的更深层体系。
 
 ---
 
@@ -80,7 +80,7 @@ draft: false
 
 **PostMem 应用**：留存指标不应该是"月活用户"，而应该是"月活故事创建者"或"月活照片整理者"——具体到一个有意义的行为。
 
-> 频率策略的详细展开，见 [低频产品的留存策略](/bruce-growth-lab/posts/low-frequency-retention/)。那篇文章从行为心理学角度讲了怎么在低频场景下设计留存。
+> 频率策略的详细展开，见 [低频产品的留存策略](/lab/posts/low-frequency-retention/)。那篇文章从行为心理学角度讲了怎么在低频场景下设计留存。
 
 ---
 
@@ -125,7 +125,7 @@ draft: false
 | 中（$50-200/月） | 中 | 付费广告、合作 |
 | 高（$1000+/月） | 高 | 销售团队、企业营销 |
 
-**中间地带最危险**——ARPU 不够高，养不起销售团队；ARPU 不够低，用户对价格不够不敏感。这和 [AI 产品增长法则](/bruce-growth-lab/posts/ai-growth-principles/) 中"GTM 二选一"的观点完全对应。
+**中间地带最危险**——ARPU 不够高，养不起销售团队；ARPU 不够低，用户对价格不够不敏感。这和 [AI 产品增长法则](/lab/posts/ai-growth-principles/) 中"GTM 二选一"的观点完全对应。
 
 ### Fit 4：模型-市场 Fit
 
@@ -140,7 +140,7 @@ draft: false
 | Fit | 状态 | 判断 |
 |-----|------|------|
 | 市场-产品 | 在验证中 | 用户研究已有 19 人数据，需要更大样本 |
-| 产品-渠道 | 初步明确 | 内容+SEO+视频广告是主渠道（[SEO 七层框架](/bruce-growth-lab/posts/seo-seven-layer-framework/)） |
+| 产品-渠道 | 初步明确 | 内容+SEO+视频广告是主渠道（[SEO 七层框架](/lab/posts/seo-seven-layer-framework/)） |
 | 渠道-模型 | 待验证 | $5-15/月订阅 → 需要低 CAC 渠道 → SEO/内容/产品传播 |
 | 模型-市场 | 初步成立 | 4000 万+北美目标用户 × $99/年 → 市场足够大 |
 
@@ -168,7 +168,7 @@ draft: false
 | E（触点） | 中等——有邮件+推送 | 增加：周报邮件、日历事件触发、家庭成员通知 |
 | D（独特性） | 较高——"照片出发"是独特定位 | 持续强化"Photo-First"定位，不要泛化 |
 
-> ICED 和 [低频产品留存策略](/bruce-growth-lab/posts/low-frequency-retention/) 中的"三种频率模型"高度互补——ICED 告诉你问题在哪，那篇文章告诉你具体怎么解。
+> ICED 和 [低频产品留存策略](/lab/posts/low-frequency-retention/) 中的"三种频率模型"高度互补——ICED 告诉你问题在哪，那篇文章告诉你具体怎么解。
 
 ---
 

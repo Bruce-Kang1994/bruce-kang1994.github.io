@@ -8,7 +8,7 @@ featured: true
 draft: false
 ---
 
-> **阅读定位**：这是增长方法论体系的**第二篇**。[上一篇](/bruce-growth-lab/posts/growth-dimension-framework/)给了你分析产品的 8 维度工具，但维度分析有个前提——你得先知道自己在做什么业务。本文解决这个前提问题。
+> **阅读定位**：这是增长方法论体系的**第二篇**。[上一篇](/lab/posts/growth-dimension-framework/)给了你分析产品的 8 维度工具，但维度分析有个前提——你得先知道自己在做什么业务。本文解决这个前提问题。
 
 ---
 
@@ -69,7 +69,7 @@ draft: false
 
 用户不同、交付不同、赚钱方式不同、增长引擎不同。**四要素不同就是不同的业务**——即使看起来都是"吃饭"。
 
-> 把这个分析和 [产品增长通用框架](/bruce-growth-lab/posts/growth-dimension-framework/) 的 8 维度结合：外卖是"高频+低决策+重供给+强网络效应"，到店是"中频+低决策+轻供给+弱网络效应"。维度不同，增长打法完全不同。
+> 把这个分析和 [产品增长通用框架](/lab/posts/growth-dimension-framework/) 的 8 维度结合：外卖是"高频+低决策+重供给+强网络效应"，到店是"中频+低决策+轻供给+弱网络效应"。维度不同，增长打法完全不同。
 
 ### 美团的真正秘密：业务协同
 
@@ -81,7 +81,7 @@ draft: false
 
 每条新业务的边际成本极低。不是"什么都做不专注"，而是**每条新业务都让已有业务更值钱**。
 
-> 美团增长引擎的详细拆解，见 [美团外卖增长杠杆拆解](/bruce-growth-lab/posts/meituan-growth-levers/)。
+> 美团增长引擎的详细拆解，见 [美团外卖增长杠杆拆解](/lab/posts/meituan-growth-levers/)。
 
 ---
 
@@ -97,7 +97,7 @@ draft: false
 | Cursor（AI 编程） | 毫秒级补全 | 人工 review | 数小时 |
 | Lovable（AI 建站） | 几分钟出 App | 外包开发 | 数周 |
 
-**爆款 SaaS 让用户在秒到分钟内看到价值。** 这和 [产品增长通用框架](/bruce-growth-lab/posts/growth-dimension-framework/) 里的"Aha Moment 速度"维度直接对应——Aha 越快，激活率越高，口碑传播越快。
+**爆款 SaaS 让用户在秒到分钟内看到价值。** 这和 [产品增长通用框架](/lab/posts/growth-dimension-framework/) 里的"Aha Moment 速度"维度直接对应——Aha 越快，激活率越高，口碑传播越快。
 
 ### 差异 2：产品即传播
 
@@ -138,7 +138,7 @@ draft: false
 | 使用频率 | 项目制 | iCloud | 后台持续 + 智能触发 |
 | 增长 | 传统营销 | 所有爆款 SaaS | 产品即传播 |
 
-> ElevenLabs 的增长策略就是这些原则的具体应用：快速 Aha（首页即体验）+ 产品即传播（mini-tool SEO）+ 消息集中（推文线程法）。详见 [ElevenLabs 增长策略拆解](/bruce-growth-lab/posts/elevenlabs-growth-teardown/)。
+> ElevenLabs 的增长策略就是这些原则的具体应用：快速 Aha（首页即体验）+ 产品即传播（mini-tool SEO）+ 消息集中（推文线程法）。详见 [ElevenLabs 增长策略拆解](/lab/posts/elevenlabs-growth-teardown/)。
 
 ---
 
@@ -150,6 +150,6 @@ draft: false
 2. **用三层视角确定"在哪个层级竞争"** — 赛道、业务线、还是产品层
 3. **用 4 个差异检查"离爆款 SaaS 有多远"** — 价值交付速度、传播性、频率、买家=用户
 
-做完这三步，再回到 [产品增长通用框架](/bruce-growth-lab/posts/growth-dimension-framework/) 的 8 维度分析和六步执行，你对产品的理解会完全不同。
+做完这三步，再回到 [产品增长通用框架](/lab/posts/growth-dimension-framework/) 的 8 维度分析和六步执行，你对产品的理解会完全不同。
 
 > **业务拆解不是学术练习，是增长策略的起点。你连自己在做什么业务都说不清楚，增长策略就是空中楼阁。**

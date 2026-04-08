@@ -8,7 +8,7 @@ featured: false
 draft: false
 ---
 
-> **阅读定位**：这是 [产品增长通用框架](/bruce-growth-lab/posts/growth-dimension-framework/) 中"使用频率"维度的深度展开。通用框架告诉你"使用频率是 8 个维度之一"，本文回答一个更尖锐的问题：**如果你的产品天然低频，怎么做留存？**
+> **阅读定位**：这是 [产品增长通用框架](/lab/posts/growth-dimension-framework/) 中"使用频率"维度的深度展开。通用框架告诉你"使用频率是 8 个维度之一"，本文回答一个更尖锐的问题：**如果你的产品天然低频，怎么做留存？**
 
 ---
 
@@ -65,7 +65,7 @@ PostMem 的验证：PostMem 的受众是 40-65 岁。我们评估后认为 Strea
 **问题**：
 - 全年只有 5-8 个高峰期
 - 非高峰期用户觉得"没用" → 取消订阅
-- 和 [美团拆解](/bruce-growth-lab/posts/meituan-growth-levers/) 中 StoryWorth 的困境一样——"做完了就不用了"
+- 和 [美团拆解](/lab/posts/meituan-growth-levers/) 中 StoryWorth 的困境一样——"做完了就不用了"
 
 **不适合作为主模型**，但可以作为营销节奏（母亲节、圣诞节做促销）。
 
@@ -84,7 +84,7 @@ PostMem 的验证：PostMem 的受众是 40-65 岁。我们评估后认为 Strea
 
 > **续费理由从"效率"变成"关系"变成"不可替代"——越用越难离开。**
 
-和 [美团拆解](/bruce-growth-lab/posts/meituan-growth-levers/) 中的"魔法数字"类似：美团要让用户在第一周下满 3 单。低频产品的"魔法数字"不是操作次数，而是**数据量级**——当用户的 5000 张照片、10 个故事、8 位家人都在产品里时，迁移成本已经高到无法离开。
+和 [美团拆解](/lab/posts/meituan-growth-levers/) 中的"魔法数字"类似：美团要让用户在第一周下满 3 单。低频产品的"魔法数字"不是操作次数，而是**数据量级**——当用户的 5000 张照片、10 个故事、8 位家人都在产品里时，迁移成本已经高到无法离开。
 
 ---
 
@@ -174,7 +174,7 @@ PostMem 的验证：PostMem 的受众是 40-65 岁。我们评估后认为 Strea
 
 ## 核心结论
 
-回到 [产品增长通用框架](/bruce-growth-lab/posts/growth-dimension-framework/) 的 8 维度：
+回到 [产品增长通用框架](/lab/posts/growth-dimension-framework/) 的 8 维度：
 
 "使用频率"这个维度不是越高越好。关键在于**产品价值的感知是否持续**。
 

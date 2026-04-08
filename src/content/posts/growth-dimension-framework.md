@@ -56,7 +56,7 @@ draft: false
 | 传播性 | 中等 | 拼单有传播性 |
 | Aha Moment | 快 | 下单到收餐 30 分钟 |
 
-**维度组合推导**：高频 + 低决策成本 + 强网络效应 → **补贴养习惯 + 供给侧扩张**是最优策略。（详见 [美团增长杠杆拆解](/bruce-growth-lab/posts/meituan-growth-levers/)）
+**维度组合推导**：高频 + 低决策成本 + 强网络效应 → **补贴养习惯 + 供给侧扩张**是最优策略。（详见 [美团增长杠杆拆解](/lab/posts/meituan-growth-levers/)）
 
 **案例 B：一个低频高客单产品**
 
@@ -108,7 +108,7 @@ draft: false
 | 定价策略 | 如何定价、锚点在哪 |
 | 弱点 | 用户抱怨最多的是什么 |
 
-> 拆竞品最重要的产出不是"他做了什么"，而是"他为什么这样做"以及"他漏了什么"。更系统的拆解方法，见 [业务拆解方法论](/bruce-growth-lab/posts/business-teardown-methodology/)。
+> 拆竞品最重要的产出不是"他做了什么"，而是"他为什么这样做"以及"他漏了什么"。更系统的拆解方法，见 [业务拆解方法论](/lab/posts/business-teardown-methodology/)。
 
 ### Step 3: 定位 — 你是谁
 
@@ -133,13 +133,13 @@ draft: false
 
 **美团外卖**的答案是供给驱动 + 运营驱动。**案例 B** 的答案是营销驱动 + 产品驱动。
 
-> 这个六类模型在后续案例中会反复出现：美团的"供给+运营"见 [美团增长杠杆拆解](/bruce-growth-lab/posts/meituan-growth-levers/)，ElevenLabs 的"产品+营销"见 [ElevenLabs 增长策略拆解](/bruce-growth-lab/posts/elevenlabs-growth-teardown/)。
+> 这个六类模型在后续案例中会反复出现：美团的"供给+运营"见 [美团增长杠杆拆解](/lab/posts/meituan-growth-levers/)，ElevenLabs 的"产品+营销"见 [ElevenLabs 增长策略拆解](/lab/posts/elevenlabs-growth-teardown/)。
 
 ### Step 5: 策略执行 — 怎么做
 
 把增长杠杆翻译成具体执行计划：
 
-- **营销驱动**：渠道选择 → 内容策略 → 广告投放 → 着陆页优化。搜索渠道的系统做法见 [SEO 七层框架](/bruce-growth-lab/posts/seo-seven-layer-framework/)。
+- **营销驱动**：渠道选择 → 内容策略 → 广告投放 → 着陆页优化。搜索渠道的系统做法见 [SEO 七层框架](/lab/posts/seo-seven-layer-framework/)。
 - **产品驱动**：Onboarding 优化 → 分享机制 → 邀请机制
 - **供给驱动**：供给端获取 → 品质控制 → 密度管理
 
@@ -158,7 +158,7 @@ draft: false
 假设 → 设计实验 → 设定成功标准 → 执行 → 看数据 → 学到什么 → 下一个实验
 ```
 
-好的增长团队不是"策略牛"，是**实验速度快**。每周跑 2-3 个小实验，一个季度就积累了足够的数据来做大决策。美团的实验体系（S/A/B/C 四级分级）是这个思想的极致应用，详见 [美团增长杠杆拆解](/bruce-growth-lab/posts/meituan-growth-levers/)。
+好的增长团队不是"策略牛"，是**实验速度快**。每周跑 2-3 个小实验，一个季度就积累了足够的数据来做大决策。美团的实验体系（S/A/B/C 四级分级）是这个思想的极致应用，详见 [美团增长杠杆拆解](/lab/posts/meituan-growth-levers/)。
 
 ---
 
@@ -168,9 +168,9 @@ draft: false
 
 | 后续文章 | 用到了本文的什么 |
 |---------|----------------|
-| [业务拆解方法论](/bruce-growth-lab/posts/business-teardown-methodology/) | 在维度分析之前，先搞清楚"我在做什么业务" |
-| [SEO 七层框架](/bruce-growth-lab/posts/seo-seven-layer-framework/) | 把"营销驱动"这个杠杆在搜索渠道上的系统化展开 |
-| [美团增长杠杆拆解](/bruce-growth-lab/posts/meituan-growth-levers/) | 高频+低决策+双边网络 → 供给+运营驱动的实战案例 |
-| [ElevenLabs 增长策略拆解](/bruce-growth-lab/posts/elevenlabs-growth-teardown/) | 快Aha+PLG → 产品+营销驱动的实战案例 |
+| [业务拆解方法论](/lab/posts/business-teardown-methodology/) | 在维度分析之前，先搞清楚"我在做什么业务" |
+| [SEO 七层框架](/lab/posts/seo-seven-layer-framework/) | 把"营销驱动"这个杠杆在搜索渠道上的系统化展开 |
+| [美团增长杠杆拆解](/lab/posts/meituan-growth-levers/) | 高频+低决策+双边网络 → 供给+运营驱动的实战案例 |
+| [ElevenLabs 增长策略拆解](/lab/posts/elevenlabs-growth-teardown/) | 快Aha+PLG → 产品+营销驱动的实战案例 |
 
 > **先记住框架，再在实操中填血肉。框架记住了，细节遇到时自然会想起来。**
