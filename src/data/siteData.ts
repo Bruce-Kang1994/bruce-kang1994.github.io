@@ -17,7 +17,7 @@ export const profile = {
     zh: '我是 Bruce，正在全职做 PostMem——一个用老照片帮家庭留住故事的 AI 产品。从 0 到 1 的增长过程中，我把 SEO 体系、投放策略、用户研究沉淀成了公开的方法论。不是理论总结，是正在执行的东西。',
     en: "I'm Bruce, building PostMem full-time — an AI product that turns old family photos into family stories. Along the way, I'm writing down everything I learn about growth: SEO systems, ad strategies, user research. Not theory — things I'm actually doing.",
   },
-  siteUrl: 'https://bruce-kang1994.github.io',
+  siteUrl: 'https://kangxin.me',
 };
 
 // ─── Growth Metrics (current practice) ─────────────────

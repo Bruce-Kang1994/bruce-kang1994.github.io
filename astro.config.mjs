@@ -4,7 +4,7 @@ import tailwindcss from '@tailwindcss/vite';
 import sitemap from '@astrojs/sitemap';
 
 export default defineConfig({
-  site: 'https://bruce-kang1994.github.io',
+  site: 'https://kangxin.me',
   integrations: [sitemap()],
   markdown: {
     shikiConfig: {
