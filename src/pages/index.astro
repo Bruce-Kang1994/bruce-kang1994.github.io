@@ -2,15 +2,15 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import '../styles/home.css';
 import {
-  profile, metrics, endorsements, education, now,
-  sideProjects, methodAssets, experiences, contact,
+  profile, metrics, now, methodAssets,
+  experienceSummary, experiences, contact,
 } from '../data/siteData';
 
 const structuredData = [
   {
     '@context': 'https://schema.org', '@type': 'Person',
     name: '康鑫', alternateName: 'Bruce Kang',
-    url: profile.siteUrl, jobTitle: 'Product Manager',
+    url: profile.siteUrl, jobTitle: 'Growth Practitioner',
     description: profile.bio.en,
     sameAs: [contact.github],
     alumniOf: [
@@ -19,13 +19,11 @@ const structuredData = [
     ],
   },
 ];
-
-const pressItems = endorsements.filter(e => e.href);
 ---
 
 <BaseLayout
-  title="Bruce Kang｜Product Manager · PostMem Co-Founder"
-  description="5 年 B 端产品经验，现在全职做 PostMem。真实项目结果、公开方法论资产与独立产品实践。"
+  title="Bruce Kang｜Growth Practitioner · Building PostMem"
+  description="在真实产品上做增长，把过程写成方法论。SEO 体系、投放策略、用户研究——不是理论，是正在执行的东西。"
   section="home"
   structuredData={structuredData}
 >
@@ -33,13 +31,9 @@ const pressItems = endorsements.filter(e => e.href);
   <!-- ══════════ HERO ══════════ -->
   <section class="hero">
     <div class="wrap">
-      <div class="hero__name">Bruce Kang</div>
-      <div class="hero__roles">
-        <span class="hero__role">
-          <span data-lang="zh">产品经理</span><span data-lang="en">Product Manager</span>
-        </span>
-        <span class="hero__role-sep"></span>
-        <span class="hero__role">PostMem Co-Founder</span>
+      <div class="hero__label">
+        <span data-lang="zh">{profile.label.zh}</span>
+        <span data-lang="en">{profile.label.en}</span>
       </div>
       <h1 class="hero__title">
         <span data-lang="zh">{profile.heroTitle.zh}</span>
@@ -49,6 +43,17 @@ const pressItems = endorsements.filter(e => e.href);
         <span data-lang="zh">{profile.bio.zh}</span>
         <span data-lang="en">{profile.bio.en}</span>
       </p>
+
+      <div class="hero__ctas">
+        <a href="/lab/" class="hero__cta hero__cta--primary">
+          <span data-lang="zh">看方法论 →</span>
+          <span data-lang="en">Read the playbook →</span>
+        </a>
+        <a href="/postmem/" class="hero__cta hero__cta--secondary">
+          <span data-lang="zh">看 SEO 实战 →</span>
+          <span data-lang="en">See SEO in action →</span>
+        </a>
+      </div>
 
       <div class="metrics" data-reveal>
         {metrics.map((m) => (
@@ -66,36 +71,16 @@ const pressItems = endorsements.filter(e => e.href);
     </div>
   </section>
 
-  <!-- ══════════ PRESS ══════════ -->
-  <div class="press-bar">
-    <div class="wrap">
-      <div class="press-bar__inner">
-        <span class="press-bar__label">
-          <span data-lang="zh">媒体报道</span><span data-lang="en">Press</span>
-        </span>
-        {pressItems.map((e) => (
-          <a href={e.href} target="_blank" rel="noopener" class="press-chip">
-            <span data-lang="zh">{e.label.zh}</span><span data-lang="en">{e.label.en}</span> ↗
-          </a>
-        ))}
-      </div>
-    </div>
-  </div>
-
-  <!-- ══════════ NOW ══════════ -->
+  <!-- ══════════ NOW: GROWTH PRACTICE ══════════ -->
   <section id="now" class="sec">
     <div class="wrap">
-      <div class="sec__label">Now</div>
-      <div class="sec__title">
-        <span data-lang="zh">正在做的事</span><span data-lang="en">What I'm working on</span>
+      <div class="sec__label">
+        <span data-lang="zh">正在做的增长实践</span><span data-lang="en">Current Growth Practice</span>
       </div>
       <div class="now-card" data-reveal>
         <div class="now-card__header">
           <div>
-            <div class="now-card__title">
-              {now.title}
-              <span class="badge badge--live" style="margin-left: 0.5rem; vertical-align: middle;">{now.role.zh}</span>
-            </div>
+            <div class="now-card__title">{now.title}</div>
             <div class="now-card__tagline">
               <span data-lang="zh">{now.tagline.zh}</span><span data-lang="en">{now.tagline.en}</span>
             </div>
@@ -104,26 +89,31 @@ const pressItems = endorsements.filter(e => e.href);
             postmem.com ↗
           </a>
         </div>
-        <div class="now-card__body">
-          <span data-lang="zh">{now.description.zh}</span><span data-lang="en">{now.description.en}</span>
+        <div class="now-card__practices">
+          <div data-lang="zh">
+            {now.practices.zh.map((p) => (
+              <div class="now-card__practice">{p}</div>
+            ))}
+          </div>
+          <div data-lang="en">
+            {now.practices.en.map((p) => (
+              <div class="now-card__practice">{p}</div>
+            ))}
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ══════════ WORK ══════════ -->
+  <!-- ══════════ TWO ASSETS ══════════ -->
   <section id="work" class="sec sec--alt">
     <div class="wrap">
       <div class="sec__label">
-        <span data-lang="zh">作品</span><span data-lang="en">Work</span>
+        <span data-lang="zh">公开资产</span><span data-lang="en">Public Assets</span>
       </div>
-
       <div class="sec__title">
-        <span data-lang="zh">方法论资产</span><span data-lang="en">Methodology Assets</span>
-      </div>
-      <div class="sec__desc">
-        <span data-lang="zh">增长和 SEO 的实践沉淀，可直接查看的公开站点。</span>
-        <span data-lang="en">Growth and SEO practice distilled into public, browsable sites.</span>
+        <span data-lang="zh">Lab 是思考，SEO 是执行。同一个人，同一条线。</span>
+        <span data-lang="en">Lab is thinking, SEO is doing. Same person, same thread.</span>
       </div>
 
       <div class="grid-2" data-reveal>
@@ -131,9 +121,10 @@ const pressItems = endorsements.filter(e => e.href);
           <a href={a.href} class="card">
             <div class="card__header">
               <span class="card__title">{a.title}</span>
-              <span class="badge badge--published">
-                <span data-lang="zh">{a.status.zh}</span><span data-lang="en">{a.status.en}</span>
-              </span>
+              <span class="badge badge--published">{a.count}</span>
+            </div>
+            <div class="card__subtitle">
+              <span data-lang="zh">{a.subtitle.zh}</span><span data-lang="en">{a.subtitle.en}</span>
             </div>
             <div class="card__desc">
               <span data-lang="zh">{a.tagline.zh}</span><span data-lang="en">{a.tagline.en}</span>
@@ -146,65 +137,28 @@ const pressItems = endorsements.filter(e => e.href);
           </a>
         ))}
       </div>
-
-      <div style="margin-top: 2.5rem;">
-        <div class="sec__title">
-          <span data-lang="zh">独立项目</span><span data-lang="en">Side Projects</span>
-        </div>
-        <div class="sec__desc">
-          <span data-lang="zh">从想法到上线的完整实践。</span>
-          <span data-lang="en">End-to-end practice from idea to launch.</span>
-        </div>
-      </div>
-
-      <div class="grid-2" data-reveal>
-        {sideProjects.map((p) => (
-          <div class="card">
-            <div class="card__header">
-              <span class="card__title">{p.title}</span>
-              <span class={`badge badge--${p.statusType}`}>
-                <span data-lang="zh">{p.status.zh}</span><span data-lang="en">{p.status.en}</span>
-              </span>
-            </div>
-            <div class="card__desc">
-              <span data-lang="zh">{p.tagline.zh}</span><span data-lang="en">{p.tagline.en}</span>
-            </div>
-            <div class="card__meta">
-              {p.stack}
-              {p.href && (
-                <span>
-                  <span style="margin: 0 0.375rem; color: var(--home-border);">|</span>
-                  <a href={p.href} target="_blank" rel="noopener" class="card__link">
-                    <span data-lang="zh">查看 ↗</span><span data-lang="en">View ↗</span>
-                  </a>
-                </span>
-              )}
-            </div>
-          </div>
-        ))}
-      </div>
     </div>
   </section>
 
-  <!-- ══════════ EXPERIENCE ══════════ -->
+  <!-- ══════════ EXPERIENCE (collapsed) ══════════ -->
   <section id="experience" class="sec">
     <div class="wrap">
       <div class="sec__label">
-        <span data-lang="zh">经历</span><span data-lang="en">Experience</span>
+        <span data-lang="zh">背景</span><span data-lang="en">Background</span>
       </div>
-      <div class="sec__title">
-        <span data-lang="zh">职业背景</span><span data-lang="en">Career</span>
-      </div>
-      <div class="sec__desc">
-        <span data-lang="zh">5 年 B 端产品经验，独立负责过 3 条产品线从 0 到 1。</span>
-        <span data-lang="en">Five years of B2B product experience, having independently led three product lines from zero to one.</span>
-      </div>
+      <p class="exp-summary">
+        <span data-lang="zh">{experienceSummary.zh}</span>
+        <span data-lang="en">{experienceSummary.en}</span>
+      </p>
 
-      <div data-reveal>
-        {experiences.map((exp) => (
-          <div class="tl-item">
-            <div class="tl-period">{exp.period}</div>
-            <div>
+      <details class="exp-details" data-reveal>
+        <summary class="exp-toggle">
+          <span data-lang="zh">展开看详细经历 ↓</span>
+          <span data-lang="en">Show full experience ↓</span>
+        </summary>
+        <div class="exp-list">
+          {experiences.map((exp) => (
+            <div class="tl-item">
               <div>
                 <span class="tl-company">
                   <span data-lang="zh">{exp.company.zh}</span><span data-lang="en">{exp.company.en}</span>
@@ -212,6 +166,7 @@ const pressItems = endorsements.filter(e => e.href);
                 <span class="tl-role">
                   <span data-lang="zh">{exp.role.zh}</span><span data-lang="en">{exp.role.en}</span>
                 </span>
+                <span class="tl-period">{exp.period}</span>
               </div>
               <div class="tl-desc">
                 <span data-lang="zh">{exp.description.zh}</span><span data-lang="en">{exp.description.en}</span>
@@ -226,10 +181,19 @@ const pressItems = endorsements.filter(e => e.href);
                   <div class="tl-highlight">{h}</div>
                 ))}
               </div>
+              {'pressLinks' in exp && exp.pressLinks && (
+                <div class="tl-press">
+                  {exp.pressLinks.map((link) => (
+                    <a href={link.href} target="_blank" rel="noopener" class="tl-press__link">
+                      <span data-lang="zh">{link.label.zh}</span><span data-lang="en">{link.label.en}</span> ↗
+                    </a>
+                  ))}
+                </div>
+              )}
             </div>
-          </div>
-        ))}
-      </div>
+          ))}
+        </div>
+      </details>
     </div>
   </section>
 
