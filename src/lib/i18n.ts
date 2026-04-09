@@ -12,6 +12,7 @@ export const translations = {
       caseStudies: '案例拆解',
       dialogues: '对话精华',
       notes: '学习笔记',
+      journal: '增长日志',
       about: '关于',
       tags: '标签',
     },
@@ -35,6 +36,7 @@ export const translations = {
       'case-studies': { label: '案例拆解', desc: '真实产品的增长策略深度分析' },
       dialogues: { label: '对话精华', desc: '与增长从业者的访谈和讨论提炼' },
       notes: { label: '学习笔记', desc: '阅读、课程和日常思考的记录' },
+      journal: { label: '增长日志', desc: '在做 PostMem 过程中的真实判断、踩过的坑、改过的认知' },
     },
     footer: {
       copyright: '用方法论驱动增长',
@@ -58,6 +60,7 @@ export const translations = {
       caseStudies: 'Case Studies',
       dialogues: 'Dialogues',
       notes: 'Notes',
+      journal: 'Growth Journal',
       about: 'About',
       tags: 'Tags',
     },
@@ -81,6 +84,7 @@ export const translations = {
       'case-studies': { label: 'Case Studies', desc: 'Deep analysis of real product growth strategies' },
       dialogues: { label: 'Dialogues', desc: 'Insights from conversations with growth practitioners' },
       notes: { label: 'Notes', desc: 'Reading notes, course takeaways, and reflections' },
+      journal: { label: 'Growth Journal', desc: 'Real judgments, mistakes, and shifts while building PostMem' },
     },
     footer: {
       copyright: 'Growth driven by methodology',

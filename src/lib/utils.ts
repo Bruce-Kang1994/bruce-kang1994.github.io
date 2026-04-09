@@ -16,6 +16,7 @@ export const categoryColors: Record<string, { bg: string; text: string; border: 
   'case-studies': { bg: 'bg-cyan-50 dark:bg-cyan-500/10', text: 'text-cyan-700 dark:text-cyan-300', border: 'border-cyan-200 dark:border-cyan-400/20', icon: '02' },
   dialogues: { bg: 'bg-violet-50 dark:bg-violet-500/10', text: 'text-violet-700 dark:text-violet-300', border: 'border-violet-200 dark:border-violet-400/20', icon: '03' },
   notes: { bg: 'bg-emerald-50 dark:bg-emerald-500/10', text: 'text-emerald-700 dark:text-emerald-300', border: 'border-emerald-200 dark:border-emerald-400/20', icon: '04' },
+  journal: { bg: 'bg-amber-50 dark:bg-amber-500/10', text: 'text-amber-700 dark:text-amber-300', border: 'border-amber-200 dark:border-amber-400/20', icon: '05' },
 };
 
 export function slugify(text: string): string {

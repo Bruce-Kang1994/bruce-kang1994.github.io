@@ -130,6 +130,7 @@ const siteTitle = section === 'lab'
         {section === 'lab' && (
           <>
             <div class="mobile-nav__divider"></div>
+            <a href="/lab/journal/" class="mobile-nav__link mobile-nav__link--sub" data-i18n="nav.journal">日志</a>
             <a href="/lab/frameworks/" class="mobile-nav__link mobile-nav__link--sub" data-i18n="nav.frameworks">框架</a>
             <a href="/lab/case-studies/" class="mobile-nav__link mobile-nav__link--sub" data-i18n="nav.caseStudies">案例</a>
             <a href="/lab/dialogues/" class="mobile-nav__link mobile-nav__link--sub" data-i18n="nav.dialogues">对话</a>
@@ -143,6 +144,7 @@ const siteTitle = section === 'lab'
       {section === 'lab' && (
         <nav class="lab-subnav">
           <div class="lab-subnav__inner">
+            <a href="/lab/journal/" class:list={['lab-subnav__link', isActive('/lab/journal/') && 'is-active']} data-i18n="nav.journal">日志</a>
             <a href="/lab/frameworks/" class:list={['lab-subnav__link', isActive('/lab/frameworks/') && 'is-active']} data-i18n="nav.frameworks">框架</a>
             <a href="/lab/case-studies/" class:list={['lab-subnav__link', isActive('/lab/case-studies/') && 'is-active']} data-i18n="nav.caseStudies">案例</a>
             <a href="/lab/dialogues/" class:list={['lab-subnav__link', isActive('/lab/dialogues/') && 'is-active']} data-i18n="nav.dialogues">对话</a>
