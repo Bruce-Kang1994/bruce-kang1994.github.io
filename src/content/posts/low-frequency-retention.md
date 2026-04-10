@@ -66,7 +66,7 @@ PostMem 的验证：PostMem 的受众是 40-65 岁。我们评估后认为 Strea
 **问题**：
 - 全年只有 5-8 个高峰期
 - 非高峰期用户觉得"没用" → 取消订阅
-- 和 [美团拆解](/lab/posts/meituan-growth-levers/) 中 StoryWorth 的困境一样——"做完了就不用了"
+- 和 [美团拆解](/lab/posts/meituan-growth-levers/) 中 [StoryWorth](https://www.storyworth.com/) 的困境一样——"做完了就不用了"
 
 **不适合作为主模型**，但可以作为营销节奏（母亲节、圣诞节做促销）。
 

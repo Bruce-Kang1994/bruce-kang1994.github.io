@@ -15,7 +15,7 @@ dataVerified: 2026-04-10
 
 ## 先做维度分析
 
-在拆策略之前，先用 [8 维度](/lab/posts/growth-dimension-framework/) 看 ElevenLabs 长什么样：
+在拆策略之前，先用 [8 维度](/lab/posts/growth-dimension-framework/) 看 [ElevenLabs](https://elevenlabs.io/) 长什么样：
 
 | 维度 | ElevenLabs | 和美团对比 |
 |------|-----------|----------|

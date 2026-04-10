@@ -76,7 +76,7 @@ GEO（AI 搜索优化）和 SEO 不是两件事，是一件事的两个出口。
 
 用户已经在选方案了，只是还没选你。
 
-*"StoryWorth alternative" · "StoryWorth vs Remento" · "StoryWorth review"*
+*"StoryWorth alternative" · "StoryWorth vs [Remento](https://www.remento.co/)" · "StoryWorth review"*
 
 这类人不需要你教育他——他在选工具。你要做的是截住他，告诉他你比竞品好在哪。
 
@@ -197,7 +197,7 @@ GEO（AI 搜索优化）和 SEO 不是两件事，是一件事的两个出口。
 
 ### PostMem 能做的 3 件事
 
-**1. Reddit 渗透 — 最快见效**
+**1. [Reddit](https://www.reddit.com/) 渗透 — 最快见效**
 
 很多 PostMem 相关的关键词，Reddit 帖子本身就排在 Google 前几名（"StoryWorth alternative" 排第一的就是 Reddit）。Google 近两年明确加大了 Reddit 内容的排名权重。AI 搜索也大量引用 Reddit 讨论。
 

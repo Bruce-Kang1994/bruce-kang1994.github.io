@@ -191,7 +191,7 @@ Set it up for them. Upload the photos yourself. Show them the result — not the
 
 ### How much does this cost?
 
-The DIY approach is free. PostMem starts at $19/month ($228/year). StoryWorth and Remento are ~$99/year. Professional interview services start at $500+. For a [detailed StoryWorth alternative comparison](/storyworth-alternative), see our dedicated page.
+The DIY approach is free. PostMem starts at $19/month ($228/year). [StoryWorth](https://www.storyworth.com/) and [Remento](https://www.remento.co/) are ~$99/year. Professional interview services start at $500+. For a [detailed StoryWorth alternative comparison](/storyworth-alternative), see our dedicated page.
 
 ### What if I live far away from my parents?
 

@@ -48,25 +48,25 @@ And they're disappearing. Every year that passes without someone asking "Mom, wh
 
 **What it is:** Every week for a year, mom gets an email with a question like "What's your earliest memory?" She writes her answer, and after 52 weeks, all the responses are compiled into a hardcover book.
 
-**Why it's a great Mother's Day gift:** The printed book is genuinely beautiful — a family heirloom you can hold. StoryWorth has been doing this since 2013, with over 1 million books printed and 62,000+ Trustpilot reviews at 4.7 stars. It's the most established option.
+**Why it's a great Mother's Day gift:** The printed book is genuinely beautiful — a family heirloom you can hold. StoryWorth has been doing this since 2013, with over 1 million books printed and 62,000+ [Trustpilot](https://www.trustpilot.com/) reviews at 4.7 stars. It's the most established option.
 
-**The honest caveat:** 52 weeks of writing is a commitment. Reddit threads in r/StoryWorth and r/gifts describe enthusiastic starts that taper off by month three. If your mom loves writing, this is perfect. If she doesn't, the weekly prompts start feeling like homework.
+**The honest caveat:** 52 weeks of writing is a commitment. [Reddit](https://www.reddit.com/) threads in [r/StoryWorth](https://www.reddit.com/r/storyworth/) and r/gifts describe enthusiastic starts that taper off by month three. If your mom loves writing, this is perfect. If she doesn't, the weekly prompts start feeling like homework.
 
 **Best for:** Moms who enjoy writing and would love a weekly creative ritual.
 
-### 3. Remento — Speak Stories, Preserve Her Voice
+### 3. [Remento](https://www.remento.co/) — Speak Stories, Preserve Her Voice
 
 **$84-99/year** | [remento.co](https://remento.co)
 
 **What it is:** Instead of writing, mom records spoken answers to prompts. Remento's Speech-to-Story AI transcribes and edits them into written narratives. The final book includes QR codes that link to her original audio — so your children can hear Grandma's voice telling the story decades from now.
 
-**Why it's a great Mother's Day gift:** The voice preservation is genuinely meaningful. Backed by Mark Cuban on Shark Tank ($300K investment, March 2025), Remento has recorded 500,000+ stories. The QR-to-audio feature is unique in the market.
+**Why it's a great Mother's Day gift:** The voice preservation is genuinely meaningful. Backed by Mark Cuban on [Shark Tank](https://abc.com/shows/shark-tank) ($300K investment, March 2025), Remento has recorded 500,000+ stories. The QR-to-audio feature is unique in the market.
 
 **The honest caveat:** Requires scheduling recording sessions. If your family is spread across time zones, coordinating the logistics is the real barrier.
 
 **Best for:** Moms whose stories come alive when they talk (especially if preserving her voice matters to you).
 
-### 4. TellMel — An AI Calls Her Weekly
+### 4. [TellMel](https://www.tellmel.ai/) — An AI Calls Her Weekly
 
 **$26-229** | [tellmel.ai](https://tellmel.ai)
 
@@ -78,7 +78,7 @@ And they're disappearing. Every year that passes without someone asking "Mom, wh
 
 **Best for:** Non-tech-savvy moms who are great talkers but won't download an app.
 
-### 5. Storii — Phone Calls That Work on a Landline
+### 5. [Storii](https://storii.com/) — Phone Calls That Work on a Landline
 
 **~$119** | [storii.com](https://storii.com)
 
@@ -88,7 +88,7 @@ And they're disappearing. Every year that passes without someone asking "Mom, wh
 
 **Best for:** Grandmothers who don't use smartphones but will happily answer a phone call.
 
-### 6. StoryKeeper — AI + Human Editors
+### 6. [StoryKeeper](https://www.storykeeper.com/) — AI + Human Editors
 
 **$89-99 one-time** | [storykeeper.com](https://storykeeper.com)
 

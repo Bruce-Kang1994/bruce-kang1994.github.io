@@ -97,7 +97,7 @@ If you're evaluating StoryWorth specifically, see our detailed comparison: [Stor
 
 ### Method 2: Speaking
 
-**How it works:** The storyteller records spoken memories — either in response to app-based prompts (Remento, Storii) or in conversation with a family member.
+**How it works:** The storyteller records spoken memories — either in response to app-based prompts ([Remento](https://www.remento.co/), [Storii](https://storii.com/)) or in conversation with a family member.
 
 **Best for:** Families where the storyteller is a natural talker who'd rather speak than type.
 
@@ -251,7 +251,7 @@ Still unsure? Find your family below:
 | **Remento** | Speaking | ~$99/year | Talkers who want voice recordings + QR audio in a printed book | People uncomfortable being recorded; families wanting photo-first approach |
 | **PostMem** | Photos | From $19/month | Photo-rich families who want stories without scheduled homework; AI identifies groupings and asks follow-up questions | Families with very few photos; those wanting a pure writing experience |
 | **Storii** | Speaking (phone) | ~$79/year | Non-tech-savvy grandparents who will answer a phone call | Younger family members; anyone who prefers text over voice |
-| **FamilySearch** | Mixed | Free | Genealogy enthusiasts building family trees with historical records | Families focused on personal stories rather than genealogical data |
+| **[FamilySearch](https://www.familysearch.org/)** | Mixed | Free | Genealogy enthusiasts building family trees with historical records | Families focused on personal stories rather than genealogical data |
 | **No Story Lost** | Video | $500+ | Families who want professional-quality video interviews as heirlooms | Budget-conscious families; camera-shy storytellers |
 
 For a detailed breakdown of features, pricing, and real user experiences, read our [9 Best Family Story Preservation Tools in 2026](/blog/best-family-story-tools-2026).

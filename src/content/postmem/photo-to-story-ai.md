@@ -223,7 +223,7 @@ We're building in the open and actively developing based on user feedback. Early
 - **StoryWorth** captures stories through writing prompts. Starts from a blank page.
 - **PostMem** starts with your photos. AI asks questions. You tell the stories.
 
-For a detailed side-by-side comparison, see [StoryWorth vs. Remento vs. PostMem](/storyworth-vs-remento-vs-postmem).
+For a detailed side-by-side comparison, see [StoryWorth vs. [Remento](https://www.remento.co/) vs. PostMem](/storyworth-vs-remento-vs-postmem).
 
 ---
 

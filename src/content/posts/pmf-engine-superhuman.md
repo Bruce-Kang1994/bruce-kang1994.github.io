@@ -26,7 +26,7 @@ dataVerified: 2026-04-10
 
 ---
 
-## Sean Ellis 的 40% 基准线
+## [Sean Ellis](https://en.wikipedia.org/wiki/Sean_Ellis_(entrepreneur)) 的 40% 基准线
 
 Sean Ellis（Dropbox、LogMeIn 早期增长负责人）发现了一个预测性极强的指标：
 
@@ -46,7 +46,7 @@ Ellis 测试了大量创业公司后发现：低于 40% 的公司几乎都在苦
 
 ## 四个问题
 
-Rahul Vohra（Superhuman CEO）在 Ellis 的基础上，设计了一套完整的 4 问调查：
+[Rahul Vohra](https://review.firstround.com/how-superhuman-built-an-engine-to-find-product-market-fit/)（[Superhuman](https://superhuman.com/) CEO）在 Ellis 的基础上，设计了一套完整的 4 问调查：
 
 ### 问题 1："如果明天不能再用 [产品]，你会有什么感受？"
 

@@ -11,7 +11,7 @@ dateModified: 2026-03-25
 draft: false
 ---
 
-# StoryWorth vs Remento vs PostMem: Which Family Story App Is Right for You?
+# StoryWorth vs [Remento](https://www.remento.co/) vs PostMem: Which Family Story App Is Right for You?
 
 > **TL;DR**: Three different approaches to preserving family stories — writing, speaking, or photos. An honest comparison to help you choose.
 
@@ -35,7 +35,7 @@ We built PostMem, so we have a bias. We'll be transparent about it throughout. W
 
 ## How We Compared These Tools
 
-We signed up for or tested free/trial versions of each tool. Pricing was verified from official websites as of March 2026. User experience observations are based on our own testing and publicly available user reviews from Reddit, Trustpilot, and app store listings. We built PostMem — so take our perspective on our own product with appropriate skepticism.
+We signed up for or tested free/trial versions of each tool. Pricing was verified from official websites as of March 2026. User experience observations are based on our own testing and publicly available user reviews from [Reddit](https://www.reddit.com/), [Trustpilot](https://www.trustpilot.com/), and app store listings. We built PostMem — so take our perspective on our own product with appropriate skepticism.
 
 Where we cite user sentiment (e.g., "writing fatigue" or "dropout rates"), we link to the specific source. Where no independent data exists, we say so.
 
@@ -80,7 +80,7 @@ Families where the storyteller enjoys writing. Your mom journals every day. Your
 
 ### Tradeoffs
 
-- **Writing fatigue.** The first few weeks feel exciting. By week 15, the weekly email can start feeling like homework. Reddit threads in r/Genealogy and r/GiftIdeas describe mid-year dropout — resulting in books with rich early chapters and thin later ones.[^5]
+- **Writing fatigue.** The first few weeks feel exciting. By week 15, the weekly email can start feeling like homework. Reddit threads in [r/Genealogy](https://www.reddit.com/r/Genealogy/) and r/GiftIdeas describe mid-year dropout — resulting in books with rich early chapters and thin later ones.[^5]
 - **Starts from a blank page.** There's no visual trigger to spark memories. The question "What was your favorite family vacation?" requires the writer to retrieve, organize, and articulate a memory from scratch.
 - **One-year commitment.** The project has a 52-week arc. If someone stops at week 20, they have 20 disconnected answers — not a coherent narrative.
 
@@ -256,7 +256,7 @@ All three tools require basic smartphone or computer skills. StoryWorth is email
 
 [^4]: PostMem pricing — Verified from [postmem.com](https://www.postmem.com) as of March 2026. Starting at $19/month.
 
-[^5]: Reddit user discussions on StoryWorth completion — Threads in r/Genealogy, r/AgingParents, and r/GiftIdeas (2023-2026) describe mid-year writing fatigue and incomplete books. These are anecdotal reports, not systematic data.
+[^5]: Reddit user discussions on StoryWorth completion — Threads in r/Genealogy, [r/AgingParents](https://www.reddit.com/r/AgingParents/), and r/GiftIdeas (2023-2026) describe mid-year writing fatigue and incomplete books. These are anecdotal reports, not systematic data.
 
 [^6]: Trustpilot reviews — StoryWorth and Remento user reviews referenced for general satisfaction signals. Individual reviews reflect personal experiences and may not be representative.
 

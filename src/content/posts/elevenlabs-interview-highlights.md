@@ -9,7 +9,7 @@ draft: false
 dataVerified: 2026-04-10
 ---
 
-> **阅读定位**：这是增长方法论体系中"对话精华"分类的第一篇。建议先读 [ElevenLabs 增长策略拆解](/lab/posts/elevenlabs-growth-teardown/)（我对 5 个策略的分析），本文是那篇的原材料——Luke Harries 在 20VC 播客中的原话提炼，附上我的适配笔记。
+> **阅读定位**：这是增长方法论体系中"对话精华"分类的第一篇。建议先读 [ElevenLabs 增长策略拆解](/lab/posts/elevenlabs-growth-teardown/)（我对 5 个策略的分析），本文是那篇的原材料——[Luke Harries](https://www.linkedin.com/in/lukeharries/) 在 [20VC](https://www.20vc.com/) 播客中的原话提炼，附上我的适配笔记。
 
 ---
 

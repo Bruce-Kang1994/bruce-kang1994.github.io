@@ -9,7 +9,7 @@ draft: false
 dataVerified: 2026-04-10
 ---
 
-> **阅读定位**：这是"对话精华"分类的第二篇。来源是 Adaline Labs 的一篇圆桌讨论（Growth And Retention In An AI-first World），四位嘉宾分别来自 Reforge（Brian Balfour）、Superhuman（Gaurav Vohra）、Craft Ventures（Aaron Cort）和 Cognition（Bryce Hunt）。原文 11 个观点，我筛掉了 4 个正确但表面的，留下 7 个真正能用的。
+> **阅读定位**：这是"对话精华"分类的第二篇。来源是 Adaline Labs 的一篇圆桌讨论（Growth And Retention In An AI-first World），四位嘉宾分别来自 Reforge（[Brian Balfour](https://brianbalfour.com/)）、[Superhuman](https://superhuman.com/)（Gaurav Vohra）、Craft Ventures（Aaron Cort）和 Cognition（Bryce Hunt）。原文 11 个观点，我筛掉了 4 个正确但表面的，留下 7 个真正能用的。
 
 ---
 

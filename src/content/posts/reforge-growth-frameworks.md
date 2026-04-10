@@ -9,7 +9,7 @@ draft: false
 dataVerified: 2026-04-10
 ---
 
-> **阅读定位**：这是增长方法论体系中最"硬核"的一篇。Brian Balfour 是 Reforge 的创始人，前 HubSpot VP Growth，增长领域最系统化的思想家。本文把他最核心的 5 个框架串成一条线。建议先读 [产品增长通用框架](/lab/posts/growth-dimension-framework/)（理解基础维度分析），再来看 Balfour 的更深层体系。
+> **阅读定位**：这是增长方法论体系中最"硬核"的一篇。[Brian Balfour](https://brianbalfour.com/) 是 [Reforge](https://www.reforge.com/) 的创始人，前 HubSpot VP Growth，增长领域最系统化的思想家。本文把他最核心的 5 个框架串成一条线。建议先读 [产品增长通用框架](/lab/posts/growth-dimension-framework/)（理解基础维度分析），再来看 Balfour 的更深层体系。
 
 ---
 

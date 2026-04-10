@@ -22,7 +22,7 @@ draft: false
 
 Your mother has 47,000 photos on her phone. She has zero memoirs. She has been meaning to "do something" with those photos for years.
 
-Meanwhile, every family storytelling tool on the market asks her to do one of these things: write answers to weekly prompts (StoryWorth), record her voice in scheduled sessions (Remento), answer AI phone calls (TellMel), or chat with an AI interviewer (StoriedLife, Memoir.bot, Autobiographer). All of them start from scratch — a blank page, a microphone, a ringing phone.
+Meanwhile, every family storytelling tool on the market asks her to do one of these things: write answers to weekly prompts (StoryWorth), record her voice in scheduled sessions ([Remento](https://www.remento.co/)), answer AI phone calls ([TellMel](https://www.tellmel.ai/)), or chat with an AI interviewer (StoriedLife, Memoir.bot, Autobiographer). All of them start from scratch — a blank page, a microphone, a ringing phone.
 
 None of them start with the photos she already has.
 
@@ -37,9 +37,9 @@ We [researched 21 family story preservation tools](/postmem/best-family-story-to
 | Input Approach | Tools | Count |
 |----------------|-------|-------|
 | AI voice conversation | StoriedLife, Autobiographer, Memoir.bot, Legacium, Tayle | 5 |
-| AI phone calls | TellMel, Storii, Memorygram | 3 |
+| AI phone calls | TellMel, [Storii](https://storii.com/), Memorygram | 3 |
 | WhatsApp chat | Memoirji | 1 |
-| AI text interview | StoryKeeper, KindredTales, Journtell | 3 |
+| AI text interview | [StoryKeeper](https://www.storykeeper.com/), KindredTales, Journtell | 3 |
 | Email prompts to written replies | StoryWorth, My Life in a Book, Meminto, Life Story AI | 4 |
 | Text questionnaire | A Life Untold, Memowrite | 2 |
 | Professional human interview | Story Terrace | 1 |
@@ -47,7 +47,7 @@ We [researched 21 family story preservation tools](/postmem/best-family-story-to
 | Video recording | Viography | 1 |
 | **Existing photo library** | **None** | **0** |
 
-This is not cherry-picked. These are all the dedicated family story/memoir tools we could identify through Reddit user recommendations, AI search results, app store listings, and competitor research. The pattern is absolute: the entire category assumes stories start with questions.
+This is not cherry-picked. These are all the dedicated family story/memoir tools we could identify through [Reddit](https://www.reddit.com/) user recommendations, AI search results, app store listings, and competitor research. The pattern is absolute: the entire category assumes stories start with questions.
 
 Why does this matter? Because cognitive science suggests the assumption is wrong.
 
@@ -71,7 +71,7 @@ Research by Dorthe Berntsen and David Rubin (*Psychology and Aging*, 2002) confi
 
 ## The Completion Problem: Why Most Memoir Projects Fail
 
-StoryWorth, the category leader with 1M+ books printed, asks users to write one answer per week for 52 weeks. Reddit threads in r/StoryWorth, r/gifts, and r/AgingParents consistently describe a pattern: enthusiastic starts that taper off by month three. "Homework" is the word users reach for most often.
+StoryWorth, the category leader with 1M+ books printed, asks users to write one answer per week for 52 weeks. Reddit threads in [r/StoryWorth](https://www.reddit.com/r/storyworth/), r/gifts, and [r/AgingParents](https://www.reddit.com/r/AgingParents/) consistently describe a pattern: enthusiastic starts that taper off by month three. "Homework" is the word users reach for most often.
 
 This isn't a StoryWorth-specific problem. It's a behavioral science problem.
 

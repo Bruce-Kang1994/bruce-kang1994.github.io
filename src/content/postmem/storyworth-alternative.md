@@ -22,9 +22,9 @@ StoryWorth is a beautiful idea: answer one question a week, and after a year, yo
 But here's what actually happens for many families:
 
 - **The first few weeks go great.** Then life gets busy.
-- **The weekly prompts start feeling like homework.** In Reddit communities like r/RedditForGrownups, r/Gifts, and r/AgingParents, "homework" is the single most common word users reach for when describing the StoryWorth experience. One r/Gifts commenter wrote: "My mom answered 3 questions and then stopped. I felt guilty nagging her."
+- **The weekly prompts start feeling like homework.** In [Reddit](https://www.reddit.com/) communities like [r/RedditForGrownups](https://www.reddit.com/r/RedditForGrownups/), [r/Gifts](https://www.reddit.com/r/Gifts/), and [r/AgingParents](https://www.reddit.com/r/AgingParents/), "homework" is the single most common word users reach for when describing the StoryWorth experience. One r/Gifts commenter wrote: "My mom answered 3 questions and then stopped. I felt guilty nagging her."
 - **A year later, the book has gaps.** Some chapters are rich. Others are one sentence. Some are blank.
-- **You paid $99 for a book that's incomplete.** Multiple threads in r/StoryWorth and r/Gifts cite low completion as the top frustration. Trustpilot reviews echo the pattern — users love the concept but struggle with the execution.
+- **You paid $99 for a book that's incomplete.** Multiple threads in [r/StoryWorth](https://www.reddit.com/r/storyworth/) and r/Gifts cite low completion as the top frustration. [Trustpilot](https://www.trustpilot.com/) reviews echo the pattern — users love the concept but struggle with the execution.
 
 It's not anyone's fault. Writing is hard. Sitting down every week to put memories into words is a commitment that most people — especially older parents — find exhausting.
 
@@ -34,11 +34,11 @@ It's not anyone's fault. Writing is hard. Sitting down every week to put memorie
 
 ## How We Compared
 
-We compared StoryWorth, Remento, and PostMem across pricing, workflow, output, and user experience. Here's how:
+We compared StoryWorth, [Remento](https://www.remento.co/), and PostMem across pricing, workflow, output, and user experience. Here's how:
 
 - **Pricing:** Pulled from each company's official website. Last verified March 2026.
 - **Features and workflow:** Based on hands-on testing of all three products.
-- **User feedback:** Sourced from Reddit (r/RedditForGrownups, r/Gifts, r/GiftIdeas, r/AgingParents, r/Genealogy), Trustpilot, and App Store reviews, 2023-2025.
+- **User feedback:** Sourced from Reddit (r/RedditForGrownups, r/Gifts, r/GiftIdeas, r/AgingParents, [r/Genealogy](https://www.reddit.com/r/Genealogy/)), Trustpilot, and App Store reviews, 2023-2025.
 - **First-party research:** PostMem conducted semi-structured interviews with 19 memory keepers (ages 38-67) in January-March 2025.
 
 **Disclosure:** We built PostMem. We've done our best to represent each product fairly, but you should know where we stand. We encourage you to try all three if you're deciding.

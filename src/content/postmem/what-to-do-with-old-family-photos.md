@@ -114,7 +114,7 @@ The approach matters more than the tool you use. For each photo (or group of pho
 
 The simplest version of this is a notes app or spreadsheet — one row per photo, a sentence or two of context. That alone puts you ahead of 97% of families.
 
-If you want more structure, voice memos work well: record your parent telling the story while looking at the photo, then transcribe later. Services like StoryWorth send weekly writing prompts. Remento does guided voice recording. AI tools like [PostMem](https://postmem.com) can help group related photos and prompt you with questions, so you're not staring at a blank page.
+If you want more structure, voice memos work well: record your parent telling the story while looking at the photo, then transcribe later. Services like [StoryWorth](https://www.storyworth.com/) send weekly writing prompts. [Remento](https://www.remento.co/) does guided voice recording. AI tools like [PostMem](https://postmem.com) can help group related photos and prompt you with questions, so you're not staring at a blank page.
 
 But honestly, the method matters less than doing it at all. Even a one-sentence caption — "Mom and Aunt Linda, Easter 1987, the year they both got the same dress by accident" — is infinitely better than nothing.
 

@@ -13,7 +13,7 @@ draft: false
 
 # 9 Best Tools to Preserve Family Stories in 2026 (Honest Comparison)
 
-> **TL;DR**: We tested 9 family story tools — from StoryWorth to FamilySearch. Here's what actually works, who each tool is best for, and what to watch out for.
+> **TL;DR**: We tested 9 family story tools — from StoryWorth to [FamilySearch](https://www.familysearch.org/). Here's what actually works, who each tool is best for, and what to watch out for.
 
 The best tool for preserving family stories depends on how your family communicates — some families write, some talk, some have 50,000 photos and no time for homework. We evaluated 9 tools across 6 dimensions to help you find the right fit. No tool is perfect for every family, and we'll tell you exactly where each one shines and where it falls short.
 
@@ -38,10 +38,10 @@ We assessed each tool across six dimensions:
 
 ### Our Testing Methodology
 
-We signed up for free trials or paid subscriptions for 7 of the 9 tools listed (StoryWorth, Remento, PostMem, Tell Mel, Storii, HereAfter AI, and FamilySearch Memories). For No Story Lost and Klokbox, we reviewed public materials, demo videos, and user testimonials — we did not purchase a session or subscription.
+We signed up for free trials or paid subscriptions for 7 of the 9 tools listed (StoryWorth, [Remento](https://www.remento.co/), PostMem, Tell Mel, [Storii](https://storii.com/), HereAfter AI, and FamilySearch Memories). For No Story Lost and Klokbox, we reviewed public materials, demo videos, and user testimonials — we did not purchase a session or subscription.
 
 - **Pricing** was verified from official websites in March 2026.
-- **User sentiment** was gathered from Reddit ([r/StoryWorth](https://www.reddit.com/r/StoryWorth/), [r/gifts](https://www.reddit.com/r/gifts/), [r/Genealogy](https://www.reddit.com/r/Genealogy/)), Trustpilot, and App Store / Google Play reviews.
+- **User sentiment** was gathered from [Reddit](https://www.reddit.com/) ([r/StoryWorth](https://www.reddit.com/r/StoryWorth/), [r/gifts](https://www.reddit.com/r/gifts/), [r/Genealogy](https://www.reddit.com/r/Genealogy/)), [Trustpilot](https://www.trustpilot.com/), and App Store / Google Play reviews.
 - **Feature details** were confirmed through hands-on use where possible.
 
 We did not receive compensation from any tool listed. We built PostMem — that's our bias, and we flag it explicitly in our review.
@@ -368,7 +368,7 @@ Pick the tool that matches how your family communicates. Try it with one story. 
 10. **Tell Mel** — Pricing verified from App Store listing, March 2026.
 11. **No Story Lost** — Reviewed from public materials and testimonials. [nostorylost.com](https://www.nostorylost.com), March 2026.
 12. **Klokbox** — Reviewed from public materials and testimonials, March 2026.
-13. **Reddit user reviews** — Sourced from r/StoryWorth, r/gifts, r/Genealogy, r/AgingParents, and r/RedditForGrownups (2023-2026).
+13. **Reddit user reviews** — Sourced from r/StoryWorth, r/gifts, r/Genealogy, [r/AgingParents](https://www.reddit.com/r/AgingParents/), and [r/RedditForGrownups](https://www.reddit.com/r/RedditForGrownups/) (2023-2026).
 14. **Trustpilot and app store reviews** — Referenced for user satisfaction data across listed tools (2023-2026).
 
 ---
