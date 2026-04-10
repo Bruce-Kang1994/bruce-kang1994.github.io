@@ -30,6 +30,7 @@ const structuredData = [
 
   <!-- ══════════ HERO ══════════ -->
   <section class="hero">
+    <div class="hero__aurora"></div>
     <div class="wrap">
       <div class="hero__label">
         <span data-lang="zh">{profile.label.zh}</span>
@@ -56,8 +57,8 @@ const structuredData = [
       </div>
 
       <div class="metrics" data-reveal>
-        {metrics.map((m) => (
-          <div class="metric">
+        {metrics.map((m, i) => (
+          <div class="metric" style={`--delay: ${i * 80}ms`}>
             <div class="metric__val">{m.value}</div>
             <div class="metric__label">
               <span data-lang="zh">{m.label.zh}</span><span data-lang="en">{m.label.en}</span>
@@ -117,8 +118,8 @@ const structuredData = [
       </div>
 
       <div class="grid-2" data-reveal>
-        {methodAssets.map((a) => (
-          <a href={a.href} class="card">
+        {methodAssets.map((a, i) => (
+          <a href={a.href} class="card" style={`--delay: ${i * 120}ms`}>
             <div class="card__header">
               <span class="card__title">{a.title}</span>
               <span class="badge badge--published">{a.count}</span>
@@ -196,5 +197,187 @@ const structuredData = [
       </details>
     </div>
   </section>
+
+  <!-- ══════════ GSAP Animations ══════════ -->
+  <script>
+    import gsap from 'gsap';
+    import { ScrollTrigger } from 'gsap/ScrollTrigger';
+    gsap.registerPlugin(ScrollTrigger);
+
+    // Respect reduced motion
+    const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (prefersReduced) {
+      document.querySelectorAll('.hero__label, .hero__title, .hero__bio, .hero__ctas')
+        .forEach(el => (el as HTMLElement).style.visibility = 'visible');
+    }
+
+    if (!prefersReduced) {
+      // ── Hero entrance timeline ──
+      const heroTl = gsap.timeline({ delay: 0.15 });
+
+      // Label: slide in from left with a blur
+      heroTl.fromTo('.hero__label',
+        { autoAlpha: 0, x: -30, filter: 'blur(8px)' },
+        { autoAlpha: 1, x: 0, filter: 'blur(0px)', duration: 0.6, ease: 'power3.out' }
+      );
+
+      // Title: split into words, each word pops in
+      const titleEl = document.querySelector('.hero__title');
+      if (titleEl) {
+        // Get all visible span[data-lang] children
+        const langSpans = titleEl.querySelectorAll('span[data-lang]');
+        langSpans.forEach(span => {
+          const text = span.textContent || '';
+          // Split by characters for Chinese, words for English
+          const lang = span.getAttribute('data-lang');
+          let parts: string[];
+          if (lang === 'en') {
+            parts = text.split(/(\s+)/); // preserve spaces
+          } else {
+            parts = text.split('');
+          }
+          span.innerHTML = parts.map(p =>
+            p.trim() === '' ? p : `<span class="char" style="display:inline-block">${p}</span>`
+          ).join('');
+        });
+
+        heroTl.fromTo('.hero__title .char',
+          { autoAlpha: 0, y: 40, rotateX: -90, filter: 'blur(6px)' },
+          {
+            autoAlpha: 1, y: 0, rotateX: 0, filter: 'blur(0px)',
+            duration: 0.5, stagger: 0.03, ease: 'back.out(1.7)'
+          },
+          '-=0.2'
+        );
+
+        // Make title visible (container)
+        heroTl.set('.hero__title', { visibility: 'visible' }, 0);
+      }
+
+      // Bio: fade up
+      heroTl.fromTo('.hero__bio',
+        { autoAlpha: 0, y: 20 },
+        { autoAlpha: 1, y: 0, duration: 0.6, ease: 'power2.out' },
+        '-=0.2'
+      );
+
+      // CTAs: pop in with scale bounce
+      heroTl.fromTo('.hero__cta',
+        { autoAlpha: 0, y: 20, scale: 0.8 },
+        {
+          autoAlpha: 1, y: 0, scale: 1,
+          duration: 0.5, stagger: 0.12, ease: 'back.out(2)'
+        },
+        '-=0.3'
+      );
+      // Make ctas container visible
+      heroTl.set('.hero__ctas', { visibility: 'visible' }, 0);
+
+      // ── Metrics: count-up numbers + stagger in ──
+      const metricsEl = document.querySelector('.metrics');
+      if (metricsEl) {
+        const metricItems = metricsEl.querySelectorAll('.metric');
+
+        ScrollTrigger.create({
+          trigger: metricsEl,
+          start: 'top 85%',
+          once: true,
+          onEnter: () => {
+            gsap.fromTo(metricItems,
+              { autoAlpha: 0, y: 30, scale: 0.9 },
+              {
+                autoAlpha: 1, y: 0, scale: 1,
+                duration: 0.5, stagger: 0.1, ease: 'back.out(1.4)'
+              }
+            );
+
+            // Animate numbers (count up effect)
+            metricItems.forEach(item => {
+              const valEl = item.querySelector('.metric__val');
+              if (!valEl) return;
+              const finalText = valEl.textContent || '';
+              const numMatch = finalText.match(/[\d.]+/);
+              if (!numMatch) return;
+
+              const finalNum = parseFloat(numMatch[0]);
+              const prefix = finalText.slice(0, finalText.indexOf(numMatch[0]));
+              const suffix = finalText.slice(finalText.indexOf(numMatch[0]) + numMatch[0].length);
+              const isFloat = numMatch[0].includes('.');
+              const decimals = isFloat ? (numMatch[0].split('.')[1] || '').length : 0;
+
+              const counter = { val: 0 };
+              gsap.to(counter, {
+                val: finalNum,
+                duration: 1.2,
+                delay: 0.3,
+                ease: 'power2.out',
+                onUpdate: () => {
+                  valEl.textContent = prefix + (isFloat ? counter.val.toFixed(decimals) : Math.round(counter.val).toString()) + suffix;
+                }
+              });
+            });
+          }
+        });
+      }
+
+      // ── Now card: slide in from bottom with rotation ──
+      gsap.fromTo('.now-card',
+        { autoAlpha: 0, y: 60, rotateX: -8 },
+        {
+          autoAlpha: 1, y: 0, rotateX: 0,
+          duration: 0.8, ease: 'power3.out',
+          scrollTrigger: { trigger: '.now-card', start: 'top 85%', once: true }
+        }
+      );
+
+      // ── Cards: stagger from alternate sides ──
+      const cards = document.querySelectorAll('.grid-2 .card');
+      cards.forEach((card, i) => {
+        const fromX = i % 2 === 0 ? -60 : 60;
+        gsap.fromTo(card,
+          { autoAlpha: 0, x: fromX, rotateY: i % 2 === 0 ? -10 : 10 },
+          {
+            autoAlpha: 1, x: 0, rotateY: 0,
+            duration: 0.7, ease: 'power3.out',
+            scrollTrigger: { trigger: card, start: 'top 88%', once: true },
+            delay: i * 0.15
+          }
+        );
+      });
+
+      // ── Experience section ──
+      gsap.fromTo('.exp-details',
+        { autoAlpha: 0, y: 40 },
+        {
+          autoAlpha: 1, y: 0,
+          duration: 0.6, ease: 'power2.out',
+          scrollTrigger: { trigger: '.exp-details', start: 'top 85%', once: true }
+        }
+      );
+
+      // ── Section labels: slide in from left ──
+      document.querySelectorAll('.sec__label').forEach(label => {
+        gsap.fromTo(label,
+          { autoAlpha: 0, x: -40 },
+          {
+            autoAlpha: 1, x: 0,
+            duration: 0.5, ease: 'power2.out',
+            scrollTrigger: { trigger: label, start: 'top 90%', once: true }
+          }
+        );
+      });
+
+      document.querySelectorAll('.sec__title').forEach(title => {
+        gsap.fromTo(title,
+          { autoAlpha: 0, y: 20 },
+          {
+            autoAlpha: 1, y: 0,
+            duration: 0.6, ease: 'power2.out',
+            scrollTrigger: { trigger: title, start: 'top 88%', once: true }
+          }
+        );
+      });
+    }
+  </script>
 
 </BaseLayout>

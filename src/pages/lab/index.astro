@@ -264,4 +264,155 @@ const leadReadMinutes = leadPost ? readingTime(leadPost.body || '') : 0;
       </div>
     </section>
   </div>
+  <!-- ══════════ GSAP Scroll Animations ══════════ -->
+  <script>
+    import gsap from 'gsap';
+    import { ScrollTrigger } from 'gsap/ScrollTrigger';
+    gsap.registerPlugin(ScrollTrigger);
+
+    const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    if (!prefersReduced) {
+      // ── Hero entrance ──
+      const heroTl = gsap.timeline({ delay: 0.1 });
+
+      heroTl.fromTo('.eyebrow',
+        { autoAlpha: 0, x: -30, filter: 'blur(6px)' },
+        { autoAlpha: 1, x: 0, filter: 'blur(0px)', duration: 0.5, ease: 'power3.out' }
+      );
+
+      heroTl.fromTo('.display-serif',
+        { autoAlpha: 0, y: 30, filter: 'blur(4px)' },
+        { autoAlpha: 1, y: 0, filter: 'blur(0px)', duration: 0.7, ease: 'power3.out' },
+        '-=0.25'
+      );
+
+      // Tag pills stagger pop
+      heroTl.fromTo('.tag-pill',
+        { autoAlpha: 0, scale: 0.7, y: 10 },
+        { autoAlpha: 1, scale: 1, y: 0, duration: 0.4, stagger: 0.08, ease: 'back.out(2)' },
+        '-=0.3'
+      );
+
+      // Metric chips count up
+      heroTl.fromTo('.metric-chip',
+        { autoAlpha: 0, y: 15 },
+        { autoAlpha: 1, y: 0, duration: 0.4, stagger: 0.1, ease: 'power2.out' },
+        '-=0.2'
+      );
+
+      // Metric number count-up
+      document.querySelectorAll('.metric-chip__value').forEach(el => {
+        const final = parseInt(el.textContent || '0', 10);
+        if (isNaN(final)) return;
+        const counter = { val: 0 };
+        gsap.to(counter, {
+          val: final, duration: 1.2, delay: 0.6, ease: 'power2.out',
+          onUpdate: () => { el.textContent = Math.round(counter.val).toString(); }
+        });
+      });
+
+      // ── Reading order sidebar: items slide in with stagger ──
+      const readingItems = document.querySelectorAll('.reading-order-item');
+      if (readingItems.length) {
+        gsap.fromTo(readingItems,
+          { autoAlpha: 0, x: 40 },
+          {
+            autoAlpha: 1, x: 0,
+            duration: 0.5, stagger: 0.15, ease: 'power3.out',
+            scrollTrigger: { trigger: '.reading-order-list', start: 'top 85%', once: true }
+          }
+        );
+      }
+
+      // ── Research track cards: stagger from bottom with rotation ──
+      const trackCards = document.querySelectorAll('.track-card');
+      trackCards.forEach((card, i) => {
+        gsap.fromTo(card,
+          { autoAlpha: 0, y: 50, rotateX: -5 },
+          {
+            autoAlpha: 1, y: 0, rotateX: 0,
+            duration: 0.6, ease: 'power3.out',
+            delay: i * 0.1,
+            scrollTrigger: { trigger: card, start: 'top 88%', once: true }
+          }
+        );
+      });
+
+      // ── Lead essay card: scale up from center ──
+      gsap.fromTo('.lead-essay-card',
+        { autoAlpha: 0, scale: 0.92, y: 40 },
+        {
+          autoAlpha: 1, scale: 1, y: 0,
+          duration: 0.8, ease: 'power3.out',
+          scrollTrigger: { trigger: '.lead-essay-card', start: 'top 85%', once: true }
+        }
+      );
+
+      // ── Reading path cards: slide up with stagger ──
+      const pathCards = document.querySelectorAll('.path-card');
+      pathCards.forEach((card, i) => {
+        gsap.fromTo(card,
+          { autoAlpha: 0, y: 40 },
+          {
+            autoAlpha: 1, y: 0,
+            duration: 0.5, ease: 'back.out(1.4)',
+            delay: i * 0.12,
+            scrollTrigger: { trigger: card, start: 'top 88%', once: true }
+          }
+        );
+      });
+
+      // ── Section kickers: slide from left ──
+      document.querySelectorAll('.section-kicker').forEach(el => {
+        gsap.fromTo(el,
+          { autoAlpha: 0, x: -30 },
+          {
+            autoAlpha: 1, x: 0,
+            duration: 0.5, ease: 'power2.out',
+            scrollTrigger: { trigger: el, start: 'top 90%', once: true }
+          }
+        );
+      });
+
+      // ── Section display titles: blur reveal ──
+      document.querySelectorAll('section .display-serif').forEach((el, i) => {
+        if (i === 0) return; // skip hero (already animated)
+        gsap.fromTo(el,
+          { autoAlpha: 0, y: 20, filter: 'blur(4px)' },
+          {
+            autoAlpha: 1, y: 0, filter: 'blur(0px)',
+            duration: 0.6, ease: 'power2.out',
+            scrollTrigger: { trigger: el, start: 'top 88%', once: true }
+          }
+        );
+      });
+
+      // ── Divider rules: expand from center ──
+      document.querySelectorAll('.rule').forEach(rule => {
+        gsap.fromTo(rule,
+          { scaleX: 0 },
+          {
+            scaleX: 1,
+            duration: 0.6, ease: 'power2.inOut',
+            scrollTrigger: { trigger: rule, start: 'top 92%', once: true }
+          }
+        );
+      });
+
+      // ── Latest writing paper card: fade up ──
+      const latestCard = document.querySelector('section:last-of-type .paper-card');
+      if (latestCard) {
+        gsap.fromTo(latestCard,
+          { autoAlpha: 0, y: 30 },
+          {
+            autoAlpha: 1, y: 0,
+            duration: 0.6, ease: 'power2.out',
+            scrollTrigger: { trigger: latestCard, start: 'top 85%', once: true }
+          }
+        );
+      }
+    }
+  </script>
+
 </BaseLayout>

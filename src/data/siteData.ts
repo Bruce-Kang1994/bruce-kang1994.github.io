@@ -10,8 +10,8 @@ export const profile = {
     en: 'Building PostMem · Writing the playbook',
   },
   heroTitle: {
-    zh: '在真实产品上做增长，把过程写成方法论。',
-    en: 'Doing growth on a real product. Writing the playbook along the way.',
+    zh: '在真实产品上做增长，把过程写成方法论',
+    en: 'Doing growth on a real product, writing the playbook along the way',
   },
   bio: {
     zh: '我是 Bruce，正在全职做 PostMem——一个用老照片帮家庭留住故事的 AI 产品。从 0 到 1 的增长过程中，我把 SEO 体系、投放策略、用户研究沉淀成了公开的方法论。不是理论总结，是正在执行的东西。',

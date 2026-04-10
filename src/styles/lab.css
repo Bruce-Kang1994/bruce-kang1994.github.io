@@ -155,6 +155,7 @@ a {
 .rule {
   height: 1px;
   background: linear-gradient(90deg, rgb(var(--border-strong)), rgb(var(--border) / 0.25));
+  transform-origin: center;
 }
 
 .tag-pill {
