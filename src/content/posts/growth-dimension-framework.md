@@ -81,7 +81,89 @@ dataVerified: 2026-04-10
 
 同样的 8 个问题，不同产品的答案组合完全不同，推导出的增长引擎也完全不同。**这就是为什么"抄别人的增长策略"通常不管用。**
 
-> 但维度分析只解决了"看清产品"的问题。接下来要解决"怎么做"——这就是六步执行框架。
+---
+
+## 从维度到杠杆：决策映射
+
+8 个维度不是平等的。真正决定增长结构的，分两层：
+
+<div style="display:grid; grid-template-columns:1fr 1fr; gap:1rem; margin:2rem 0">
+<div style="background:linear-gradient(135deg, rgba(37,99,235,0.08), rgba(99,102,241,0.06)); border:1px solid rgba(37,99,235,0.2); border-radius:12px; padding:1.5rem">
+<div style="font-size:12px; font-weight:700; text-transform:uppercase; letter-spacing:0.1em; color:#2563EB; margin-bottom:1rem">🎯 主导约束 — 决定增长引擎</div>
+<div style="display:flex; flex-direction:column; gap:0.6rem">
+<div style="background:white; border-radius:8px; padding:0.6rem 0.8rem; font-size:14px; border-left:3px solid #2563EB"><strong>使用频率</strong><br><span style="color:#6B7280; font-size:13px">能不能靠复购摊薄获客成本</span></div>
+<div style="background:white; border-radius:8px; padding:0.6rem 0.8rem; font-size:14px; border-left:3px solid #2563EB"><strong>决策成本</strong><br><span style="color:#6B7280; font-size:13px">转化链路长短，是否需要强教育</span></div>
+<div style="background:white; border-radius:8px; padding:0.6rem 0.8rem; font-size:14px; border-left:3px solid #2563EB"><strong>供给侧复杂度</strong><br><span style="color:#6B7280; font-size:13px">增长是否需要先做供给</span></div>
+<div style="background:white; border-radius:8px; padding:0.6rem 0.8rem; font-size:14px; border-left:3px solid #2563EB"><strong>Aha Moment 速度</strong><br><span style="color:#6B7280; font-size:13px">产品能不能快速自证价值</span></div>
+</div>
+</div>
+<div style="background:linear-gradient(135deg, rgba(14,165,233,0.08), rgba(6,182,212,0.06)); border:1px solid rgba(14,165,233,0.2); border-radius:12px; padding:1.5rem">
+<div style="font-size:12px; font-weight:700; text-transform:uppercase; letter-spacing:0.1em; color:#0EA5E9; margin-bottom:1rem">🔄 放大因素 — 决定增长天花板</div>
+<div style="display:flex; flex-direction:column; gap:0.6rem">
+<div style="background:white; border-radius:8px; padding:0.6rem 0.8rem; font-size:14px; border-left:3px solid #0EA5E9"><strong>网络效应</strong><br><span style="color:#6B7280; font-size:13px">产品会不会越用越强</span></div>
+<div style="background:white; border-radius:8px; padding:0.6rem 0.8rem; font-size:14px; border-left:3px solid #0EA5E9"><strong>传播性</strong><br><span style="color:#6B7280; font-size:13px">使用过程会不会天然外溢</span></div>
+<div style="background:white; border-radius:8px; padding:0.6rem 0.8rem; font-size:14px; border-left:3px solid #0EA5E9"><strong>付费模式</strong><br><span style="color:#6B7280; font-size:13px">收入模型是否支撑长期投入</span></div>
+<div style="background:white; border-radius:8px; padding:0.6rem 0.8rem; font-size:14px; border-left:3px solid #0EA5E9"><strong>竞争格局</strong><br><span style="color:#6B7280; font-size:13px">在抢存量，还是先做市场教育</span></div>
+</div>
+</div>
+</div>
+
+先看主导约束确定引擎类型，再看放大因素判断天花板。具体怎么映射：
+
+<div style="display:flex; flex-direction:column; gap:0.75rem; margin:2rem 0">
+<div style="display:flex; align-items:stretch; border-radius:10px; overflow:hidden; border:1px solid rgba(37,99,235,0.15)">
+<div style="background:linear-gradient(135deg,#2563EB,#4F46E5); color:white; padding:0.8rem 1rem; min-width:180px; display:flex; align-items:center; font-size:13px; font-weight:600; line-height:1.4">高频 + 低决策<br>+ 快 Aha</div>
+<div style="flex:1; padding:0.8rem 1rem; background:rgba(37,99,235,0.04); display:flex; align-items:center; gap:0.5rem; flex-wrap:wrap">
+<span style="background:#2563EB; color:white; padding:0.25rem 0.6rem; border-radius:5px; font-size:12px; font-weight:600">运营驱动</span>
+<span style="background:#DBEAFE; color:#2563EB; padding:0.25rem 0.6rem; border-radius:5px; font-size:12px; font-weight:600">产品驱动</span>
+<span style="color:#9CA3AF; font-size:12px; margin-left:0.5rem">✗ 销售驱动</span>
+</div>
+</div>
+<div style="display:flex; align-items:stretch; border-radius:10px; overflow:hidden; border:1px solid rgba(37,99,235,0.15)">
+<div style="background:linear-gradient(135deg,#2563EB,#4F46E5); color:white; padding:0.8rem 1rem; min-width:180px; display:flex; align-items:center; font-size:13px; font-weight:600; line-height:1.4">重供给<br>+ 双边网络效应</div>
+<div style="flex:1; padding:0.8rem 1rem; background:rgba(37,99,235,0.04); display:flex; align-items:center; gap:0.5rem; flex-wrap:wrap">
+<span style="background:#2563EB; color:white; padding:0.25rem 0.6rem; border-radius:5px; font-size:12px; font-weight:600">供给驱动</span>
+<span style="background:#DBEAFE; color:#2563EB; padding:0.25rem 0.6rem; border-radius:5px; font-size:12px; font-weight:600">运营驱动</span>
+<span style="color:#9CA3AF; font-size:12px; margin-left:0.5rem">✗ 纯内容营销</span>
+</div>
+</div>
+<div style="display:flex; align-items:stretch; border-radius:10px; overflow:hidden; border:1px solid rgba(37,99,235,0.15)">
+<div style="background:linear-gradient(135deg,#2563EB,#4F46E5); color:white; padding:0.8rem 1rem; min-width:180px; display:flex; align-items:center; font-size:13px; font-weight:600; line-height:1.4">低频 + 蓝海<br>+ 需要教育市场</div>
+<div style="flex:1; padding:0.8rem 1rem; background:rgba(37,99,235,0.04); display:flex; align-items:center; gap:0.5rem; flex-wrap:wrap">
+<span style="background:#2563EB; color:white; padding:0.25rem 0.6rem; border-radius:5px; font-size:12px; font-weight:600">营销驱动</span>
+<span style="background:#DBEAFE; color:#2563EB; padding:0.25rem 0.6rem; border-radius:5px; font-size:12px; font-weight:600">产品驱动</span>
+<span style="color:#9CA3AF; font-size:12px; margin-left:0.5rem">✗ 补贴拉新</span>
+</div>
+</div>
+<div style="display:flex; align-items:stretch; border-radius:10px; overflow:hidden; border:1px solid rgba(37,99,235,0.15)">
+<div style="background:linear-gradient(135deg,#2563EB,#4F46E5); color:white; padding:0.8rem 1rem; min-width:180px; display:flex; align-items:center; font-size:13px; font-weight:600; line-height:1.4">高客单价<br>+ 长决策链</div>
+<div style="flex:1; padding:0.8rem 1rem; background:rgba(37,99,235,0.04); display:flex; align-items:center; gap:0.5rem; flex-wrap:wrap">
+<span style="background:#2563EB; color:white; padding:0.25rem 0.6rem; border-radius:5px; font-size:12px; font-weight:600">销售驱动</span>
+<span style="background:#DBEAFE; color:#2563EB; padding:0.25rem 0.6rem; border-radius:5px; font-size:12px; font-weight:600">营销驱动</span>
+<span style="color:#9CA3AF; font-size:12px; margin-left:0.5rem">✗ 病毒传播</span>
+</div>
+</div>
+<div style="display:flex; align-items:stretch; border-radius:10px; overflow:hidden; border:1px solid rgba(37,99,235,0.15)">
+<div style="background:linear-gradient(135deg,#2563EB,#4F46E5); color:white; padding:0.8rem 1rem; min-width:180px; display:flex; align-items:center; font-size:13px; font-weight:600; line-height:1.4">强传播性<br>+ 使用即展示</div>
+<div style="flex:1; padding:0.8rem 1rem; background:rgba(37,99,235,0.04); display:flex; align-items:center; gap:0.5rem; flex-wrap:wrap">
+<span style="background:#2563EB; color:white; padding:0.25rem 0.6rem; border-radius:5px; font-size:12px; font-weight:600">产品驱动</span>
+<span style="background:#DBEAFE; color:#2563EB; padding:0.25rem 0.6rem; border-radius:5px; font-size:12px; font-weight:600">病毒驱动</span>
+<span style="color:#9CA3AF; font-size:12px; margin-left:0.5rem">✗ 重销售</span>
+</div>
+</div>
+<div style="display:flex; align-items:stretch; border-radius:10px; overflow:hidden; border:1px solid rgba(37,99,235,0.15)">
+<div style="background:linear-gradient(135deg,#2563EB,#4F46E5); color:white; padding:0.8rem 1rem; min-width:180px; display:flex; align-items:center; font-size:13px; font-weight:600; line-height:1.4">订阅制 + 中高频<br>+ 价值可持续验证</div>
+<div style="flex:1; padding:0.8rem 1rem; background:rgba(37,99,235,0.04); display:flex; align-items:center; gap:0.5rem; flex-wrap:wrap">
+<span style="background:#2563EB; color:white; padding:0.25rem 0.6rem; border-radius:5px; font-size:12px; font-weight:600">产品驱动</span>
+<span style="background:#DBEAFE; color:#2563EB; padding:0.25rem 0.6rem; border-radius:5px; font-size:12px; font-weight:600">营销驱动</span>
+<span style="color:#9CA3AF; font-size:12px; margin-left:0.5rem">✗ 一次性促销</span>
+</div>
+</div>
+</div>
+
+> 这张图不是替你生成答案，而是帮你先排除掉明显不适合的方向。增长不是先问"别人怎么做"，而是先问"我的产品结构允许什么成立"。
+
+维度分析解决了"看清产品"的问题。接下来要解决"怎么做"——这就是六步执行框架。
 
 ---
 
@@ -141,9 +223,14 @@ dataVerified: 2026-04-10
 
 把增长杠杆翻译成具体执行计划：
 
-- **营销驱动**：渠道选择 → 内容策略 → 广告投放 → 着陆页优化。搜索渠道的系统做法见 [SEO 七层框架](/lab/posts/seo-seven-layer-framework/)。
-- **产品驱动**：Onboarding 优化 → 分享机制 → 邀请机制
+- **营销驱动**：渠道选择 → 内容策略 → 广告投放 → 着陆页优化。搜索渠道的系统做法见 [SEO 七层框架](/lab/posts/seo-seven-layer-framework/)
+- **产品驱动**：Onboarding 优化 → Aha Moment 前置 → 分享机制 → 邀请机制
 - **供给驱动**：供给端获取 → 品质控制 → 密度管理
+- **运营驱动**：活动设计 → 用户分层 → 推送策略 → 留存机制
+- **销售驱动**：线索获取 → 决策链识别 → 销售流程 → 成交效率
+- **病毒驱动**：邀请设计 → 激励结构 → 分享触发点 → 转化链路
+
+每个动作都必须服务于主杠杆，不是列越多越好。
 
 ### Step 6: 实验闭环 — 验证和迭代
 
