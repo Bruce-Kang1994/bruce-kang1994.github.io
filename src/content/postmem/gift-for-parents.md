@@ -13,6 +13,8 @@ draft: false
 
 # The One Gift for Parents Who Have Everything: Their Family Stories, Preserved
 
+> **TL;DR**: They don't need another sweater. What if the gift was saying 'I want to hear your stories' — and actually preserving them? Here's how.
+
 Your parents don't need another sweater, another candle, or another gadget that collects dust. After age 60, most people have more stuff than they want — and the gifts that actually matter aren't things you can wrap. The most meaningful gift you can give your parents is saying: "I want to hear your stories — and I want to make sure our family never loses them."
 
 That's not a product pitch. It's a shift in what "gift" means for the generation that's been giving to everyone else for decades.
@@ -217,3 +219,17 @@ That's the gift. The tool is the container. Pick the one that matches your famil
 4. **White, M. & Epston, D. (1990).** *Narrative Means to Therapeutic Ends*. W. W. Norton. Referenced for narrative therapy and grief processing.
 5. **Alzheimer's Association (2024).** "Reminiscence Therapy." [https://www.alz.org/help-support/caregiving/daily-care/activities](https://www.alz.org/help-support/caregiving/daily-care/activities). Referenced for guidance on reminiscence activities and cognitive decline.
 6. **PostMem user research (2025).** Qualitative interviews with 19 memory keepers (ages 42-68), recruited via social media and community groups in the United States. Internal research; methodology available upon request.
+
+---
+
+## What's next
+
+If you're trying to preserve your family's stories, here's where to go next:
+
+- [Best Mother's Day Gift for Mom Who Has Everything (2026) — Beyond Flowers](/postmem/mothers-day-gift-2026/)
+- [9 Best Tools to Preserve Family Stories in 2026 (Honest Comparison)](/postmem/best-family-story-tools/)
+- [How to Preserve Family Stories](/postmem/how-to-preserve-family-stories/)
+
+Or if you want to actually start: visit [PostMem.com](https://www.postmem.com) and upload your first photo. It takes 2 minutes to see how it works—no signup, no homework.
+
+Have questions? Email us at [hello@postmem.com](mailto:hello@postmem.com).

@@ -6,6 +6,7 @@ tags: ["增长拆解", "ElevenLabs", "访谈", "增长团队", "品牌"]
 date: 2026-03-15
 featured: false
 draft: false
+dataVerified: 2026-04-10
 ---
 
 > **阅读定位**：这是增长方法论体系中"对话精华"分类的第一篇。建议先读 [ElevenLabs 增长策略拆解](/lab/posts/elevenlabs-growth-teardown/)（我对 5 个策略的分析），本文是那篇的原材料——Luke Harries 在 20VC 播客中的原话提炼，附上我的适配笔记。
@@ -145,3 +146,15 @@ draft: false
 | 横向产品策略 | 不是常规做法，Luke 自己也不推荐别人学 |
 
 > **提炼观点，不抄作业。每个观点都要回到你自己的 [8 维度分析](/lab/posts/growth-dimension-framework/)，判断它在你的维度组合下是否适用。**
+
+---
+
+## 接下来
+
+如果你觉得这篇有用，下面三件事任选一个继续：
+
+- **想看更多框架？** → 回到 [Growth Lab 首页](/lab/) 浏览全部 14 篇增长方法论
+- **想看实战？** → 看 [PostMem SEO 内容体系](/postmem/) 是怎么把方法论落地成 13 篇内容资产的
+- **想直接聊？** → 发邮件 [bruce@motiful.ai](mailto:bruce@motiful.ai)
+
+如果你对这篇文章有不同的判断，或者你正在做的事印证/反驳了这里的观点——**我都想听**。

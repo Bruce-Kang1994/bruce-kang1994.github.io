@@ -13,6 +13,8 @@ draft: false
 
 # Capture Family Stories Using Photos Instead of Interviews
 
+> **TL;DR**: Formal interviews often backfire with older family members. But show them an old photo, and the stories pour out. Here's how to capture family stories through photos — no script needed.
+
 You don't need a list of interview questions to capture your family's stories. In fact, the formal interview approach — sitting someone down, pressing record, and asking "Tell me about your childhood" — often backfires. Most older family members freeze when they feel like they're being tested. But hand them an old photograph, and something different happens: they lean in, point at a face, and say, "Oh, that's your uncle Ray — let me tell you about the time he..."
 
 That's the shift. Photos aren't questions — they're memory triggers. Research shows that visual cues activate episodic memory more effectively than verbal prompts (for the neuroscience behind this, see [why family photos trigger memories](/blog/why-family-photos-trigger-memories)). A photograph provides the specificity that abstract questions lack: a face, a place, a season, a piece of clothing that unlocks a story you'd never think to ask about.
@@ -196,3 +198,17 @@ Then press record.
 ---
 
 *Last updated: March 25, 2026*
+
+---
+
+## What's next
+
+If you're trying to preserve your family's stories, here's where to go next:
+
+- [Why Family Photos Trigger Memories](/postmem/science-photo-memory/)
+- [Turn Family Photos Into Stories With AI — Here's How PostMem Works](/postmem/photo-to-story-ai/)
+- [Save Your Family Stories Before It's Too Late — A Practical Guide](/postmem/save-family-stories/)
+
+Or if you want to actually start: visit [PostMem.com](https://www.postmem.com) and upload your first photo. It takes 2 minutes to see how it works—no signup, no homework.
+
+Have questions? Email us at [hello@postmem.com](mailto:hello@postmem.com).

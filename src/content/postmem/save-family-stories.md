@@ -13,6 +13,8 @@ draft: false
 
 # Save Your Family Stories Before It's Too Late: A Practical Guide
 
+> **TL;DR**: 92% of family stories exist only in someone's memory. Here's a practical guide to saving them — starting this week, not someday.
+
 Your grandmother knows why her family left their hometown in 1962. Your father knows the story behind the scar on his left hand. Your aunt remembers the name of the neighbor who helped your family through the winter of '78. And none of it is written down anywhere.
 
 This isn't unusual. It's almost universal. The vast majority of family stories exist only inside someone's memory — no recording, no written account, no backup. When that person is gone, those stories go with them. Not because anyone decided to let them disappear, but because everyone assumed there would be more time.
@@ -171,3 +173,17 @@ That's how every family's history gets saved — not with a grand plan, but with
 ---
 
 *Last updated: March 25, 2026*
+
+---
+
+## What's next
+
+If you're trying to preserve your family's stories, here's where to go next:
+
+- [How to Preserve Family Stories](/postmem/how-to-preserve-family-stories/)
+- [What to Do With Old Family Photos](/postmem/what-to-do-with-old-family-photos/)
+- [Turn Family Photos Into Stories With AI — Here's How PostMem Works](/postmem/photo-to-story-ai/)
+
+Or if you want to actually start: visit [PostMem.com](https://www.postmem.com) and upload your first photo. It takes 2 minutes to see how it works—no signup, no homework.
+
+Have questions? Email us at [hello@postmem.com](mailto:hello@postmem.com).

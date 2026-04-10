@@ -196,3 +196,17 @@ That's the simplest version of what PostMem does. The AI finds the moments. You 
 13. PostMem competitive analysis (2026). 21-tool market analysis conducted March 2026. Methodology: official website review, Reddit sourcing, AI search result analysis.
 14. Edward Jones & Age Wave (2019). "Four Pillars of the New Retirement."
 15. Caring.com (2024). Annual wills survey.
+
+---
+
+## What's next
+
+If you're trying to preserve your family's stories, here's where to go next:
+
+- [Why Family Photos Trigger Memories](/postmem/science-photo-memory/)
+- [Turn Family Photos Into Stories With AI — Here's How PostMem Works](/postmem/photo-to-story-ai/)
+- [StoryWorth vs Remento vs PostMem](/postmem/storyworth-vs-remento-vs-postmem/)
+
+Or if you want to actually start: visit [PostMem.com](https://www.postmem.com) and upload your first photo. It takes 2 minutes to see how it works—no signup, no homework.
+
+Have questions? Email us at [hello@postmem.com](mailto:hello@postmem.com).

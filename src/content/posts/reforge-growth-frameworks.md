@@ -6,6 +6,7 @@ tags: ["Reforge", "留存", "PMF", "Four Fits", "增长框架"]
 date: 2026-03-28
 featured: true
 draft: false
+dataVerified: 2026-04-10
 ---
 
 > **阅读定位**：这是增长方法论体系中最"硬核"的一篇。Brian Balfour 是 Reforge 的创始人，前 HubSpot VP Growth，增长领域最系统化的思想家。本文把他最核心的 5 个框架串成一条线。建议先读 [产品增长通用框架](/lab/posts/growth-dimension-framework/)（理解基础维度分析），再来看 Balfour 的更深层体系。
@@ -214,3 +215,15 @@ Growth Loops → 告诉你增长怎么从线性变成指数
 ```
 
 > **先判断有没有 PMF，再量对 PMF，再检查四个 Fit，再用 ICED 补短板，最后用 Growth Loops 放大。不要跳步。**
+
+---
+
+## 接下来
+
+如果你觉得这篇有用，下面三件事任选一个继续：
+
+- **想看更多框架？** → 回到 [Growth Lab 首页](/lab/) 浏览全部 14 篇增长方法论
+- **想看实战？** → 看 [PostMem SEO 内容体系](/postmem/) 是怎么把方法论落地成 13 篇内容资产的
+- **想直接聊？** → 发邮件 [bruce@motiful.ai](mailto:bruce@motiful.ai)
+
+如果你对这篇文章有不同的判断，或者你正在做的事印证/反驳了这里的观点——**我都想听**。

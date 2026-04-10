@@ -13,6 +13,8 @@ draft: false
 
 # What to Do With Old Family Photos: 9 Ideas Beyond Just Storing Them
 
+> **TL;DR**: Boxes of old family photos gathering dust? Here are 9 practical ideas — from simple digitizing to AI-powered storytelling — to give those photos new life.
+
 You know the box. Maybe it's in the closet, the attic, or the back of a drawer. Maybe it's three boxes. Maybe it's 47,000 photos on your phone that you keep meaning to organize "someday."
 
 Old family photos are one of those things most of us feel responsible for but don't know what to do with. They're too meaningful to throw away, too overwhelming to sort through, and too scattered to feel like they're actually preserved.
@@ -214,3 +216,17 @@ Yes, and it's getting better fast. AI can identify faces, group related photos, 
 - PostMem (2025). User research interviews with 19 memory keepers, ages 38-67, semi-structured interviews. Internal research.
 - Rubin, D. C., Rahhal, T. A., & Poon, L. W. (1998). Things learned in early adulthood are remembered best. *Memory & Cognition, 26*(1), 3-19.
 - Research on photo-triggered autobiographical memory: see [The Science Behind Why Photos Trigger Memories](/blog/why-family-photos-trigger-memories) for full academic citations.
+
+---
+
+## What's next
+
+If you're trying to preserve your family's stories, here's where to go next:
+
+- [Save Your Family Stories Before It's Too Late — A Practical Guide](/postmem/save-family-stories/)
+- [How to Preserve Family Stories](/postmem/how-to-preserve-family-stories/)
+- [Turn Family Photos Into Stories With AI — Here's How PostMem Works](/postmem/photo-to-story-ai/)
+
+Or if you want to actually start: visit [PostMem.com](https://www.postmem.com) and upload your first photo. It takes 2 minutes to see how it works—no signup, no homework.
+
+Have questions? Email us at [hello@postmem.com](mailto:hello@postmem.com).

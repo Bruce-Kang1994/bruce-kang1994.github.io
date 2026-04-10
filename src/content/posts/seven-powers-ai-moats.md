@@ -6,6 +6,7 @@ tags: ["Seven Powers", "竞争壁垒", "护城河", "战略", "AI"]
 date: 2026-03-26
 featured: false
 draft: false
+dataVerified: 2026-04-10
 ---
 
 > **阅读定位**：这篇文章是竞争战略层面的。和 [竞品 7 维分析法](/lab/posts/competitive-growth-analysis/)（战术层：怎么拆竞品）不同，本文回答一个更根本的问题：**你凭什么长期赢？** 建议先读 [业务拆解方法论](/lab/posts/business-teardown-methodology/)（理解业务是什么），再来看 Power 怎么保护业务。

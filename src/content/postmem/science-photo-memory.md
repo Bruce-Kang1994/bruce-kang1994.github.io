@@ -13,6 +13,8 @@ draft: false
 
 # Why Family Photos Trigger Memories: The Science Behind It (And How to Use It)
 
+> **TL;DR**: Photos activate autobiographical memory more effectively than questions alone. Here's the science — and how to use it to preserve family stories before they're lost.
+
 *By the PostMem Team*
 
 You open a shoebox and find a photo of your mother at twenty-two, standing on a porch you don't recognize. You've never seen it before. But the moment you show it to her, she's gone — not confused, not searching for words. She's *there*. "That's Aunt Helen's house in Galveston. We drove down every summer. Your grandmother made us sleep on the screened porch because she said the salt air was good for our lungs."
@@ -205,3 +207,17 @@ PostMem can help you organize, connect, and preserve what you capture — but th
 - Tulving, E. (1973). Encoding specificity and retrieval processes in episodic memory. *Psychological Review*, 80(5), 352-373.
 
 - White, M., & Epston, D. (1990). *Narrative Means to Therapeutic Ends*. New York: W. W. Norton.
+
+---
+
+## What's next
+
+If you're trying to preserve your family's stories, here's where to go next:
+
+- [Turn Family Photos Into Stories With AI — Here's How PostMem Works](/postmem/photo-to-story-ai/)
+- [Photo Memory vs Written Memoir](/postmem/photo-memory-vs-written-memoir/)
+- [Skip the Interview](/postmem/skip-the-interview/)
+
+Or if you want to actually start: visit [PostMem.com](https://www.postmem.com) and upload your first photo. It takes 2 minutes to see how it works—no signup, no homework.
+
+Have questions? Email us at [hello@postmem.com](mailto:hello@postmem.com).

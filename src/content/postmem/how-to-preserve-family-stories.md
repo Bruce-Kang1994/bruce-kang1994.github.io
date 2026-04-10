@@ -14,6 +14,8 @@ draft: false
 
 # How to Preserve Family Stories: A Complete Method Guide for Every Family
 
+> **TL;DR**: Not every family preserves stories the same way. This guide compares 5 methods — writing, speaking, photos, video, and hybrid — with a decision tree to find the right fit for your family.
+
 *By PostMem Team · Published March 20, 2026 · Updated March 25, 2026*
 *Reviewed by PostMem Editorial Team*
 
@@ -397,3 +399,17 @@ Pick the method that matches your family. Start with one story. Do it this week.
 - Cialdini, R.B. (2021). *Influence: The Psychology of Persuasion* (New and Expanded edition). Harper Business.
 - Oral History Association (2023). Best Practices for Oral History (revised). [https://www.oralhistory.org/](https://www.oralhistory.org/)
 - PostMem (2025). User research: semi-structured interviews with 19 memory keepers, ages 38-67, conducted January-March 2025. Internal research.
+
+---
+
+## What's next
+
+If you're trying to preserve your family's stories, here's where to go next:
+
+- [Save Your Family Stories Before It's Too Late — A Practical Guide](/postmem/save-family-stories/)
+- [9 Best Tools to Preserve Family Stories in 2026 (Honest Comparison)](/postmem/best-family-story-tools/)
+- [Turn Family Photos Into Stories With AI — Here's How PostMem Works](/postmem/photo-to-story-ai/)
+
+Or if you want to actually start: visit [PostMem.com](https://www.postmem.com) and upload your first photo. It takes 2 minutes to see how it works—no signup, no homework.
+
+Have questions? Email us at [hello@postmem.com](mailto:hello@postmem.com).
