@@ -6,6 +6,7 @@ tags: ["业务拆解", "方法论", "SaaS", "产品策略"]
 date: 2026-03-18
 featured: true
 draft: false
+sortOrder: 2
 dataVerified: 2026-04-10
 ---
 

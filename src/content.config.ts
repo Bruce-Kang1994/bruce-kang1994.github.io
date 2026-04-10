@@ -12,6 +12,7 @@ const posts = defineCollection({
     featured: z.boolean().default(false),
     draft: z.boolean().default(false),
     dataVerified: z.coerce.date().optional(),
+    sortOrder: z.number().optional(),
   }),
 });
 

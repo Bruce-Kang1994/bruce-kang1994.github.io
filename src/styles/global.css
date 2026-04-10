@@ -43,8 +43,8 @@ a {
 /* ─── Scroll Reveal (shared) ──────────── */
 [data-reveal] {
   opacity: 0;
-  transform: translateY(12px);
-  transition: opacity 0.5s ease, transform 0.5s ease;
+  transform: translateY(20px);
+  transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
   transition-delay: var(--delay, 0ms);
 }
 
@@ -56,4 +56,5 @@ a {
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation: none !important; transition: none !important; }
   [data-reveal] { opacity: 1; transform: none; }
+  .hero__label, .hero__title, .hero__bio, .hero__ctas { opacity: 1; transform: none; animation: none; }
 }

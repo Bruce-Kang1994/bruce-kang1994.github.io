@@ -6,6 +6,7 @@ tags: ["增长框架", "方法论", "维度分析", "增长杠杆"]
 date: 2026-03-27
 featured: true
 draft: false
+sortOrder: 1
 dataVerified: 2026-04-10
 ---
 

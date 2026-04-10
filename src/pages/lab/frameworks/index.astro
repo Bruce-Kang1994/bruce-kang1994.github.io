@@ -7,7 +7,7 @@ import { categoryArchiveMeta } from '../../../lib/archive';
 
 const posts = (await getCollection('posts'))
   .filter((p) => p.data.category === 'frameworks' && !p.data.draft)
-  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
+  .sort((a, b) => (a.data.sortOrder ?? 99) - (b.data.sortOrder ?? 99));
 
 const meta = categoryArchiveMeta.frameworks;
 ---

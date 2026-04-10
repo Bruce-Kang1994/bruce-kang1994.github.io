@@ -6,6 +6,7 @@ tags: ["Seven Powers", "竞争壁垒", "护城河", "战略", "AI"]
 date: 2026-03-26
 featured: false
 draft: false
+sortOrder: 5
 dataVerified: 2026-04-10
 ---
 
