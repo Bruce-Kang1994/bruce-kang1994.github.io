@@ -87,77 +87,53 @@ dataVerified: 2026-04-10
 
 8 个维度不是平等的。真正决定增长结构的，分两层：
 
-<div style="display:grid; grid-template-columns:1fr 1fr; gap:1rem; margin:2rem 0">
-<div style="background:linear-gradient(135deg, rgba(37,99,235,0.08), rgba(99,102,241,0.06)); border:1px solid rgba(37,99,235,0.2); border-radius:12px; padding:1.5rem">
-<div style="font-size:12px; font-weight:700; text-transform:uppercase; letter-spacing:0.1em; color:#2563EB; margin-bottom:1rem">🎯 主导约束 — 决定增长引擎</div>
-<div style="display:flex; flex-direction:column; gap:0.6rem">
-<div style="background:white; border-radius:8px; padding:0.6rem 0.8rem; font-size:14px; border-left:3px solid #2563EB"><strong>使用频率</strong><br><span style="color:#6B7280; font-size:13px">能不能靠复购摊薄获客成本</span></div>
-<div style="background:white; border-radius:8px; padding:0.6rem 0.8rem; font-size:14px; border-left:3px solid #2563EB"><strong>决策成本</strong><br><span style="color:#6B7280; font-size:13px">转化链路长短，是否需要强教育</span></div>
-<div style="background:white; border-radius:8px; padding:0.6rem 0.8rem; font-size:14px; border-left:3px solid #2563EB"><strong>供给侧复杂度</strong><br><span style="color:#6B7280; font-size:13px">增长是否需要先做供给</span></div>
-<div style="background:white; border-radius:8px; padding:0.6rem 0.8rem; font-size:14px; border-left:3px solid #2563EB"><strong>Aha Moment 速度</strong><br><span style="color:#6B7280; font-size:13px">产品能不能快速自证价值</span></div>
+<div style="display:grid; grid-template-columns:1fr 1fr; gap:2rem; margin:2rem 0">
+<div>
+<div style="font-family:'IBM Plex Mono',monospace; font-size:11px; font-weight:500; text-transform:uppercase; letter-spacing:0.12em; color:#8A8A8A; margin-bottom:1rem; padding-bottom:0.5rem; border-bottom:1px solid #E0DCD6">主导约束 — 决定增长引擎</div>
+<div style="display:flex; flex-direction:column; gap:0.75rem">
+<div style="padding-left:1rem; border-left:2px solid #1A1A1A; font-size:14px; line-height:1.6"><strong>使用频率</strong><br><span style="color:#8A8A8A">能不能靠复购摊薄获客成本</span></div>
+<div style="padding-left:1rem; border-left:2px solid #1A1A1A; font-size:14px; line-height:1.6"><strong>决策成本</strong><br><span style="color:#8A8A8A">转化链路长短，是否需要强教育</span></div>
+<div style="padding-left:1rem; border-left:2px solid #1A1A1A; font-size:14px; line-height:1.6"><strong>供给侧复杂度</strong><br><span style="color:#8A8A8A">增长是否需要先做供给</span></div>
+<div style="padding-left:1rem; border-left:2px solid #1A1A1A; font-size:14px; line-height:1.6"><strong>Aha Moment 速度</strong><br><span style="color:#8A8A8A">产品能不能快速自证价值</span></div>
 </div>
 </div>
-<div style="background:linear-gradient(135deg, rgba(14,165,233,0.08), rgba(6,182,212,0.06)); border:1px solid rgba(14,165,233,0.2); border-radius:12px; padding:1.5rem">
-<div style="font-size:12px; font-weight:700; text-transform:uppercase; letter-spacing:0.1em; color:#0EA5E9; margin-bottom:1rem">🔄 放大因素 — 决定增长天花板</div>
-<div style="display:flex; flex-direction:column; gap:0.6rem">
-<div style="background:white; border-radius:8px; padding:0.6rem 0.8rem; font-size:14px; border-left:3px solid #0EA5E9"><strong>网络效应</strong><br><span style="color:#6B7280; font-size:13px">产品会不会越用越强</span></div>
-<div style="background:white; border-radius:8px; padding:0.6rem 0.8rem; font-size:14px; border-left:3px solid #0EA5E9"><strong>传播性</strong><br><span style="color:#6B7280; font-size:13px">使用过程会不会天然外溢</span></div>
-<div style="background:white; border-radius:8px; padding:0.6rem 0.8rem; font-size:14px; border-left:3px solid #0EA5E9"><strong>付费模式</strong><br><span style="color:#6B7280; font-size:13px">收入模型是否支撑长期投入</span></div>
-<div style="background:white; border-radius:8px; padding:0.6rem 0.8rem; font-size:14px; border-left:3px solid #0EA5E9"><strong>竞争格局</strong><br><span style="color:#6B7280; font-size:13px">在抢存量，还是先做市场教育</span></div>
+<div>
+<div style="font-family:'IBM Plex Mono',monospace; font-size:11px; font-weight:500; text-transform:uppercase; letter-spacing:0.12em; color:#8A8A8A; margin-bottom:1rem; padding-bottom:0.5rem; border-bottom:1px solid #E0DCD6">放大因素 — 决定增长天花板</div>
+<div style="display:flex; flex-direction:column; gap:0.75rem">
+<div style="padding-left:1rem; border-left:2px solid #C0BAB0; font-size:14px; line-height:1.6"><strong>网络效应</strong><br><span style="color:#8A8A8A">产品会不会越用越强</span></div>
+<div style="padding-left:1rem; border-left:2px solid #C0BAB0; font-size:14px; line-height:1.6"><strong>传播性</strong><br><span style="color:#8A8A8A">使用过程会不会天然外溢</span></div>
+<div style="padding-left:1rem; border-left:2px solid #C0BAB0; font-size:14px; line-height:1.6"><strong>付费模式</strong><br><span style="color:#8A8A8A">收入模型是否支撑长期投入</span></div>
+<div style="padding-left:1rem; border-left:2px solid #C0BAB0; font-size:14px; line-height:1.6"><strong>竞争格局</strong><br><span style="color:#8A8A8A">在抢存量，还是先做市场教育</span></div>
 </div>
 </div>
 </div>
 
 先看主导约束确定引擎类型，再看放大因素判断天花板。具体怎么映射：
 
-<div style="display:flex; flex-direction:column; gap:0.75rem; margin:2rem 0">
-<div style="display:flex; align-items:stretch; border-radius:10px; overflow:hidden; border:1px solid rgba(37,99,235,0.15)">
-<div style="background:linear-gradient(135deg,#2563EB,#4F46E5); color:white; padding:0.8rem 1rem; min-width:180px; display:flex; align-items:center; font-size:13px; font-weight:600; line-height:1.4">高频 + 低决策<br>+ 快 Aha</div>
-<div style="flex:1; padding:0.8rem 1rem; background:rgba(37,99,235,0.04); display:flex; align-items:center; gap:0.5rem; flex-wrap:wrap">
-<span style="background:#2563EB; color:white; padding:0.25rem 0.6rem; border-radius:5px; font-size:12px; font-weight:600">运营驱动</span>
-<span style="background:#DBEAFE; color:#2563EB; padding:0.25rem 0.6rem; border-radius:5px; font-size:12px; font-weight:600">产品驱动</span>
-<span style="color:#9CA3AF; font-size:12px; margin-left:0.5rem">✗ 销售驱动</span>
+<div style="margin:2rem 0; border-top:1px solid #E0DCD6">
+<div style="display:flex; align-items:baseline; padding:1rem 0; border-bottom:1px solid #EBE8E3; gap:1.5rem">
+<div style="min-width:200px; font-size:14px; font-weight:600; color:#1A1A1A; line-height:1.5">高频 + 低决策 + 快 Aha</div>
+<div style="flex:1; font-size:14px; color:#4A4A4A"><strong>运营驱动</strong> · 产品驱动 · <span style="color:#C0BAB0; text-decoration:line-through">销售驱动</span></div>
 </div>
+<div style="display:flex; align-items:baseline; padding:1rem 0; border-bottom:1px solid #EBE8E3; gap:1.5rem">
+<div style="min-width:200px; font-size:14px; font-weight:600; color:#1A1A1A; line-height:1.5">重供给 + 双边网络效应</div>
+<div style="flex:1; font-size:14px; color:#4A4A4A"><strong>供给驱动</strong> · 运营驱动 · <span style="color:#C0BAB0; text-decoration:line-through">纯内容营销</span></div>
 </div>
-<div style="display:flex; align-items:stretch; border-radius:10px; overflow:hidden; border:1px solid rgba(37,99,235,0.15)">
-<div style="background:linear-gradient(135deg,#2563EB,#4F46E5); color:white; padding:0.8rem 1rem; min-width:180px; display:flex; align-items:center; font-size:13px; font-weight:600; line-height:1.4">重供给<br>+ 双边网络效应</div>
-<div style="flex:1; padding:0.8rem 1rem; background:rgba(37,99,235,0.04); display:flex; align-items:center; gap:0.5rem; flex-wrap:wrap">
-<span style="background:#2563EB; color:white; padding:0.25rem 0.6rem; border-radius:5px; font-size:12px; font-weight:600">供给驱动</span>
-<span style="background:#DBEAFE; color:#2563EB; padding:0.25rem 0.6rem; border-radius:5px; font-size:12px; font-weight:600">运营驱动</span>
-<span style="color:#9CA3AF; font-size:12px; margin-left:0.5rem">✗ 纯内容营销</span>
+<div style="display:flex; align-items:baseline; padding:1rem 0; border-bottom:1px solid #EBE8E3; gap:1.5rem">
+<div style="min-width:200px; font-size:14px; font-weight:600; color:#1A1A1A; line-height:1.5">低频 + 蓝海 + 需要教育</div>
+<div style="flex:1; font-size:14px; color:#4A4A4A"><strong>营销驱动</strong> · 产品驱动 · <span style="color:#C0BAB0; text-decoration:line-through">补贴拉新</span></div>
 </div>
+<div style="display:flex; align-items:baseline; padding:1rem 0; border-bottom:1px solid #EBE8E3; gap:1.5rem">
+<div style="min-width:200px; font-size:14px; font-weight:600; color:#1A1A1A; line-height:1.5">高客单价 + 长决策链</div>
+<div style="flex:1; font-size:14px; color:#4A4A4A"><strong>销售驱动</strong> · 营销驱动 · <span style="color:#C0BAB0; text-decoration:line-through">病毒传播</span></div>
 </div>
-<div style="display:flex; align-items:stretch; border-radius:10px; overflow:hidden; border:1px solid rgba(37,99,235,0.15)">
-<div style="background:linear-gradient(135deg,#2563EB,#4F46E5); color:white; padding:0.8rem 1rem; min-width:180px; display:flex; align-items:center; font-size:13px; font-weight:600; line-height:1.4">低频 + 蓝海<br>+ 需要教育市场</div>
-<div style="flex:1; padding:0.8rem 1rem; background:rgba(37,99,235,0.04); display:flex; align-items:center; gap:0.5rem; flex-wrap:wrap">
-<span style="background:#2563EB; color:white; padding:0.25rem 0.6rem; border-radius:5px; font-size:12px; font-weight:600">营销驱动</span>
-<span style="background:#DBEAFE; color:#2563EB; padding:0.25rem 0.6rem; border-radius:5px; font-size:12px; font-weight:600">产品驱动</span>
-<span style="color:#9CA3AF; font-size:12px; margin-left:0.5rem">✗ 补贴拉新</span>
+<div style="display:flex; align-items:baseline; padding:1rem 0; border-bottom:1px solid #EBE8E3; gap:1.5rem">
+<div style="min-width:200px; font-size:14px; font-weight:600; color:#1A1A1A; line-height:1.5">强传播性 + 使用即展示</div>
+<div style="flex:1; font-size:14px; color:#4A4A4A"><strong>产品驱动</strong> · 病毒驱动 · <span style="color:#C0BAB0; text-decoration:line-through">重销售</span></div>
 </div>
-</div>
-<div style="display:flex; align-items:stretch; border-radius:10px; overflow:hidden; border:1px solid rgba(37,99,235,0.15)">
-<div style="background:linear-gradient(135deg,#2563EB,#4F46E5); color:white; padding:0.8rem 1rem; min-width:180px; display:flex; align-items:center; font-size:13px; font-weight:600; line-height:1.4">高客单价<br>+ 长决策链</div>
-<div style="flex:1; padding:0.8rem 1rem; background:rgba(37,99,235,0.04); display:flex; align-items:center; gap:0.5rem; flex-wrap:wrap">
-<span style="background:#2563EB; color:white; padding:0.25rem 0.6rem; border-radius:5px; font-size:12px; font-weight:600">销售驱动</span>
-<span style="background:#DBEAFE; color:#2563EB; padding:0.25rem 0.6rem; border-radius:5px; font-size:12px; font-weight:600">营销驱动</span>
-<span style="color:#9CA3AF; font-size:12px; margin-left:0.5rem">✗ 病毒传播</span>
-</div>
-</div>
-<div style="display:flex; align-items:stretch; border-radius:10px; overflow:hidden; border:1px solid rgba(37,99,235,0.15)">
-<div style="background:linear-gradient(135deg,#2563EB,#4F46E5); color:white; padding:0.8rem 1rem; min-width:180px; display:flex; align-items:center; font-size:13px; font-weight:600; line-height:1.4">强传播性<br>+ 使用即展示</div>
-<div style="flex:1; padding:0.8rem 1rem; background:rgba(37,99,235,0.04); display:flex; align-items:center; gap:0.5rem; flex-wrap:wrap">
-<span style="background:#2563EB; color:white; padding:0.25rem 0.6rem; border-radius:5px; font-size:12px; font-weight:600">产品驱动</span>
-<span style="background:#DBEAFE; color:#2563EB; padding:0.25rem 0.6rem; border-radius:5px; font-size:12px; font-weight:600">病毒驱动</span>
-<span style="color:#9CA3AF; font-size:12px; margin-left:0.5rem">✗ 重销售</span>
-</div>
-</div>
-<div style="display:flex; align-items:stretch; border-radius:10px; overflow:hidden; border:1px solid rgba(37,99,235,0.15)">
-<div style="background:linear-gradient(135deg,#2563EB,#4F46E5); color:white; padding:0.8rem 1rem; min-width:180px; display:flex; align-items:center; font-size:13px; font-weight:600; line-height:1.4">订阅制 + 中高频<br>+ 价值可持续验证</div>
-<div style="flex:1; padding:0.8rem 1rem; background:rgba(37,99,235,0.04); display:flex; align-items:center; gap:0.5rem; flex-wrap:wrap">
-<span style="background:#2563EB; color:white; padding:0.25rem 0.6rem; border-radius:5px; font-size:12px; font-weight:600">产品驱动</span>
-<span style="background:#DBEAFE; color:#2563EB; padding:0.25rem 0.6rem; border-radius:5px; font-size:12px; font-weight:600">营销驱动</span>
-<span style="color:#9CA3AF; font-size:12px; margin-left:0.5rem">✗ 一次性促销</span>
-</div>
+<div style="display:flex; align-items:baseline; padding:1rem 0; border-bottom:1px solid #E0DCD6; gap:1.5rem">
+<div style="min-width:200px; font-size:14px; font-weight:600; color:#1A1A1A; line-height:1.5">订阅制 + 中高频 + 可验证</div>
+<div style="flex:1; font-size:14px; color:#4A4A4A"><strong>产品驱动</strong> · 营销驱动 · <span style="color:#C0BAB0; text-decoration:line-through">一次性促销</span></div>
 </div>
 </div>
 
