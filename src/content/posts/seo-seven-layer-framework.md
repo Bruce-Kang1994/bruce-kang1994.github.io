@@ -6,11 +6,11 @@ tags: ["SEO", "GEO", "增长框架", "搜索获客"]
 date: 2026-04-18
 featured: true
 draft: false
-sortOrder: 3
-dataVerified: 2026-04-18
+sortOrder: 4
+dataVerified: 2026-04-20
 ---
 
-> **阅读定位**：这是增长方法论体系里关于“搜索获客”的一篇。建议先读 [产品增长通用框架](/lab/posts/growth-dimension-framework/) 理解增长杠杆，再读 [业务拆解方法论](/lab/posts/business-teardown-methodology/) 判断一个业务适不适合做搜索获客。本文不想写成 SEO 百科，而是回答一个更具体的问题：**早期产品在不同阶段，到底应该怎么做 SEO？**
+> **阅读定位**：这是增长框架体系的第四篇。建议先读 [业务拆解方法论](/lab/posts/business-teardown-methodology/) 和 [8 维度增长诊断](/lab/posts/growth-dimension-framework/)，判断搜索是否适合你的业务和阶段。本文不想写成 SEO 百科，而是回答一个更具体的问题：**早期产品在不同阶段，到底应该怎么做 SEO？**
 
 ---
 

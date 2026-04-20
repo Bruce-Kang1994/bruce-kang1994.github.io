@@ -36,7 +36,7 @@ dataVerified: 2026-04-10
 
 > 给明天开始做增长的人的建议：精通 Copywriting。LinkedIn 广告、有机内容、博客、推文、落地页——一切都建立在文案之上。
 
-**我的笔记**：文案能力在 [SEO 七层框架](/lab/posts/seo-seven-layer-framework/) 第 4 层（内容层）和 [GEO 实战指南](/lab/posts/geo-ai-search-optimization/)（Evidence 三要素）中都是核心。不是"写得漂亮"，是"写得清楚、写得可信、写得让人行动"。
+**我的笔记**：文案能力在 [SEO 早期方法论](/lab/posts/seo-seven-layer-framework/) 和 [AI 搜索可引用性框架](/lab/posts/geo-ai-search-optimization/) 中都是核心。不是"写得漂亮"，是"写得清楚、写得可信、写得让人行动"。
 
 ### 3. LinkedIn 有机内容是最被低估的渠道
 
@@ -82,7 +82,7 @@ dataVerified: 2026-04-10
 
 > 先招一个通才型增长营销人员——负责定位、信息到渠道测试。如果你只招产品营销，定位漂亮但没人知道；只招量化渠道人员，能推出去但没人转化。
 
-**我的笔记**：这个建议对早期团队太重要了。不要一上来就招"SEO 专家"或"Facebook 广告专家"——你还不知道哪个渠道有效。先招一个什么都能做的人，用 [产品增长通用框架](/lab/posts/growth-dimension-framework/) 的六步执行测出有效渠道后，再招专人。
+**我的笔记**：这个建议对早期团队太重要了。不要一上来就招"SEO 专家"或"Facebook 广告专家"——你还不知道哪个渠道有效。先招一个什么都能做的人，用 [8 维度增长诊断](/lab/posts/growth-dimension-framework/) 测出有效渠道后，再招专人。
 
 ### 10. 第二个增长hire：增长工程师
 
@@ -104,7 +104,7 @@ dataVerified: 2026-04-10
 
 > 博客型内容会逐渐死亡，因为 ChatGPT 可以直接回答。但工具型页面至少还能活 5 年——搜索引擎无法用 AI 生成交互页面。
 
-**我的笔记**：这直接影响了 [GEO 实战指南](/lab/posts/geo-ai-search-optimization/) 的策略——博客仍然要写（现在还没死），但要加入 GEO 三要素让 AI 也能用；同时开始投资 Mini-Tool 类页面作为 SEO 护城河。
+**我的笔记**：这直接影响了 [AI 搜索可引用性框架](/lab/posts/geo-ai-search-optimization/) 的策略——博客仍然要写，但要让内容具备实体、证据和引用结构；同时开始投资 Mini-Tool 类页面作为更难被替代的搜索资产。
 
 ### 13. 不要暴露全部产品，免费给出小片段价值
 

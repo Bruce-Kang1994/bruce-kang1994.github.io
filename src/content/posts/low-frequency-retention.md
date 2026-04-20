@@ -9,7 +9,7 @@ draft: false
 dataVerified: 2026-04-10
 ---
 
-> **阅读定位**：这是 [产品增长通用框架](/lab/posts/growth-dimension-framework/) 中"使用频率"维度的深度展开。通用框架告诉你"使用频率是 8 个维度之一"，本文回答一个更尖锐的问题：**如果你的产品天然低频，怎么做留存？**
+> **阅读定位**：这是 [8 维度增长诊断](/lab/posts/growth-dimension-framework/) 中"使用频率"维度的深度展开。增长诊断告诉你"使用频率是 8 个维度之一"，本文回答一个更尖锐的问题：**如果你的产品天然低频，怎么做留存？**
 
 ---
 
@@ -175,7 +175,7 @@ PostMem 的验证：PostMem 的受众是 40-65 岁。我们评估后认为 Strea
 
 ## 核心结论
 
-回到 [产品增长通用框架](/lab/posts/growth-dimension-framework/) 的 8 维度：
+回到 [8 维度增长诊断](/lab/posts/growth-dimension-framework/) 的 8 维度：
 
 "使用频率"这个维度不是越高越好。关键在于**产品价值的感知是否持续**。
 
