@@ -6,6 +6,14 @@ import { getCollection } from 'astro:content';
 const articles = (await getCollection('postmem'))
   .filter((a) => !a.data.draft)
   .sort((a, b) => b.data.datePublished.valueOf() - a.data.datePublished.valueOf());
+
+// Group by pageType for intent-based layout
+const groups = new Map<string, typeof articles>();
+for (const a of articles) {
+  const type = a.data.pageType || 'Article';
+  if (!groups.has(type)) groups.set(type, []);
+  groups.get(type)!.push(a);
+}
 ---
 
 <BaseLayout
@@ -13,39 +21,48 @@ const articles = (await getCollection('postmem'))
   description="SEO/GEO content system built from real user problems, turning product narrative into growth assets."
   section="postmem"
 >
-  <div class="pm-hub-hero">
-    <h1 class="pm-hub-hero__title">
-      <span data-lang="zh">PostMem SEO 内容体系</span><span data-lang="en">PostMem SEO System</span>
-    </h1>
-    <p class="pm-hub-hero__desc">
-      <span data-lang="zh">围绕真实用户需求搭建的 SEO/GEO 内容体系，把产品叙事转化为搜索增长资产。</span>
-      <span data-lang="en">A content system built from real user problems — turning product narrative into search-driven growth assets.</span>
-    </p>
-    <p style="font-size: 0.875rem; color: var(--pm-text-3); margin-top: 0.75rem;">
-      <span data-lang="zh">{articles.length} 篇文章 · 由 </span>
-      <span data-lang="en">{articles.length} articles · Built by </span>
-      <a href="/" style="color: var(--pm-accent);">Bruce Kang</a>
-      <span data-lang="zh"> 搭建</span>
-    </p>
-  </div>
+  <div class="max-w-[960px] mx-auto px-6">
+    <div class="pm-hub-hero">
+      <h1 class="pm-hub-hero__title">
+        <span data-lang="zh">PostMem SEO 内容体系</span><span data-lang="en">PostMem SEO System</span>
+      </h1>
+      <p class="pm-hub-hero__desc">
+        <span data-lang="zh">围绕真实用户需求搭建的 SEO/GEO 内容体系，把产品叙事转化为搜索增长资产。</span>
+        <span data-lang="en">A content system built from real user problems — turning product narrative into search-driven growth assets.</span>
+      </p>
+      <p class="text-[13px] text-[var(--text-3)] mt-3">
+        <span data-lang="zh">{articles.length} 篇文章 · 由 </span>
+        <span data-lang="en">{articles.length} articles · Built by </span>
+        <a href="/" class="text-[var(--accent)]">Bruce Kang</a>
+        <span data-lang="zh"> 搭建</span>
+      </p>
+    </div>
 
-  <div class="pm-article-grid" style="padding-bottom: 4rem;">
-    {articles.map((article) => (
-      <a href={`/postmem/${article.id}/`} class="pm-card">
-        <div style="margin-bottom: 0.5rem;">
-          <span class="pm-badge">{article.data.pageType}</span>
+    {[...groups.entries()].map(([type, items]) => (
+      <div class="pm-intent-group">
+        <div class="pm-intent-label">{type} · {items.length}</div>
+        <div class="pm-article-grid" style="padding: 0;">
+          {items.map((article) => (
+            <a href={`/postmem/${article.id}/`} class="pm-card">
+              <div style="margin-bottom: 0.375rem;">
+                <span class="pm-badge">{article.data.pageType}</span>
+              </div>
+              <div class="pm-card__title">{article.data.title}</div>
+              <div class="pm-card__desc">{article.data.description}</div>
+              <div class="pm-card__meta">
+                <span data-locale-date data-date={article.data.datePublished.toISOString()}>
+                  {article.data.datePublished.toLocaleDateString('zh-CN', { year: 'numeric', month: 'short', day: 'numeric' })}
+                </span>
+                {article.data.keywords.length > 0 && (
+                  <span> · {article.data.keywords[0]}</span>
+                )}
+              </div>
+            </a>
+          ))}
         </div>
-        <div class="pm-card__title">{article.data.title}</div>
-        <div class="pm-card__desc">{article.data.description}</div>
-        <div class="pm-card__meta">
-          <span data-locale-date data-date={article.data.datePublished.toISOString()}>
-            {article.data.datePublished.toLocaleDateString('zh-CN', { year: 'numeric', month: 'short', day: 'numeric' })}
-          </span>
-          {article.data.keywords.length > 0 && (
-            <span> · {article.data.keywords[0]}</span>
-          )}
-        </div>
-      </a>
+      </div>
     ))}
+
+    <div style="padding-bottom: 4rem;"></div>
   </div>
 </BaseLayout>

@@ -15,54 +15,35 @@ interface Props {
 const { title, description, category, tags, date, slug, body = '' } = Astro.props;
 const url = (path: string) => withBase(path, '/lab');
 const catLabel = translations.zh.category[category as keyof typeof translations.zh.category]?.label || category;
+const catLabelEn = translations.en.category[category as keyof typeof translations.en.category]?.label || category;
 const mins = readingTime(body);
-const primaryTag = tags[0];
 const tone = categoryColors[category] ?? categoryColors.frameworks;
 ---
 
-<a href={url(`posts/${slug}/`)} class="post-link group block py-6">
-  <div class="flex flex-wrap items-center gap-x-2 gap-y-1 mb-2 text-[13px] text-[rgb(var(--text-3))]">
-    <span class:list={['inline-flex items-center gap-1.5 rounded-full border px-2.5 py-1 text-[12px] font-semibold', tone.bg, tone.text, tone.border]} data-i18n={`category.${category}.label`}>
-      <span class="inline-block h-1.5 w-1.5 rounded-full bg-current opacity-70"></span>
+<a href={url(`posts/${slug}/`)} class="post-link group block py-5">
+  <div class="flex flex-wrap items-center gap-x-2 gap-y-1 mb-1.5 text-[12px] text-[var(--text-3)]">
+    <span class:list={['inline-flex items-center gap-1 rounded border px-2 py-0.5 text-[11px] font-semibold', tone.bg, tone.text, tone.border]} data-copy-zh={catLabel} data-copy-en={catLabelEn}>
       {catLabel}
     </span>
     <span>&middot;</span>
     <span data-locale-date data-date={date.toISOString()}>{formatDate(date)}</span>
     <span>&middot;</span>
     <span data-locale-mins data-mins={mins}>{mins} 分钟阅读</span>
-    {primaryTag && (
-      <>
-        <span>&middot;</span>
-        <span class="uppercase tracking-[0.08em] text-[11px]">{primaryTag}</span>
-      </>
-    )}
   </div>
 
-  <div class="flex items-start justify-between gap-4">
-    <div class="min-w-0">
-      <h3 class="text-[19px] sm:text-[20px] font-semibold leading-snug tracking-[-0.02em] text-[rgb(var(--text-1))] group-hover:text-[rgb(var(--accent))] transition-colors duration-150 mb-2">
-        {title}
-      </h3>
-      <p class="text-[15px] text-[rgb(var(--text-2))] leading-relaxed max-w-[44rem]">
-        {description}
-      </p>
-    </div>
-
-    <!-- Arrow -->
-    <svg class="w-4 h-4 mt-1 shrink-0 text-[rgb(var(--text-3))] opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-200" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
-      <path d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75"/>
-    </svg>
-  </div>
+  <h3 class="text-[17px] font-semibold leading-snug tracking-[-0.01em] text-[var(--text-1)] group-hover:text-[var(--accent)] transition-colors duration-150 mb-1">
+    {title}
+  </h3>
+  <p class="text-[14px] text-[var(--text-2)] leading-relaxed max-w-[44rem]">
+    {description}
+  </p>
 </a>
 
 <style>
   .post-link {
-    border-bottom: 1px solid rgb(var(--border));
+    border-bottom: 1px solid var(--border);
   }
   .post-link:last-child {
     border-bottom: none;
-  }
-  .post-link:hover {
-    transform: translateX(2px);
   }
 </style>

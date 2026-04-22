@@ -1,0 +1,216 @@
+---
+/**
+ * Knowledge Graph — built from real article data at compile time.
+ * Node positions are EDITORIAL (hand-placed), edges are DATA-DRIVEN (tag co-occurrence).
+ */
+
+interface Props {
+  posts: { data: { category: string; tags: string[] } }[];
+}
+
+const { posts } = Astro.props;
+
+// ── Compute real data ──
+const catTags: Record<string, Set<string>> = {};
+const catCount: Record<string, number> = {};
+for (const post of posts) {
+  const cat = post.data.category;
+  catCount[cat] = (catCount[cat] || 0) + 1;
+  if (!catTags[cat]) catTags[cat] = new Set();
+  for (const tag of post.data.tags) catTags[cat].add(tag);
+}
+
+// ── Editorial node layout — hand-placed to reflect conceptual hierarchy ──
+// Frameworks = center-top (foundation), Cases & Notes flank it,
+// Dialogues bridges below, Journal floats at edge (newest, forming)
+const nodeConfig = [
+  { key: 'frameworks',   x: 150, y: 65,  labelZh: '增长框架', labelEn: 'Frameworks', color: '#2563eb', darkColor: '#93c5fd' },
+  { key: 'case-studies', x: 268, y: 155, labelZh: '案例拆解', labelEn: 'Cases',      color: '#0891b2', darkColor: '#67e8f9' },
+  { key: 'notes',        x: 48,  y: 160, labelZh: '学习笔记', labelEn: 'Notes',      color: '#059669', darkColor: '#6ee7b7' },
+  { key: 'dialogues',    x: 148, y: 255, labelZh: '对话精华', labelEn: 'Dialogues',   color: '#7c3aed', darkColor: '#c4b5fd' },
+  { key: 'journal',      x: 265, y: 295, labelZh: '增长日志', labelEn: 'Journal',     color: '#d97706', darkColor: '#fbbf24' },
+];
+
+const maxCount = Math.max(...Object.values(catCount), 1);
+const nodes = nodeConfig
+  .filter(n => (catCount[n.key] || 0) > 0)
+  .map(n => ({
+    ...n,
+    count: catCount[n.key] || 0,
+    r: Math.round(13 + ((catCount[n.key] || 0) / maxCount) * 17),
+  }));
+
+// ── Compute edges from tag co-occurrence ──
+const bridgeEn: Record<string, string> = {
+  '方法论': 'Methodology', 'SEO': 'SEO', '增长拆解': 'Teardowns',
+  '留存': 'Retention', '产品策略': 'Strategy', 'PLG': 'PLG',
+  '增长杠杆': 'Levers', 'PMF': 'PMF', 'ElevenLabs': 'ElevenLabs',
+};
+
+// Hand-tuned arc control points — each curve bows outward from center
+const arcCtrl: Record<string, [number, number]> = {
+  'frameworks|case-studies': [238, 78],
+  'frameworks|notes':        [65, 82],
+  'frameworks|dialogues':    [100, 160],
+  'case-studies|dialogues':  [250, 218],
+  'dialogues|notes':         [58, 222],
+};
+
+interface Edge {
+  path: string;
+  weight: number;
+  sw: number;
+  labelZh?: string;
+  labelEn?: string;
+  lx: number;
+  ly: number;
+}
+
+const edges: Edge[] = [];
+const keys = nodeConfig.map(n => n.key);
+for (let i = 0; i < keys.length; i++) {
+  for (let j = i + 1; j < keys.length; j++) {
+    const a = keys[i], b = keys[j];
+    const tA = catTags[a], tB = catTags[b];
+    if (!tA || !tB) continue;
+    const shared = [...tA].filter(t => tB.has(t));
+    if (shared.length === 0) continue;
+
+    const na = nodeConfig.find(n => n.key === a)!;
+    const nb = nodeConfig.find(n => n.key === b)!;
+    const ek = `${a}|${b}`;
+    const ctrl = arcCtrl[ek] || [(na.x + nb.x) / 2, (na.y + nb.y) / 2];
+
+    // Bezier midpoint at t=0.5
+    const lx = 0.25 * na.x + 0.5 * ctrl[0] + 0.25 * nb.x;
+    const ly = 0.25 * na.y + 0.5 * ctrl[1] + 0.25 * nb.y;
+
+    edges.push({
+      path: `M${na.x},${na.y} Q${ctrl[0]},${ctrl[1]} ${nb.x},${nb.y}`,
+      weight: shared.length,
+      sw: Math.min(1 + shared.length * 0.5, 3),
+      labelZh: shared.length >= 2 ? shared[0] : undefined,
+      labelEn: shared.length >= 2 ? (bridgeEn[shared[0]] || shared[0]) : undefined,
+      lx, ly,
+    });
+  }
+}
+---
+
+<svg viewBox="0 0 320 350" class="kg" role="img" aria-label="Knowledge graph">
+  <defs>
+    <pattern id="kg-dots" width="24" height="24" patternUnits="userSpaceOnUse">
+      <circle cx="12" cy="12" r="0.5" class="kg__dot" />
+    </pattern>
+  </defs>
+  <rect width="320" height="350" fill="url(#kg-dots)" rx="4" />
+
+  <!-- Edges (rendered first, nodes will cover endpoints) -->
+  {edges.map((e) => (
+    <path d={e.path} fill="none" class="kg__edge" style={`stroke-width:${e.sw}px`} />
+  ))}
+
+  <!-- Bridge labels (strong connections only) -->
+  {edges.filter(e => e.labelZh).map((e) => (
+    <g>
+      <text x={e.lx} y={e.ly + 3} data-lang="zh" class="kg__bridge">{e.labelZh}</text>
+      <text x={e.lx} y={e.ly + 3} data-lang="en" class="kg__bridge">{e.labelEn}</text>
+    </g>
+  ))}
+
+  <!-- Nodes -->
+  {nodes.map((node) => (
+    <a href={`#${node.key}`} class="kg__link">
+      {/* Background mask — covers edge lines under node */}
+      <circle cx={node.x} cy={node.y} r={node.r} class="kg__mask" />
+      {/* Colored circle */}
+      <circle
+        cx={node.x} cy={node.y} r={node.r}
+        class={`kg__circle ${node.key === 'journal' ? 'kg__circle--dashed' : ''}`}
+        style={`--c:${node.color};--cd:${node.darkColor}`}
+      />
+      {/* Article count inside */}
+      <text x={node.x} y={node.y + 5} class="kg__count">{node.count}</text>
+      {/* Category label below */}
+      <text x={node.x} y={node.y + node.r + 15} data-lang="zh" class="kg__name">{node.labelZh}</text>
+      <text x={node.x} y={node.y + node.r + 15} data-lang="en" class="kg__name">{node.labelEn}</text>
+    </a>
+  ))}
+</svg>
+
+<style>
+  .kg {
+    width: 100%;
+    height: auto;
+  }
+
+  .kg__dot {
+    fill: var(--text-3);
+    opacity: 0.12;
+  }
+
+  .kg__edge {
+    stroke: var(--border-strong);
+    opacity: 0.35;
+  }
+
+  .kg__bridge {
+    font-family: var(--font-sans);
+    font-size: 9px;
+    font-weight: 500;
+    fill: var(--text-3);
+    text-anchor: middle;
+    paint-order: stroke;
+    stroke: var(--bg);
+    stroke-width: 4px;
+    stroke-linejoin: round;
+  }
+
+  .kg__mask {
+    fill: var(--bg);
+  }
+
+  .kg__circle {
+    fill: var(--c);
+    fill-opacity: 0.07;
+    stroke: var(--c);
+    stroke-width: 1.5px;
+    cursor: pointer;
+    transition: fill-opacity 200ms ease, stroke-width 200ms ease;
+  }
+  :global(.dark) .kg__circle {
+    fill: var(--cd);
+    stroke: var(--cd);
+    fill-opacity: 0.1;
+  }
+
+  .kg__circle--dashed {
+    stroke-dasharray: 3.5 2.5;
+  }
+
+  .kg__count {
+    font-family: var(--font-heading);
+    font-size: 14px;
+    font-weight: 700;
+    fill: var(--text-1);
+    text-anchor: middle;
+    pointer-events: none;
+  }
+
+  .kg__name {
+    font-family: var(--font-sans);
+    font-size: 10.5px;
+    font-weight: 600;
+    fill: var(--text-2);
+    text-anchor: middle;
+    pointer-events: none;
+  }
+
+  .kg__link:hover .kg__circle {
+    fill-opacity: 0.16;
+    stroke-width: 2.5px;
+  }
+  :global(.dark) .kg__link:hover .kg__circle {
+    fill-opacity: 0.2;
+  }
+</style>

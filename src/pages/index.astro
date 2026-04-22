@@ -1,10 +1,81 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import '../styles/home.css';
-import {
-  profile, metrics, now, methodAssets,
-  experienceSummary, experiences, contact,
-} from '../data/siteData';
+import ArticleCard from '../components/ArticleCard.astro';
+import { getCollection } from 'astro:content';
+import { profile, now, contact } from '../data/siteData';
+import { translations } from '../lib/i18n';
+
+// ── Data ──
+const labPosts = (await getCollection('posts')).filter((p) => !p.data.draft);
+const postmemPosts = (await getCollection('postmem')).filter((p) => !p.data.draft);
+
+const featuredPosts = labPosts
+  .filter((p) => p.data.featured)
+  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
+  .slice(0, 4);
+
+const latestPosts = labPosts
+  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
+  .slice(0, 5);
+
+// Category counts
+const catCount = (cat: string) => labPosts.filter((p) => p.data.category === cat).length;
+
+const zh = translations.zh;
+const en = translations.en;
+
+// Knowledge map data
+const knowledgeMap = [
+  {
+    count: catCount('frameworks'),
+    titleZh: zh.category.frameworks.label,
+    titleEn: en.category.frameworks.label,
+    descZh: zh.category.frameworks.desc,
+    descEn: en.category.frameworks.desc,
+    href: '/lab/frameworks/',
+  },
+  {
+    count: catCount('case-studies'),
+    titleZh: zh.category['case-studies'].label,
+    titleEn: en.category['case-studies'].label,
+    descZh: zh.category['case-studies'].desc,
+    descEn: en.category['case-studies'].desc,
+    href: '/lab/case-studies/',
+  },
+  {
+    count: catCount('dialogues'),
+    titleZh: zh.category.dialogues.label,
+    titleEn: en.category.dialogues.label,
+    descZh: zh.category.dialogues.desc,
+    descEn: en.category.dialogues.desc,
+    href: '/lab/dialogues/',
+  },
+  {
+    count: catCount('notes'),
+    titleZh: zh.category.notes.label,
+    titleEn: en.category.notes.label,
+    descZh: zh.category.notes.desc,
+    descEn: en.category.notes.desc,
+    href: '/lab/notes/',
+  },
+  {
+    count: catCount('journal'),
+    titleZh: zh.category.journal.label,
+    titleEn: en.category.journal.label,
+    descZh: zh.category.journal.desc,
+    descEn: en.category.journal.desc,
+    href: '/lab/journal/',
+  },
+  {
+    count: postmemPosts.length,
+    titleZh: 'PostMem SEO',
+    titleEn: 'PostMem SEO',
+    descZh: '围绕真实用户需求搭建的 SEO/GEO 内容体系',
+    descEn: 'SEO/GEO content system built from real user needs',
+    href: '/postmem/',
+  },
+];
 
 const structuredData = [
   {
@@ -28,236 +99,126 @@ const structuredData = [
   structuredData={structuredData}
 >
 
-  <!-- ══════════ HERO — editorial, asymmetric ══════════ -->
+  <!-- ═══ 1. METHODOLOGY HERO ═══ -->
   <section class="hero">
     <div class="hero__inner">
-      <div class="hero__main">
-        <div class="hero__label">
-          <span data-lang="zh">{profile.label.zh}</span>
-          <span data-lang="en">{profile.label.en}</span>
-        </div>
-        <h1 class="hero__title">
-          <span data-lang="zh">{profile.heroTitle.zh}</span>
-          <span data-lang="en">{profile.heroTitle.en}</span>
-        </h1>
-        <p class="hero__bio">
-          <span data-lang="zh">{profile.bio.zh}</span>
-          <span data-lang="en">{profile.bio.en}</span>
-        </p>
-        <div class="hero__ctas">
-          <a href="/lab/" class="hero__cta hero__cta--primary">
-            <span data-lang="zh">看方法论 →</span>
-            <span data-lang="en">Read the playbook →</span>
-          </a>
-          <a href="/postmem/" class="hero__cta hero__cta--secondary">
-            <span data-lang="zh">看 SEO 实战 →</span>
-            <span data-lang="en">See SEO in action →</span>
-          </a>
-        </div>
+      <h1 class="hero__title">
+        <span data-lang="zh">{profile.heroTitle.zh}</span>
+        <span data-lang="en">{profile.heroTitle.en}</span>
+      </h1>
+      <p class="hero__tagline">
+        <span data-lang="zh">{profile.tagline.zh}</span>
+        <span data-lang="en">{profile.tagline.en}</span>
+      </p>
+      <div class="hero__ctas">
+        <a href="/lab/" class="hero__cta hero__cta--primary">
+          <span data-lang="zh">Growth Lab →</span>
+          <span data-lang="en">Growth Lab →</span>
+        </a>
+        <a href="/postmem/" class="hero__cta hero__cta--secondary">
+          <span data-lang="zh">PostMem SEO →</span>
+          <span data-lang="en">PostMem SEO →</span>
+        </a>
       </div>
-      <aside class="hero__aside" data-reveal>
-        {metrics.map((m) => (
-          <div class="hero__stat">
-            <span class="hero__stat-val">{m.value}</span>
-            <div>
-              <div class="hero__stat-label">
-                <span data-lang="zh">{m.label.zh}</span><span data-lang="en">{m.label.en}</span>
-              </div>
-              <div class="hero__stat-detail">
-                <span data-lang="zh">{m.detail.zh}</span><span data-lang="en">{m.detail.en}</span>
-              </div>
-            </div>
-          </div>
+    </div>
+  </section>
+
+  <!-- ═══ 2. FEATURED METHODOLOGY ═══ -->
+  <section class="sec">
+    <div class="page-w">
+      <div class="sec__label">
+        <span data-lang="zh">{zh.home.featured}</span>
+        <span data-lang="en">{en.home.featured}</span>
+      </div>
+      <div class="featured-list" data-reveal>
+        {featuredPosts.map((post) => (
+          <ArticleCard
+            title={post.data.title}
+            description={post.data.description}
+            category={post.data.category}
+            tags={post.data.tags}
+            date={post.data.date}
+            slug={post.id}
+            body={post.body || ''}
+          />
         ))}
-      </aside>
-    </div>
-  </section>
-
-  <!-- ══════════ NOW — typographic, no card ══════════ -->
-  <section class="sec">
-    <div class="page-w">
-      <div class="sec__label">
-        <span data-lang="zh">正在做的增长实践</span><span data-lang="en">Current Growth Practice</span>
-      </div>
-      <div class="now" data-reveal>
-        <div class="now__header">
-          <h2 class="now__title">{now.title}</h2>
-          <p class="now__tagline">
-            <span data-lang="zh">{now.tagline.zh}</span><span data-lang="en">{now.tagline.en}</span>
-          </p>
-          <a href={now.href} target="_blank" rel="noopener" class="now__link">postmem.com ↗</a>
-        </div>
-        <div class="now__list">
-          <div data-lang="zh">
-            {now.practices.zh.map((p, i) => (
-              <div class="now__item">
-                <span class="now__num">{String(i + 1).padStart(2, '0')}</span>
-                <span>{p}</span>
-              </div>
-            ))}
-          </div>
-          <div data-lang="en">
-            {now.practices.en.map((p, i) => (
-              <div class="now__item">
-                <span class="now__num">{String(i + 1).padStart(2, '0')}</span>
-                <span>{p}</span>
-              </div>
-            ))}
-          </div>
-        </div>
       </div>
     </div>
   </section>
 
-  <!-- ══════════ TWO ASSETS — asymmetric layout ══════════ -->
+  <!-- ═══ 3. KNOWLEDGE MAP ═══ -->
   <section class="sec">
     <div class="page-w">
       <div class="sec__label">
-        <span data-lang="zh">公开资产</span><span data-lang="en">Public Assets</span>
+        <span data-lang="zh">{zh.home.knowledgeMap}</span>
+        <span data-lang="en">{en.home.knowledgeMap}</span>
       </div>
-      <div class="sec__title">
-        <span data-lang="zh">Lab 是思考，SEO 是执行。同一个人，同一条线。</span>
-        <span data-lang="en">Lab is thinking, SEO is doing. Same person, same thread.</span>
-      </div>
-
-      <div class="assets" data-reveal>
-        {methodAssets.map((a, i) => (
-          <a href={a.href} class="asset">
-            <div class="asset__count">{a.count}</div>
-            <div class="asset__body">
-              <h3 class="asset__title">{a.title}</h3>
-              <div class="asset__sub">
-                <span data-lang="zh">{a.subtitle.zh}</span><span data-lang="en">{a.subtitle.en}</span>
-              </div>
-              <p class="asset__desc">
-                <span data-lang="zh">{a.tagline.zh}</span><span data-lang="en">{a.tagline.en}</span>
+      <div class="knowledge-map" data-reveal>
+        {knowledgeMap.map((item) => (
+          <a href={item.href} class="km-card">
+            <div class="km-card__count">{item.count}</div>
+            <div class="km-card__body">
+              <h3 class="km-card__title">
+                <span data-lang="zh">{item.titleZh}</span>
+                <span data-lang="en">{item.titleEn}</span>
+              </h3>
+              <p class="km-card__desc">
+                <span data-lang="zh">{item.descZh}</span>
+                <span data-lang="en">{item.descEn}</span>
               </p>
             </div>
-            <span class="asset__arrow">→</span>
+            <span class="km-card__arrow">→</span>
           </a>
         ))}
       </div>
     </div>
   </section>
 
-  <!-- ══════════ EXPERIENCE — collapsed ══════════ -->
+  <!-- ═══ 4. CURRENT PRACTICE ═══ -->
   <section class="sec">
     <div class="page-w">
       <div class="sec__label">
-        <span data-lang="zh">背景</span><span data-lang="en">Background</span>
+        <span data-lang="zh">{zh.home.currentPractice}</span>
+        <span data-lang="en">{en.home.currentPractice}</span>
       </div>
-      <p class="exp-summary">
-        <span data-lang="zh">{experienceSummary.zh}</span>
-        <span data-lang="en">{experienceSummary.en}</span>
-      </p>
-
-      <details class="exp-details" data-reveal>
-        <summary class="exp-toggle">
-          <span data-lang="zh">展开看详细经历 ↓</span>
-          <span data-lang="en">Show full experience ↓</span>
-        </summary>
-        <div class="exp-list">
-          {experiences.map((exp) => (
-            <div class="tl-item">
-              <div>
-                <span class="tl-company">
-                  <span data-lang="zh">{exp.company.zh}</span><span data-lang="en">{exp.company.en}</span>
-                </span>
-                <span class="tl-role">
-                  <span data-lang="zh">{exp.role.zh}</span><span data-lang="en">{exp.role.en}</span>
-                </span>
-                <span class="tl-period">{exp.period}</span>
-              </div>
-              <div class="tl-desc">
-                <span data-lang="zh">{exp.description.zh}</span><span data-lang="en">{exp.description.en}</span>
-              </div>
-              <div class="tl-highlights" data-lang="zh">
-                {exp.highlights.zh.map((h) => (
-                  <div class="tl-highlight">{h}</div>
-                ))}
-              </div>
-              <div class="tl-highlights" data-lang="en">
-                {exp.highlights.en.map((h) => (
-                  <div class="tl-highlight">{h}</div>
-                ))}
-              </div>
-              {'pressLinks' in exp && exp.pressLinks && (
-                <div class="tl-press">
-                  {exp.pressLinks.map((link) => (
-                    <a href={link.href} target="_blank" rel="noopener" class="tl-press__link">
-                      <span data-lang="zh">{link.label.zh}</span><span data-lang="en">{link.label.en}</span> ↗
-                    </a>
-                  ))}
-                </div>
-              )}
-            </div>
-          ))}
+      <a href={now.href} target="_blank" rel="noopener" class="now-card" data-reveal>
+        <div class="now-card__body">
+          <h2 class="now-card__title">{now.title}</h2>
+          <p class="now-card__tagline">
+            <span data-lang="zh">{now.tagline.zh}</span>
+            <span data-lang="en">{now.tagline.en}</span>
+          </p>
         </div>
-      </details>
+        <span class="now-card__link">postmem.com ↗</span>
+      </a>
     </div>
   </section>
 
-  <!-- ══════════ GSAP Animations ══════════ -->
-  <script>
-    import gsap from 'gsap';
-    import { ScrollTrigger } from 'gsap/ScrollTrigger';
-    gsap.registerPlugin(ScrollTrigger);
-
-    const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    if (prefersReduced) {
-      document.querySelectorAll('.hero__label, .hero__title, .hero__bio, .hero__ctas')
-        .forEach(el => (el as HTMLElement).style.visibility = 'visible');
-    }
-
-    if (!prefersReduced) {
-      const heroTl = gsap.timeline({ delay: 0.15 });
-
-      heroTl.fromTo('.hero__label',
-        { autoAlpha: 0, y: 12 },
-        { autoAlpha: 1, y: 0, duration: 0.5, ease: 'power2.out' }
-      );
-
-      heroTl.fromTo('.hero__title',
-        { autoAlpha: 0, y: 20 },
-        { autoAlpha: 1, y: 0, duration: 0.7, ease: 'power2.out' },
-        '-=0.25'
-      );
-
-      heroTl.fromTo('.hero__bio',
-        { autoAlpha: 0, y: 16 },
-        { autoAlpha: 1, y: 0, duration: 0.6, ease: 'power2.out' },
-        '-=0.3'
-      );
-
-      heroTl.fromTo('.hero__cta',
-        { autoAlpha: 0, y: 12 },
-        { autoAlpha: 1, y: 0, duration: 0.4, stagger: 0.1, ease: 'power2.out' },
-        '-=0.2'
-      );
-      heroTl.set('.hero__ctas', { visibility: 'visible' }, 0);
-
-      // Stats stagger
-      heroTl.fromTo('.hero__stat',
-        { autoAlpha: 0, x: 20 },
-        { autoAlpha: 1, x: 0, duration: 0.4, stagger: 0.08, ease: 'power2.out' },
-        '-=0.3'
-      );
-
-      // Scroll sections
-      document.querySelectorAll('.sec__label').forEach(label => {
-        gsap.fromTo(label,
-          { autoAlpha: 0, x: -20 },
-          { autoAlpha: 1, x: 0, duration: 0.4, ease: 'power2.out',
-            scrollTrigger: { trigger: label, start: 'top 90%', once: true } }
-        );
-      });
-
-      gsap.fromTo('.asset',
-        { autoAlpha: 0, y: 24 },
-        { autoAlpha: 1, y: 0, duration: 0.5, stagger: 0.15, ease: 'power2.out',
-          scrollTrigger: { trigger: '.assets', start: 'top 85%', once: true } }
-      );
-    }
-  </script>
+  <!-- ═══ 5. LATEST ARTICLES ═══ -->
+  <section class="sec">
+    <div class="page-w">
+      <div class="sec__label">
+        <span data-lang="zh">{zh.home.latest}</span>
+        <span data-lang="en">{en.home.latest}</span>
+      </div>
+      <div class="latest-feed" data-reveal>
+        {latestPosts.map((post) => (
+          <ArticleCard
+            title={post.data.title}
+            description={post.data.description}
+            category={post.data.category}
+            tags={post.data.tags}
+            date={post.data.date}
+            slug={post.id}
+            body={post.body || ''}
+          />
+        ))}
+      </div>
+      <a href="/lab/" class="sec__view-all">
+        <span data-lang="zh">{zh.home.viewAll} →</span>
+        <span data-lang="en">{en.home.viewAll} →</span>
+      </a>
+    </div>
+  </section>
 
 </BaseLayout>

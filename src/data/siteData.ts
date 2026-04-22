@@ -5,17 +5,17 @@ export const profile = {
     zh: '增长实践者',
     en: 'Growth Practitioner',
   },
-  tagline: {
-    zh: 'Building PostMem · 公开写方法论',
-    en: 'Building PostMem · Writing the playbook',
-  },
   heroTitle: {
-    zh: '在真实产品上做增长，把过程写成方法论',
-    en: 'Doing growth on a real product, writing the playbook along the way',
+    zh: '增长是结构问题',
+    en: 'Growth is a structural problem',
+  },
+  tagline: {
+    zh: '在做 PostMem 的过程中，把增长拆成可复用的框架。',
+    en: 'Building PostMem, breaking growth into reusable frameworks along the way.',
   },
   bio: {
-    zh: '我是 Bruce，正在全职做 PostMem——一个用老照片帮家庭留住故事的 AI 产品。从 0 到 1 的增长过程中，我把 SEO 体系、投放策略、用户研究沉淀成了公开的方法论。不是理论总结，是正在执行的东西。',
-    en: "I'm Bruce, building PostMem full-time — an AI product that turns old family photos into family stories. Along the way, I'm writing down everything I learn about growth: SEO systems, ad strategies, user research. Not theory — things I'm actually doing.",
+    zh: '我是 Bruce，正在全职做 PostMem——一个用老照片帮家庭留住故事的 AI Agent 产品。从 0 到 1 的增长过程中，我把 SEO 体系、投放策略、用户研究沉淀成了公开的方法论。不是理论总结，是正在执行的东西。',
+    en: "I'm Bruce, building PostMem full-time — an AI agent that turns old family photos into family stories. Along the way, I'm writing down everything I learn about growth: SEO systems, ad strategies, user research. Not theory — things I'm actually doing.",
   },
   siteUrl: 'https://kangxin.me',
 };
@@ -48,57 +48,13 @@ export const metrics = [
 export const now = {
   title: 'PostMem',
   tagline: {
-    zh: '用老照片帮家庭留住故事的 AI 产品',
-    en: 'AI product that turns old family photos into family stories',
+    zh: '用老照片帮家庭留住故事的 AI Agent 产品',
+    en: 'AI agent that turns old family photos into family stories',
   },
   href: 'https://www.postmem.com',
-  practices: {
-    zh: [
-      '搭建了一套 13 篇文章的 SEO/GEO 内容体系，覆盖竞品拦截、品类定义、问题感知三层关键词',
-      '从 0 开始做 Facebook 视频广告，用 Remotion 搭建自动化视频生产线',
-      '基于 21 款竞品分析做产品定位，用 April Dunford 方法论梳理差异化',
-      '设计用户研究框架，完成多轮目标用户访谈（40-65 岁家庭记忆保存者）',
-    ],
-    en: [
-      'Built a 13-article SEO/GEO content system covering competitor intercept, category definition, and problem awareness keywords',
-      'Running Facebook video ads from scratch, built automated video pipeline with Remotion',
-      'Product positioning based on 21-competitor analysis using April Dunford methodology',
-      'Designed user research framework, conducted multiple rounds of interviews (40-65 age group)',
-    ],
-  },
 };
 
-// ─── Two Public Assets ─────────────────────────────────
-export const methodAssets = [
-  {
-    title: 'Growth Lab',
-    subtitle: {
-      zh: '增长怎么想',
-      en: 'How to think about growth',
-    },
-    tagline: {
-      zh: '把增长拆成结构，再把结构变成执行。框架、案例拆解、对话精华、工作笔记。',
-      en: 'Break growth into structure, then turn structure into execution. Frameworks, teardowns, dialogues, working notes.',
-    },
-    count: '13',
-    href: '/lab/',
-  },
-  {
-    title: 'PostMem SEO',
-    subtitle: {
-      zh: '增长怎么做',
-      en: 'How to do growth',
-    },
-    tagline: {
-      zh: '围绕真实用户需求搭建的 SEO/GEO 内容体系，把产品叙事转化为搜索增长资产。',
-      en: 'SEO/GEO content system built from real user problems, turning product narrative into search-driven growth assets.',
-    },
-    count: '13',
-    href: '/postmem/',
-  },
-];
-
-// ─── Experience (collapsed on homepage) ────────────────
+// ─── Experience (kept for footer / about page) ────────
 export const experienceSummary = {
   zh: '在做 PostMem 之前，我在新华网、VIPKID 等公司做了 5 年 B 端产品。',
   en: 'Before PostMem, I spent 5 years in B2B product at Xinhua, VIPKID, and others.',
